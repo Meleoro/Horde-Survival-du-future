@@ -1,4 +1,4 @@
-using Objects;
+using Character.Projectiles;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -16,9 +16,7 @@ namespace Character
         private Transform initialBulletPos;
         
         private float _nextFireTime;
-        
-        public bool isAttacking;
-        
+
         #endregion
         
         #region Declaration
@@ -46,31 +44,18 @@ namespace Character
         }
         private void Update()
         {
-            BasicAttackCooldown();
-            BasicAttack();
+            //Shoot With Uzi
+            ObjectPooling.Instance.BasicAttack(initialBulletPos.position,ObjectPooling.Instance.ShootWithUzi(),playerData);
         }
         private void FixedUpdate()
         {
             HandleMovement();
             HandleRotation();
         }
-        void BasicAttack()
-        {
-            GameObject bullet = ObjectPooling.instance.GetPooledObject();
-            
-            if (bullet != null && BasicAttackCooldown())
-            {
-                Debug.Log(4);
-                bullet.transform.position = initialBulletPos.position;
-                bullet.SetActive(true);
-                bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up * playerData.basicAttackSpeed;
-                _nextFireTime = Time.time + playerData.basicAttackCooldown;
-            }
-        }
+        
         void OnMovement(InputAction.CallbackContext context)
         {
             _movement = context.ReadValue<Vector2>();
-            Debug.Log(_movement);
         }
         void HandleMovement()
         {
@@ -81,12 +66,7 @@ namespace Character
             float a = Mathf.Atan2(_aim.x, _aim.y) * Mathf.Rad2Deg;
             _rb.MoveRotation(-a);
         }
-        bool BasicAttackCooldown()
-        {
-            if(Time.time > _nextFireTime) return true;
-            return false;
-        }
-
+        
     }
 }
 
