@@ -9,8 +9,6 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public GameObject enemyStand;
-
     void Start()
     {
         currentHealth = maxHealth;
@@ -19,17 +17,10 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
-        void OnTriggerEnter2D(Collision collision)
-        {
-            if (collision.gameObject.tag == "enemy")
-            {
-                TakeDamage(1);
-                Debug.Log("Encounter");
-            }
-        }
+        
     }
-
-    void TakeDamage(int damage)
+    
+    public void TakeDamage(int damage)
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
