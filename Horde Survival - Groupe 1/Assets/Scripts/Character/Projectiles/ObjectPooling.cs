@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,7 +9,11 @@ namespace Objects
         public static ObjectPooling instance;
         private List<GameObject> _pooledObjects = new List<GameObject>();
         private int _amountToPool = 20;
-
+        
+        [SerializeField] private List<PoolData> poolData;
+        [SerializeField] private List<GameObject> weapon02;
+        [SerializeField] private List<GameObject> weapon03;
+        
         [SerializeField] private GameObject bulletPrefab;
 
         private void Awake()
@@ -17,9 +22,14 @@ namespace Objects
             {
                 instance = this;
             }
-        }
 
-        // Start is called before the first frame update
+
+            for (int i = 0; i < poolData[0].NumberOfProjectiles; i++)
+            {
+                Instantiate(poolData[0].Prefab);
+            }
+        }
+        
         void Start()
         {
             for (int i = 0; i < _amountToPool; i++)
@@ -43,4 +53,25 @@ namespace Objects
             return null;
         }
     }
+
+    
+    [Serializable]
+    public class PoolData
+    {
+        [SerializeField]
+        private GameObject prefab;
+        [SerializeField]
+        private int numberOfProjectiles;
+
+        public GameObject Prefab
+        {
+            get
+            {
+                return prefab;
+            }
+        }
+
+        public int NumberOfProjectiles => numberOfProjectiles;
+    }
+    
 }

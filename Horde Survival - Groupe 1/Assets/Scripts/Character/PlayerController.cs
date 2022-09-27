@@ -60,6 +60,7 @@ namespace Character
             
             if (bullet != null && BasicAttackCooldown())
             {
+                Debug.Log(4);
                 bullet.transform.position = initialBulletPos.position;
                 bullet.SetActive(true);
                 bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up * playerData.basicAttackSpeed;
