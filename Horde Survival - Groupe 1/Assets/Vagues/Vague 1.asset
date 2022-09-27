@@ -12,3 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 705a5cd19ee058446a957ea310b36ec0, type: 3}
   m_Name: Vague 1
   m_EditorClassIdentifier: 
+  duration: 30
+  spawnRate: 2
+  spawnFrequency:
+  - key: {fileID: 0}
+    val: 50
+  - key: {fileID: 0}
+    val: 50

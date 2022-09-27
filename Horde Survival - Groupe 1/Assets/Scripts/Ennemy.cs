@@ -10,7 +10,7 @@ public class Ennemy : MonoBehaviour
     
     void Update()
     {
-        Vector2 direction = CharacterControler.Instance.transform.position - transform.position;
+        Vector2 direction = RefCharacter.Instance.transform.position - transform.position;
         
         transform.Translate(direction.normalized * speed * Time.deltaTime);
     }

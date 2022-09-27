@@ -58,14 +58,17 @@ public class SpawnManager : MonoBehaviour
         {
             timerSpawn = spawnFrequency;
             
-            SpawnEntity(test1);
+            //SpawnEntity(test1);
         }
     }
 
 
     private void SelectSpawnEntity()
     {
-        
+        /*foreach (GameObject ennemy in currentVague.spawnRate.)
+        {
+            
+        }*/
     }
     
     private void SpawnEntity(GameObject entity)
