@@ -8,8 +8,15 @@ public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager Instance;
 
-    [Header("Ennemies")] 
-    public List<GameObject> ennemies;
+    [Header("GestionVagues")]
+    public List<Vague> vagues;
+    private int currentVagueNumber;
+    private Vague currentVague;
+    private float vagueDuration;
+    private float timerVague;
+    
+    
+    [HideInInspector] public List<GameObject> ennemies;
     public GameObject test1;
     
     [Header("Paramètres")] 
@@ -29,13 +36,24 @@ public class SpawnManager : MonoBehaviour
 
         else
             Destroy(gameObject);
+
+        currentVague = vagues[currentVagueNumber];
+        timerVague = currentVague.duration;
     }
 
 
     void Update()
     {
         timerSpawn -= Time.deltaTime;
+        timerVague -= Time.deltaTime;
         
+        // CHANGEMENT DE VAGUE
+        if (timerVague <= 0)
+        {
+            ChangeVague();
+        }
+        
+        // SPAWN D'UN ENNEMIE
         if (timerSpawn <= 0)
         {
             timerSpawn = spawnFrequency;
@@ -45,6 +63,11 @@ public class SpawnManager : MonoBehaviour
     }
 
 
+    private void SelectSpawnEntity()
+    {
+        
+    }
+    
     private void SpawnEntity(GameObject entity)
     {
         // Pour eviter que le spawn se fasse toujours en haut, a gauche, ect.
@@ -93,5 +116,13 @@ public class SpawnManager : MonoBehaviour
         GameObject newEnnemy =  Instantiate(entity, CharacterControler.Instance.transform.position + new Vector3(spawnX, spawnY, 0), Quaternion.identity);
         
         ennemies.Add(newEnnemy);
+    }
+
+    private void ChangeVague()
+    {
+        currentVagueNumber += 1;
+        
+        currentVague = vagues[currentVagueNumber];
+        timerVague = currentVague.duration;
     }
 }
