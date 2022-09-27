@@ -6,7 +6,13 @@ public class Collector : MonoBehaviour
 {
    private void OnTriggerEnter2D(Collider2D collision)
    {
-      EXP.ICollectible collectible = collision.GetComponent<EXP.ICollectible>();
+      /*var exp = collision.GetComponent<EXP>();
+      if (exp != null)
+      {
+         exp.Collect();
+      }*/
+      
+      ICollectible collectible = collision.GetComponent<ICollectible>();
       if (collectible != null)
       {
          collectible.Collect();
