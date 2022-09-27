@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Character.Projectiles;
 using UnityEngine;
 
 public class CharacterControler : MonoBehaviour
@@ -11,6 +12,7 @@ public class CharacterControler : MonoBehaviour
 
     private void Awake()
     {
+
         if (Instance == null)
             Instance = this;
         

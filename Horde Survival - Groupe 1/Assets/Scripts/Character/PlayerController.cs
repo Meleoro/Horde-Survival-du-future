@@ -9,18 +9,15 @@ namespace Character
     {
         #region Variables
 
-        private Vector2 _movement;
+        public Vector2 movement;
         private Vector2 _aim;
-
-        [SerializeField]
-        private Transform initialBulletPos;
-        
         private float _nextFireTime;
 
         #endregion
         
         #region Declaration
         
+        [SerializeField] private Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
@@ -44,27 +41,45 @@ namespace Character
         }
         private void Update()
         {
-            //Shoot With Uzi
-            ObjectPooling.Instance.BasicAttack(initialBulletPos.position,ObjectPooling.Instance.ShootWithUzi(),playerData);
+            Shoot(initialBulletPos.position,ObjectPooling.Instance.ShootWithUzi(),playerData);
         }
         private void FixedUpdate()
         {
             HandleMovement();
             HandleRotation();
         }
-        
+        private void Shoot(Vector2 initialPos, GameObject ammoUsed, PlayerData weaponData)
+        {
+            if (ammoUsed != null && Cooldown())
+            {
+                //Placement & activation
+                ammoUsed.transform.position = initialPos;
+                ammoUsed.SetActive(true);
+                
+                //Physic
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.basicAttackSpeed;
+                
+                //Cooldown
+                _nextFireTime = Time.time + weaponData.basicAttackCooldown;
+            }
+        }
         void OnMovement(InputAction.CallbackContext context)
         {
-            _movement = context.ReadValue<Vector2>();
+            movement = context.ReadValue<Vector2>();
         }
         void HandleMovement()
         {
-            _rb.velocity = new Vector2(_movement.x * playerData.characterSpeed, _movement.y * playerData.characterSpeed);
+            _rb.velocity = new Vector2(movement.x * playerData.characterSpeed, movement.y * playerData.characterSpeed);
         }
         void HandleRotation()
         {
             float a = Mathf.Atan2(_aim.x, _aim.y) * Mathf.Rad2Deg;
             _rb.MoveRotation(-a);
+        }
+        bool Cooldown()
+        {
+            if(Time.time > _nextFireTime) return true;
+            return false;
         }
         
     }

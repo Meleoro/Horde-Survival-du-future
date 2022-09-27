@@ -64,7 +64,7 @@ namespace Character.Projectiles
         {
             for (int i = 0; i < uziAmmo.Count; i++)
             {
-                if (!uziAmmo[i].activeSelf)
+                if (!uziAmmo[i].activeInHierarchy)
                 {
                     return uziAmmo[i];
                 }
@@ -83,7 +83,6 @@ namespace Character.Projectiles
             }
             return null;
         }
-        
         public GameObject ShootWithMinigun()
         {
             for (int i = 0; i < miniGunAmmo.Count; i++)
@@ -106,37 +105,6 @@ namespace Character.Projectiles
                 }
             }
             return null;
-        }
-
-        // ReSharper disable Unity.PerformanceAnalysis
-        public void BasicAttack(Vector2 initialPos, GameObject ammoUsed, PlayerData weaponData)
-        {
-            if (ammoUsed != null && BasicAttackCooldown())
-            {
-                ammoUsed.transform.position = initialPos;
-                ammoUsed.SetActive(true);
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.basicAttackSpeed;
-                _nextFireTime = Time.time + weaponData.basicAttackCooldown;
-                Debug.Log(ammoUsed);
-            }
-        }
-        
-        public void Attack2(Vector2 initialPos, GameObject ammoUsed, PlayerData weaponData)
-        {
-            if (ammoUsed != null && BasicAttackCooldown())
-            {
-                ammoUsed.transform.position = initialPos;
-                ammoUsed.SetActive(true);
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.basicAttackSpeed;
-                _nextFireTime = Time.time + weaponData.basicAttackCooldown;
-                Debug.Log(ammoUsed);
-            }
-        }
-
-        bool BasicAttackCooldown()
-        {
-            if(Time.time > _nextFireTime) return true;
-            return false;
         }
     }
 
