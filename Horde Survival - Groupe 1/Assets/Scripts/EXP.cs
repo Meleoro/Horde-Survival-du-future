@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public class EXP : MonoBehaviour, EXP.ICollectible
+public class EXP : Collectible
 {
 
     public static event Action OnExCollected;
 
-    public void Collect()
+    public override void Collect()
     {
         Debug.Log("EXP Collected");
         Destroy(gameObject);
@@ -23,7 +23,10 @@ public class EXP : MonoBehaviour, EXP.ICollectible
 
     public interface ICollectible
     {
-        public void Collect();
+        public void Collect()
+        {
+            Debug.Log("it works now");
+        }
         
     }
 }
