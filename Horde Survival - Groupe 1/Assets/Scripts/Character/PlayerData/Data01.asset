@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Data01
   m_EditorClassIdentifier: 
   characterSpeed: 20
-  basicAttackSpeed: 20
-  basicAttackCooldown: 0.5
+  basicAttackSpeed: 35
+  basicAttackCooldown: 0.25

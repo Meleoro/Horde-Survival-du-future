@@ -1,3 +1,4 @@
+using Objects;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -7,9 +8,12 @@ namespace Character
     public class PlayerController : MonoBehaviour
     {
         #region Variables
-      
+
         private Vector2 _movement;
         private Vector2 _aim;
+
+        [SerializeField]
+        private Transform initialBulletPos;
         
         private float _nextFireTime;
         
@@ -43,11 +47,7 @@ namespace Character
         private void Update()
         {
             BasicAttackCooldown();
-
-            if (isAttacking)
-            {
-                BasicAttack();
-            }
+            BasicAttack();
         }
         private void FixedUpdate()
         {
@@ -56,17 +56,15 @@ namespace Character
         }
         void BasicAttack()
         {
-            //OBJECT POOLING//
+            GameObject bullet = ObjectPooling.instance.GetPooledObject();
             
-            // GameObject bullet = ObjectPooling.instance.GetPooledObject();
-            //
-            // if (bullet != null && BasicAttackCooldown())
-            // {
-            //     bullet.transform.position = bulletPosition.position;
-            //     bullet.SetActive(true);
-            //     bullet.GetComponent<Rigidbody2D>().velocity = _aim.normalized * playerData.basicAttackSpeed;
-            //     _nextFireTime = Time.time + playerData.basicAttackCooldown;
-            // }
+            if (bullet != null && BasicAttackCooldown())
+            {
+                bullet.transform.position = initialBulletPos.position;
+                bullet.SetActive(true);
+                bullet.GetComponent<Rigidbody2D>().velocity = Vector2.up * playerData.basicAttackSpeed;
+                _nextFireTime = Time.time + playerData.basicAttackCooldown;
+            }
         }
         void OnMovement(InputAction.CallbackContext context)
         {
