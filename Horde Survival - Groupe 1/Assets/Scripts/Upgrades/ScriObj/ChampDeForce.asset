@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
-  m_Name: Health
+  m_Name: ChampDeForce
   m_EditorClassIdentifier: 
-  name: Vie
+  name: Champ De Force
   image: {fileID: 0}
-  currentLevel: 0
-  isWeapon: 0
+  currentLevel: 15
+  isWeapon: 1
   weapon: {fileID: 0}
   levelList:
-  - desciption: Devenir un tank pour les nuls
+  - desciption: Oui
     degats: 0
     portee: 0
     fireRate: 0
     munitions: 0
     rechargement: 0
     doubleUZI: 0
-  - desciption: 
+  - desciption: "C'est \xE7a"
     degats: 0
     portee: 0
     fireRate: 0
@@ -75,4 +75,4 @@ MonoBehaviour:
     rechargement: 0
     doubleUZI: 0
   damages: 0
-  health: 1
+  health: 0

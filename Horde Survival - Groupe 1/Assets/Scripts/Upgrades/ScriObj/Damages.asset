@@ -13,10 +13,66 @@ MonoBehaviour:
   m_Name: Damages
   m_EditorClassIdentifier: 
   name: Degats
-  description: Plus fort
   image: {fileID: 0}
-  currentLevel: 1
+  currentLevel: 0
   isWeapon: 0
   weapon: {fileID: 0}
+  levelList:
+  - desciption: Tu es puissant
+    degats: 0
+    portee: 0
+    fireRate: 0
+    munitions: 0
+    rechargement: 0
+    doubleUZI: 0
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 0
+    munitions: 0
+    rechargement: 0
+    doubleUZI: 0
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 0
+    munitions: 0
+    rechargement: 0
+    doubleUZI: 0
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 0
+    munitions: 0
+    rechargement: 0
+    doubleUZI: 0
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 0
+    munitions: 0
+    rechargement: 0
+    doubleUZI: 0
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 0
+    munitions: 0
+    rechargement: 0
+    doubleUZI: 0
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 0
+    munitions: 0
+    rechargement: 0
+    doubleUZI: 0
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 0
+    munitions: 0
+    rechargement: 0
+    doubleUZI: 0
   damages: 1
   health: 0
