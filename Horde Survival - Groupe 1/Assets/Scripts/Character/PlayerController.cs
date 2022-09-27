@@ -69,6 +69,7 @@ namespace Character
         void OnMovement(InputAction.CallbackContext context)
         {
             _movement = context.ReadValue<Vector2>();
+            Debug.Log(_movement);
         }
         void HandleMovement()
         {

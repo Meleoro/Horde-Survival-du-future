@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d76c7f29c9bc9645839065483e70ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vagues:
+  - {fileID: 11400000, guid: badea38491c075547a92a8aa704dc0b0, type: 2}
+  - {fileID: 11400000, guid: f752accfa4a7b3e408c7681d5d5529aa, type: 2}
   ennemies: []
-  test1: {fileID: 1665647368470869403, guid: fdbcd13ea108a244fb338196c852a0d6, type: 3}
-  spawnFrequency: 2
