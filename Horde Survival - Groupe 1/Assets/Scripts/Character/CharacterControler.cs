@@ -21,9 +21,7 @@ public class CharacterControler : MonoBehaviour
 
     private void Update()
     {
-        NearestEnnemy();
         
-        nearestEnnemy.GetComponent<SpriteRenderer>().color = Color.black;
     }
 
 
