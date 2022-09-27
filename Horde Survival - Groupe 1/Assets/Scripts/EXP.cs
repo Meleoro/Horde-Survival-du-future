@@ -5,12 +5,10 @@ using System;
 
 public class EXP : Collectible
 {
-
     public static event Action OnExCollected;
 
     public override void Collect()
     {
-        Debug.Log("EXP Collected");
         Destroy(gameObject);
         OnExCollected?.Invoke();
     }
