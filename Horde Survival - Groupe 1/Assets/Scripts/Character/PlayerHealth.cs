@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
@@ -24,5 +26,15 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
+    }
+    
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("Encounter12");
+        if (col.collider.CompareTag("enemy"))
+        { 
+            TakeDamage(1);
+            Debug.Log("Encounter");
+        }
     }
 }

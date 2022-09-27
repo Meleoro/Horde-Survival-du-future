@@ -9,13 +9,6 @@ public class EnemyCollision : MonoBehaviour
 
     public HealthBar healthBar;
     
-    void OnTriggerEnter2D(Collider2D col)
-    {
-        if (col.CompareTag("Player"))
-        { 
-            ph.TakeDamage(1); 
-            Debug.Log("Encounter");
-        }
-    }
+    
 }
 
