@@ -14,8 +14,8 @@ public class SpawnManager : MonoBehaviour
     private Vague currentVague;
     private float vagueDuration;
     private float timerVague;
-    
-    
+
+
     [HideInInspector] public List<GameObject> ennemies;
     public GameObject test1;
     
@@ -39,6 +39,7 @@ public class SpawnManager : MonoBehaviour
 
         currentVague = vagues[currentVagueNumber];
         timerVague = currentVague.duration;
+        timerSpawn = currentVague.spawnRate;
     }
 
 
@@ -56,19 +57,32 @@ public class SpawnManager : MonoBehaviour
         // SPAWN D'UN ENNEMIE
         if (timerSpawn <= 0)
         {
-            timerSpawn = spawnFrequency;
+            timerSpawn = currentVague.spawnRate;
             
-            //SpawnEntity(test1);
+            SpawnEntity(SelectSpawnEntity());
         }
     }
 
 
-    private void SelectSpawnEntity()
+    private GameObject SelectSpawnEntity()
     {
-        /*foreach (GameObject ennemy in currentVague.spawnRate.)
+        int tirageRandom = Random.Range(0, 99);
+        int compteur = 0;
+
+        foreach (var k in currentVague.spawnFrequency)
         {
-            
-        }*/
+            for (int i = k.val; i > 0; i++)
+            {
+                if (compteur == tirageRandom)
+                {
+                    return k.key;
+                }
+
+                compteur += 1;
+            }
+        }
+
+        return null;
     }
     
     private void SpawnEntity(GameObject entity)
@@ -116,7 +130,7 @@ public class SpawnManager : MonoBehaviour
             }
         }
             
-        GameObject newEnnemy =  Instantiate(entity, CharacterControler.Instance.transform.position + new Vector3(spawnX, spawnY, 0), Quaternion.identity);
+        GameObject newEnnemy =  Instantiate(entity, RefCharacter.Instance.transform.position + new Vector3(spawnX, spawnY, 0), Quaternion.identity);
         
         ennemies.Add(newEnnemy);
     }
