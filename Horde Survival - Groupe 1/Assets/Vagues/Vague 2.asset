@@ -15,5 +15,5 @@ MonoBehaviour:
   duration: 30
   spawnRate: 0.5
   spawnFrequency:
-  - key: {fileID: 1665647368470869403, guid: 8f0f6bdcdf110104b9b3acc3014e0083, type: 3}
+  - key: {fileID: 1665647368470869403, guid: 1478afab2a68a9a4394ebf82f7999c06, type: 3}
     val: 100

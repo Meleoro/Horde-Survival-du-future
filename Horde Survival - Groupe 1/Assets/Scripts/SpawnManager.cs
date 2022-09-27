@@ -7,20 +7,14 @@ using Random = UnityEngine.Random;
 public class SpawnManager : MonoBehaviour
 {
     public static SpawnManager Instance;
-
-    [Header("GestionVagues")]
+    
     public List<Vague> vagues;
     private int currentVagueNumber;
     private Vague currentVague;
     private float vagueDuration;
     private float timerVague;
-
-
-    [HideInInspector] public List<GameObject> ennemies;
-    public GameObject test1;
     
-    [Header("Paramètres")] 
-    public float spawnFrequency;
+    [HideInInspector] public List<GameObject> ennemies;
 
     [Header("Autres")]
     private float timerSpawn;
