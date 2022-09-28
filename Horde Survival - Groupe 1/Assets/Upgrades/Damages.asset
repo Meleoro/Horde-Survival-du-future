@@ -17,62 +17,138 @@ MonoBehaviour:
   currentLevel: 0
   isWeapon: 0
   weapon: {fileID: 0}
+  bullet: {fileID: 0}
   levelList:
   - desciption: Tu es puissant
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  description: "+5 d\xE9g\xE2ts pour chaque attaque"
   damages: 1
+  damagesGain: 5
   health: 0
+  healthGain: 0
+  speed: 0
+  speedGain: 0
+  droneSpd: 0
+  droneSpdGain: 0
+  XPMagnet: 0
+  XPMagnetGain: 0
+  XPBoost: 0
+  XPBoostGain: 0

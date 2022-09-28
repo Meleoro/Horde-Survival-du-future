@@ -45,6 +45,36 @@ public class ButtonChoice : MonoBehaviour
             {
                 
             }
+            
+            // SI LE JOUEUR AMELIORE SES HP
+            else if (Upgrade.health)
+            {
+                
+            }
+            
+            // SI LE JOUEUR AMELIORE SA VITESSe
+            else if (Upgrade.speed)
+            {
+                
+            }
+
+            // SI LE JOUEUR AMELIORE LA VITESSE DE SES DRONES
+            else if (Upgrade.droneSpd)
+            {
+                
+            }
+            
+            // SI LE JOUEUR AMELIORE SON AIMANT A XP
+            else if (Upgrade.XPMagnet)
+            {
+                
+            }
+            
+            // SI LE JOUEUR AMELIORE LE TAUX D'XP RECU
+            else if (Upgrade.XPBoost)
+            {
+                
+            }
         }
         
         ChoiceManager.Instance.transform.localPosition = new Vector3(0, 1000, 0);

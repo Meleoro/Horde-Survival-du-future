@@ -48,10 +48,24 @@ public class Upgrade : ScriptableObject
 
     [Header("If is Stats")] 
     public string description;
+    
     public bool damages;
     public float damagesGain;
+    
     public bool health;
     public float healthGain;
+    
+    public bool speed;
+    public float speedGain;
+    
+    public bool droneSpd;
+    public float droneSpdGain;
+
+    public bool XPMagnet;
+    public float XPMagnetGain;
+
+    public bool XPBoost;
+    public float XPBoostGain;
 }
 
 [Serializable]
