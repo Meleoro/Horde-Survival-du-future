@@ -20,7 +20,7 @@ public class ExpManager : MonoBehaviour
 
     void Update()
     {
-        if(pointCount == 3 && levelCount == 0)
+        if(pointCount == 10 && levelCount == 0)
         { 
             levelCount += 1;
             Debug.Log("Level up !");
@@ -29,7 +29,6 @@ public class ExpManager : MonoBehaviour
         if (levelCount == 1 && ExpBar.currentXp == 10)
         {
             ExpBar.currentXp = 0;
-            levelCount += 1;
         }
         
         other.UpdateExp();

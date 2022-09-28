@@ -46,9 +46,12 @@ public class Upgrade : ScriptableObject
     public GameObject bullet;
     public List<Levels> levelList = new List<Levels>();
 
-    [Header("Else")] 
+    [Header("If is Stats")] 
+    public string description;
     public bool damages;
+    public float damagesGain;
     public bool health;
+    public float healthGain;
 }
 
 [Serializable]
