@@ -28,88 +28,49 @@ namespace Character.Projectiles
 
             InitialInstantiation();
         }
-        
+
         void InitialInstantiation()
         {
-            
-            _poolDictionary.Add(poolData[0].Prefab.name, new List<GameObject>());
-            _poolDictionary.Add(poolData[1].Prefab.name, new List<GameObject>());
-            _poolDictionary.Add(poolData[2].Prefab.name, new List<GameObject>());
-            _poolDictionary.Add(poolData[3].Prefab.name, new List<GameObject>());
-            // //UZI AMMO INSTANTIATION
-            // for (int i = 0; i < poolData[0].NumberOfProjectiles; i++)
-            // {
-            //     GameObject obj = Instantiate(poolData[0].Prefab);
-            //     obj.SetActive(false);
-            //     _poolDictionary[poolData[0].Prefab.name].Add(obj);
-            // }
-
-            foreach (var entry in poolData)
+            for (int j = 0; j < poolData.Count; j++)
             {
-                for (int i = 0; i < poolData[i].NumberOfProjectiles; i++)
+                _poolDictionary.Add(poolData[j].Prefab.name, new List<GameObject>());
+                
+                for (int i = 0; i < poolData[j].NumberOfProjectiles; i++)
                 {
-                    GameObject obj = Instantiate(poolData[i].Prefab);
+                    GameObject obj = Instantiate(poolData[j].Prefab);
                     obj.SetActive(false);
-                    _poolDictionary[poolData[i].Prefab.name].Add(obj);
-                    Debug.Log(3);
+                    _poolDictionary[poolData[j].Prefab.name].Add(obj);
+                    GetObject(obj.name);
                 }
             }
-            
-            foreach (KeyValuePair<string, List<GameObject>> entry in _poolDictionary)
-            {
-                
-            }
-            
-            // int i;
-            // for (i = 0; i < _poolDictionary; i++)
-            //     {
-            //         for (i = 0; i < poolData[i].NumberOfProjectiles; i++)
-            //         {
-            //             GameObject obj = Instantiate(poolData[i].Prefab);
-            //             obj.SetActive(false);
-            //             _poolDictionary[poolData[i].Prefab.name].Add(obj);
-            //             Debug.Log(3);
-            //         }
-            //     }
-                
-                
-
-            // //CCCANON AMMO INSTANTIATION
-            // for (int i = 0; i < poolData[1].NumberOfProjectiles; i++)
-            // {
-            //     GameObject obj = Instantiate(poolData[1].Prefab);
-            //     obj.SetActive(false);
-            //     ccCanonAmmo.Add(obj);
-            // } 
-            //
-            // //MINIGUN AMMO INSTANTIATION
-            // for (int i = 0; i < poolData[2].NumberOfProjectiles; i++)
-            // {
-            //     GameObject obj = Instantiate(poolData[2].Prefab);
-            //     obj.SetActive(false);
-            //     miniGunAmmo.Add(obj);
-            // }
-            //
-            // //GRENADE LAUNCHER AMMO INSTANTIATION
-            // for (int i = 0; i < poolData[3].NumberOfProjectiles; i++)
-            // {
-            //     GameObject obj = Instantiate(poolData[3].Prefab);
-            //     obj.SetActive(false);
-            //     grenadeLauncherAmmo.Add(obj);
-            // }
         }
-        
-        public GameObject ShootWithUzi()
+
+        public GameObject GetObject(string objectName)
         {
-            for (int i = 0; i < uziAmmo.Count; i++)
+            if (_poolDictionary.ContainsKey(objectName))
             {
-                if (!uziAmmo[i].activeInHierarchy)
+                for (int i = 0; i < _poolDictionary[objectName].Count; i++)
                 {
-                    return uziAmmo[i];
+                    if (!_poolDictionary[objectName][i].activeInHierarchy)
+                    {
+                        return _poolDictionary[objectName][i];
+                    }
                 }
             }
             return null;
         }
+
+        // public GameObject ShootWithUzi()
+        // {
+        //     for (int i = 0; i < _poolDictionary[objectna]; i++)
+        //     {
+        //         if (!uziAmmo[i].activeInHierarchy)
+        //         {
+        //             return uziAmmo[i];
+        //         }
+        //     }
+        //     return null;
+        // }
         
         public GameObject ShootWithCcCanon()
         {
