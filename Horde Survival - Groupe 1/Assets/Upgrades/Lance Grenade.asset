@@ -17,7 +17,7 @@ MonoBehaviour:
   currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
-  bullet: {fileID: 0}
+  bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
   levelList:
   - desciption: Lance une grenade qui rebondie 2 fois
     degats: 10
