@@ -202,6 +202,7 @@ GameObject:
   - component: {fileID: 510727653}
   - component: {fileID: 510727655}
   - component: {fileID: 510727654}
+  - component: {fileID: 510727656}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -268,6 +269,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510727652}
   m_CullTransparentMesh: 1
+--- !u!114 &510727656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510727652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8b946508c0c3184aa852151122ed4df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &680317970
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,7 +377,6 @@ GameObject:
   - component: {fileID: 1224547894}
   - component: {fileID: 1224547893}
   - component: {fileID: 1224547892}
-  - component: {fileID: 1224547891}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -372,18 +384,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1224547891
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1224547890}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8b946508c0c3184aa852151122ed4df, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1224547892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,7 +550,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1224547891}
+      - m_Target: {fileID: 510727656}
         m_TargetAssemblyTypeName: SceneChanger, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 1
