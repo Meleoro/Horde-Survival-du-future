@@ -40,7 +40,7 @@ namespace Character.Projectiles
                     GameObject obj = Instantiate(poolData[j].Prefab);
                     obj.SetActive(false);
                     _poolDictionary[poolData[j].Prefab.name].Add(obj);
-                    GetObject(obj.name);
+                    
                 }
             }
         }
