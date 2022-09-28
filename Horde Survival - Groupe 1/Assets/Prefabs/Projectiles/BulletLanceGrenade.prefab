@@ -100,12 +100,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 79638967910091859}
-  bulletSpeed: 2
+  bulletSpeed: 10
   direction: {x: 0, y: 0}
+  damages: 0
   grenade: {fileID: 614827286038339249}
   nbrRebond: 0
-  limiteRebonds: 2
-  isTheOriginal: 0
+  limiteRebonds: 4
+  isTheOriginal: 1
+  canBounce: 1
+  ennemyLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &79638967910091859
 Rigidbody2D:
   serializedVersion: 4

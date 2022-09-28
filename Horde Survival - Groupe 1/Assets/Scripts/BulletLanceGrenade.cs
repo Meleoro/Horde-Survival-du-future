@@ -11,23 +11,28 @@ public class BulletLanceGrenade : MonoBehaviour
     [Header("General")]
     public float bulletSpeed;
     public Vector2 direction;
+    public float damages;
 
     [Header("Grenade")] 
     public GameObject grenade;
     public int nbrRebond;
     public int limiteRebonds;
     public bool isTheOriginal;
+    public bool canBounce;
+    public LayerMask ennemyLayer;
 
     [Header("Autres")] 
     private GameObject nearestEnnemy;
     private GameObject nearestEnnemy2;
     private Vector2 direction2;
+    private float radius;
+    private bool detectEnnemy;
     
 
     private void Start()
     {
-        if(isTheOriginal)
-            ChangeDirection();
+        if(canBounce)
+            ChangeDirectionOpti();
     }
 
     private void Update()
@@ -59,6 +64,63 @@ public class BulletLanceGrenade : MonoBehaviour
         direction = nearestEnnemy.transform.position - transform.position;
         direction2 = nearestEnnemy2.transform.position - transform.position;
     }
+    
+    
+    // SELECTIONNE UNE NOUVELLE DIRECTION POUR LE PROJECTILE
+    public void ChangeDirectionOpti()
+    {
+        radius = 2;
+        detectEnnemy = false;
+        
+        Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
+
+        // ON CREE UN RAYCAST DE PLSU EN PLSU GRAND JUSQU'A AVOIR AU MOINS 3 ENNEMIES DEDANS
+        while (!detectEnnemy)
+        {
+            if (colliderArray.Length < 3)
+            {
+                radius += 2;
+
+                colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
+            }
+
+            else
+            {
+                detectEnnemy = true;
+            }
+        }
+
+
+        // ET DANS ON TRI DANS LES ENNEMIS TROUVES DANS CE RAYCAST
+        Vector2 currentPos = transform.position;
+        
+        float minDist = Mathf.Infinity;
+        float minDist2 = Mathf.Infinity;
+
+        foreach(Collider2D k in colliderArray)
+        {
+            Debug.Log(k.gameObject);
+            
+            float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
+
+            if (dist < minDist && dist > 1f)
+            {
+                nearestEnnemy2 = nearestEnnemy;
+                
+                minDist = dist;
+                nearestEnnemy = k.gameObject;
+            }
+            
+            else if (dist < minDist2 && dist > 1f)
+            {
+                minDist2 = dist;
+                nearestEnnemy2 = k.gameObject;
+            }
+        }
+        
+        direction = nearestEnnemy.transform.position - transform.position;
+        direction2 = nearestEnnemy2.transform.position - transform.position;
+    }
 
 
     // CREE UNE NOUVELLE GRENADE
@@ -66,28 +128,44 @@ public class BulletLanceGrenade : MonoBehaviour
     {
         GameObject grenade2 = Instantiate(grenade, transform.position, Quaternion.identity);
 
-        grenade2.GetComponent<BulletLanceGrenade>().isTheOriginal = false;
-        grenade2.GetComponent<BulletLanceGrenade>().nbrRebond = nbrRebond;
-        grenade2.GetComponent<BulletLanceGrenade>().direction = direction2;
+        BulletLanceGrenade script = grenade2.GetComponent<BulletLanceGrenade>();
+        
+        script.isTheOriginal = false;
+        script.canBounce = false;
+        script.nbrRebond = nbrRebond;
+        script.direction = direction2;
     }
     
 
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Ennemy") && isTheOriginal)
+        if (col.gameObject.CompareTag("Ennemy") && canBounce)
         {
             nbrRebond += 1;
             
-            ChangeDirection();
+            ChangeDirectionOpti();
             
             if(nbrRebond == 1)
                 Split();
+
+            if (nbrRebond >= limiteRebonds)
+            {
+                if (isTheOriginal)
+                {
+                    gameObject.SetActive(false);
+                }
+
+                else
+                {
+                    Destroy(gameObject);
+                }
+            }
         }
 
         else if (col.gameObject.CompareTag("Ennemy"))
         {
-            isTheOriginal = true;
+            canBounce = true;
         }
     }
 }
