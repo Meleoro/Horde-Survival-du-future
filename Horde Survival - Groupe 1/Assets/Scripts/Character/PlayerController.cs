@@ -1,4 +1,5 @@
 using Character.Projectiles;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -15,6 +16,11 @@ namespace Character
         private float _nextFireTime;
 
         #endregion
+
+        public LayerMask ennemyLayer;
+        private float radius;
+        private bool detectEnnemy;
+        private GameObject nearestEnnemy;
         
         #region Declaration
         
@@ -89,6 +95,50 @@ namespace Character
             return false;
         }
         
+        
+        public GameObject EnnemyNear()
+        {
+            radius = 2;
+            detectEnnemy = false;
+        
+            Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
+
+            // ON CREE UN RAYCAST DE PLSU EN PLSU GRAND JUSQU'A AVOIR AU MOINS 3 ENNEMIES DEDANS
+            while (!detectEnnemy)
+            {
+                if (colliderArray.Length < 3)
+                {
+                    radius += 2;
+
+                    colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
+                }
+
+                else
+                {
+                    detectEnnemy = true;
+                }
+            }
+
+
+            // ET DANS ON TRI DANS LES ENNEMIS TROUVES DANS CE RAYCAST
+            Vector2 currentPos = transform.position;
+        
+            float minDist = Mathf.Infinity;
+            float minDist2 = Mathf.Infinity;
+
+            foreach(Collider2D k in colliderArray)
+            {
+                float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
+
+                if (dist < minDist && dist > 1f)
+                {
+                    minDist = dist;
+                    nearestEnnemy = k.gameObject;
+                }
+            }
+
+            return nearestEnnemy;
+        }
     }
 }
 
