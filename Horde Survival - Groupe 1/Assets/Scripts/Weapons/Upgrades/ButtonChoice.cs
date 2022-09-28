@@ -4,10 +4,11 @@ using UnityEngine;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
+using Upgrades;
 
 public class ButtonChoice : MonoBehaviour
 {
-    public Upgrade Upgrade;
+    public Weapon Upgrade;
     public int currentIndex;
 
     public TextMeshProUGUI buttonName;

@@ -22,7 +22,7 @@ MonoBehaviour:
   - desciption: 
     degats: 0
     portee: 0
-    fireRate: 30
+    fireRate: 5
     bulletsPerShot: 0
     ammoMax: 0
     currentAmmo: 0
@@ -139,5 +139,16 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
+  description: 
   damages: 0
+  damagesGain: 0
   health: 0
+  healthGain: 0
+  speed: 0
+  speedGain: 0
+  droneSpd: 0
+  droneSpdGain: 0
+  XPMagnet: 0
+  XPMagnetGain: 0
+  XPBoost: 0
+  XPBoostGain: 0

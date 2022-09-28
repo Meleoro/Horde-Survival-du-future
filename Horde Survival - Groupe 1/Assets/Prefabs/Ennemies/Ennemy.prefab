@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1665647368470869400}
   - component: {fileID: -8618623778109623760}
   - component: {fileID: 4806127789896020566}
-  - component: {fileID: 982410903}
   m_Layer: 6
   m_Name: Ennemy
   m_TagString: Ennemy
@@ -104,7 +103,7 @@ MonoBehaviour:
   health: 10
   dies: 0
   explosionForce: 10
-  explosion: {fileID: 982410903}
+  explosion: {fileID: 0}
 --- !u!61 &-8618623778109623760
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -115,7 +114,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -152,19 +151,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &982410903
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665647368470869403}
-  m_Enabled: 0
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.008246422, y: 0}
-  serializedVersion: 2
-  m_Radius: 2.2730007

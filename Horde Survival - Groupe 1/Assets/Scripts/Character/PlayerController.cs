@@ -2,6 +2,7 @@ using Character.Projectiles;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Upgrades;
 
 namespace Character
 {
@@ -15,14 +16,14 @@ namespace Character
         private Vector2 _aim;
         [HideInInspector]
         public Vector3 nearestEnemyPos;
-        public float nextFireTime = 0f;
-        public int level = 0;
-
+        public float nextFireTime;      
+        private float radius;
+        private bool detectEnnemy;
+        
         #endregion
 
         public LayerMask ennemyLayer;
-        private float radius;
-        private bool detectEnnemy;
+
         private GameObject nearestEnnemy;
         
         #region Declaration
@@ -30,7 +31,7 @@ namespace Character
         [SerializeField] private Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
         
-        [SerializeField] private Upgrade weaponUsed;
+        [SerializeField] private Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
 
@@ -56,7 +57,7 @@ namespace Character
         private void Update()
         {
             nearestEnemyPos = EnemyNear().transform.position;
-            weaponUsed.Shoot(initialBulletPos.position,level,Cooldown(),this);
+            weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
         }
         private void FixedUpdate()
         {

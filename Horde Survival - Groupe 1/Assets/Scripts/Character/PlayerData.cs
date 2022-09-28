@@ -6,7 +6,5 @@ namespace Character
     public class PlayerData : ScriptableObject
     {
         public float characterSpeed = 20f;
-        public float basicAttackSpeed = 20f;
-        public float basicAttackCooldown = 0.5f;
     }
 }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using Upgrades;
 using random = UnityEngine.Random;
 using Random = System.Random;
 
@@ -11,8 +12,8 @@ public class ChoiceManager : MonoBehaviour
     public static ChoiceManager Instance;
     
     [Header("Lists")]
-    public List<Upgrade> weapons = new List<Upgrade>();
-    public List<Upgrade> availableUpgrades = new List<Upgrade>();
+    public List<Weapon> weapons = new List<Weapon>();
+    public List<Weapon> availableUpgrades = new List<Weapon>();
     public List<ButtonChoice> listButtons;
     public List<int> selectedOptions;
 
@@ -39,12 +40,12 @@ public class ChoiceManager : MonoBehaviour
         transform.localPosition = new Vector3(0, 1000, 0);
         currentLevel = 0;
 
-        foreach (Upgrade k in weapons)
+        foreach (Weapon k in weapons)
         {
             k.currentLevel = 0;
         }
         
-        foreach (Upgrade k in availableUpgrades)
+        foreach (Weapon k in availableUpgrades)
         {
             k.currentLevel = 0;
         }
@@ -202,7 +203,7 @@ public class ChoiceManager : MonoBehaviour
     {
         nbrWeapons = 0;
         
-        foreach (Upgrade k in availableUpgrades)
+        foreach (Weapon k in availableUpgrades)
         {
             if (k.isWeapon)
                 nbrWeapons += 1;

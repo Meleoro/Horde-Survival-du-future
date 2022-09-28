@@ -7,11 +7,8 @@ namespace Character.Projectiles
     public class ObjectPooling : MonoBehaviour
     {
         public static ObjectPooling Instance;
-
         private Dictionary<string, List<GameObject>> _poolDictionary = new Dictionary<string, List<GameObject>>();
-
         [SerializeField] private List<PoolData> poolData;
-
         private float _nextFireTime;
 
         private void Awake()
@@ -33,7 +30,6 @@ namespace Character.Projectiles
                     GameObject obj = Instantiate(poolData[j].Prefab);
                     obj.SetActive(false);
                     _poolDictionary[poolData[j].Prefab.name].Add(obj);
-                    
                 }
             }
         }
