@@ -96,7 +96,7 @@ namespace Character
         }
         
         
-        public GameObject EnnemyNear()
+        public GameObject EnnemyNear() 
         {
             radius = 2;
             detectEnnemy = false;

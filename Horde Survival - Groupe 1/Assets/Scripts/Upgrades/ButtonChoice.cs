@@ -34,8 +34,16 @@ public class ButtonChoice : MonoBehaviour
         {
             if (Upgrade.currentLevel >= Upgrade.levelList.Count - 1)
             {
-                Debug.Log(12);
                 ChoiceManager.Instance.availableUpgrades.RemoveAt(currentIndex);
+            }
+        }
+
+        if (!Upgrade.isWeapon)
+        {
+            // SI LE JOUEUR AMELIORE SES DEGATS
+            if (Upgrade.damages)
+            {
+                
             }
         }
         
@@ -45,6 +53,11 @@ public class ButtonChoice : MonoBehaviour
     public void UpdateButton()
     {
         buttonName.text = Upgrade.name;
-        description.text = Upgrade.levelList[Upgrade.currentLevel].desciption;
+
+        if (Upgrade.isWeapon)
+            description.text = Upgrade.levelList[Upgrade.currentLevel].desciption;
+
+        else
+            description.text = Upgrade.description;
     }
 }

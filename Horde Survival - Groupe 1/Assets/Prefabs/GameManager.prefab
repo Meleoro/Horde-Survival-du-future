@@ -47,4 +47,8 @@ MonoBehaviour:
   vagues:
   - {fileID: 11400000, guid: badea38491c075547a92a8aa704dc0b0, type: 2}
   - {fileID: 11400000, guid: f752accfa4a7b3e408c7681d5d5529aa, type: 2}
-  ennemies: []
+  ennemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  heightCamera: 15
+  widthCamera: 22
