@@ -5,8 +5,21 @@ using UnityEngine;
 
 public class ExpManager : MonoBehaviour
 {
-    public int pointCount;
-    
+    public static int pointCount;
+    public int levelCount = 0;
+
     //collision entre le joueur et le point d'exp
     //compteur +1
+
+    void Update()
+    { 
+        if(pointCount == 3 && levelCount == 0)
+        { 
+            levelCount += 1;
+        }
+  
+    }
+    
 }
+
+

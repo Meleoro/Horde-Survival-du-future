@@ -10,7 +10,7 @@ public class EXP : Collectible, ICollectible
 
     bool hasTarget;
     Vector3 targetPosition;
-    private float moveSpeed = 5;
+    private float moveSpeed = 5f;
 
     private void Awake()
     {
@@ -22,28 +22,28 @@ public class EXP : Collectible, ICollectible
         Destroy(gameObject);
         OnExCollected?.Invoke();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public interface ICollectible
+    
+    /*public interface ICollectible
     {
         public void Collect()
         {
             Debug.Log("it works now");
         }
         
-    }
+    }*/
 
     private void FixedUpdate()
     {
         if (hasTarget)
         {
             Vector2 targetDirection = targetPosition - transform.position.normalized;
-            rb.velocity = new Vector2(targetDirection.x, targetDirection.y) * 5f;
+            rb.velocity = new Vector2(targetDirection.x, targetDirection.y) * moveSpeed;
         }
+    }
+
+    public void SetTarget(Vector3 position)
+    {
+        targetPosition = position;
+        hasTarget = true;
     }
 }
