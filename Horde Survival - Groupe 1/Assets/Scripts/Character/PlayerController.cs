@@ -13,8 +13,8 @@ namespace Character
         [HideInInspector]
         public Vector2 movement;
         private Vector2 _aim;
-        private float _nextFireTime;
-        private int _level = 0;
+        public float nextFireTime = 0f;
+        public int level = 0;
 
         #endregion
 
@@ -28,7 +28,6 @@ namespace Character
         [SerializeField] private Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
         
-        [SerializeField] private Levels _weaponStats;
         [SerializeField] private Upgrade weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
@@ -39,6 +38,7 @@ namespace Character
         {
             _playerControls = new PlayerInputActions();
             _rb = GetComponent<Rigidbody2D>();
+            nextFireTime = 0f;
         }
         private void OnEnable()
         {
@@ -53,7 +53,8 @@ namespace Character
         }
         private void Update()
         {
-            weaponUsed.Shoot(initialBulletPos.position,_weaponStats,weaponUsed,_level);
+            weaponUsed.Shoot(initialBulletPos.position,level,Cooldown(),this);
+            Debug.Log(Cooldown());
         }
         private void FixedUpdate()
         {
@@ -76,6 +77,12 @@ namespace Character
         {
             float a = Mathf.Atan2(_aim.x, _aim.y) * Mathf.Rad2Deg;
             _rb.rotation = -a;
+        }
+        
+        private bool Cooldown()
+        {
+            if(Time.time > nextFireTime) return true;
+            return false;
         }
         
         public GameObject EnemyNear()
