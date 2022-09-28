@@ -9,32 +9,26 @@ using UnityEngine.UI;
 public class Upgrade : ScriptableObject
 {
     private float _nextFireTime;
-    private PlayerController _pC;
     
-    public void Shoot(Vector2 initialPos, Levels weaponStats, Upgrade weaponData)
+    public void Shoot(Vector2 initialPos, int currentLevel, bool cooldown, PlayerController pc)
     {
-        GameObject ammoUsed = ObjectPooling.Instance.GetObject(weaponData.bullet.name);
-        if (ammoUsed != null && Cooldown())
+        GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
+        
+        if (ammoUsed != null && cooldown)
         {
             //Placement & activation
             ammoUsed.transform.position = initialPos;
             ammoUsed.SetActive(true);
-            
+    
             //Physic
-            ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.levelList[0].fireRate;
-            //_pC.EnemyNear().transform.position
-
+            ammoUsed.GetComponent<Rigidbody2D>().velocity = pc.EnemyNear().transform.position * levelList[currentLevel].fireRate;
+            
             //Cooldown
-            _nextFireTime = Time.time + weaponStats.reload;
+            pc.nextFireTime = Time.time + levelList[currentLevel].reload;
         }
     }
-    
-    bool Cooldown()
-    {
-        if(Time.time > _nextFireTime) return true;
-        return false;
-    }
-    
+     
+
     [Header("Upgrade / Weapon")]
     public string name;
     public Image image;

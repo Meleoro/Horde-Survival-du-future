@@ -17,35 +17,35 @@ MonoBehaviour:
   currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
-  bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
+  bullet: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   levelList:
-  - desciption: Lance une grenade qui rebondie 2 fois
-    degats: 10
-    portee: 10
-    fireRate: 1
-    bulletsPerShot: 1
-    ammoMax: 1
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 30
+    bulletsPerShot: 0
+    ammoMax: 0
     currentAmmo: 0
-    reload: 2
+    reload: 0.5
     doubleUZI: 0
     doubleTir: 0
-    nbrRebonds: 2
+    nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: "La grenade se d\xE9double au premier rebond"
-    degats: 10
-    portee: 10
-    fireRate: 1
-    bulletsPerShot: 1
-    ammoMax: 1
+  - desciption: 
+    degats: 0
+    portee: 0
+    fireRate: 0
+    bulletsPerShot: 0
+    ammoMax: 0
     currentAmmo: 0
-    reload: 2
+    reload: 0
     doubleUZI: 0
     doubleTir: 0
-    nbrRebonds: 2
-    firstSplit: 1
+    nbrRebonds: 0
+    firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
