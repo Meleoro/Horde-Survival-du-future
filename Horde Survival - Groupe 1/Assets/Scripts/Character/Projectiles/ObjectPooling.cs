@@ -1,14 +1,19 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor.Rendering;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace Character.Projectiles
 {
     public class ObjectPooling : MonoBehaviour
     {
         public static ObjectPooling Instance;
-   
+
+        private Dictionary<string, List<GameObject>> _poolDictionary = new Dictionary<string, List<GameObject>>();
+
         [SerializeField] private List<PoolData> poolData;
+        
         [SerializeField] private List<GameObject> uziAmmo;
         [SerializeField] private List<GameObject> miniGunAmmo;
         [SerializeField] private List<GameObject> ccCanonAmmo;
@@ -23,54 +28,49 @@ namespace Character.Projectiles
 
             InitialInstantiation();
         }
-        
+
         void InitialInstantiation()
         {
-            
-            //UZI AMMO INSTANTIATION
-            for (int i = 0; i < poolData[0].NumberOfProjectiles; i++)
+            for (int j = 0; j < poolData.Count; j++)
             {
-                GameObject obj = Instantiate(poolData[0].Prefab);
-                obj.SetActive(false);
-                uziAmmo.Add(obj);
-            } 
-            
-            //CCCANON AMMO INSTANTIATION
-            for (int i = 0; i < poolData[1].NumberOfProjectiles; i++)
-            {
-                GameObject obj = Instantiate(poolData[1].Prefab);
-                obj.SetActive(false);
-                ccCanonAmmo.Add(obj);
-            } 
-            
-            //MINIGUN AMMO INSTANTIATION
-            for (int i = 0; i < poolData[2].NumberOfProjectiles; i++)
-            {
-                GameObject obj = Instantiate(poolData[2].Prefab);
-                obj.SetActive(false);
-                miniGunAmmo.Add(obj);
-            }
-            
-            //GRENADE LAUNCHER AMMO INSTANTIATION
-            for (int i = 0; i < poolData[3].NumberOfProjectiles; i++)
-            {
-                GameObject obj = Instantiate(poolData[3].Prefab);
-                obj.SetActive(false);
-                grenadeLauncherAmmo.Add(obj);
+                _poolDictionary.Add(poolData[j].Prefab.name, new List<GameObject>());
+                
+                for (int i = 0; i < poolData[j].NumberOfProjectiles; i++)
+                {
+                    GameObject obj = Instantiate(poolData[j].Prefab);
+                    obj.SetActive(false);
+                    _poolDictionary[poolData[j].Prefab.name].Add(obj);
+                    GetObject(obj.name);
+                }
             }
         }
-        
-        public GameObject ShootWithUzi()
+
+        public GameObject GetObject(string objectName)
         {
-            for (int i = 0; i < uziAmmo.Count; i++)
+            if (_poolDictionary.ContainsKey(objectName))
             {
-                if (!uziAmmo[i].activeInHierarchy)
+                for (int i = 0; i < _poolDictionary[objectName].Count; i++)
                 {
-                    return uziAmmo[i];
+                    if (!_poolDictionary[objectName][i].activeInHierarchy)
+                    {
+                        return _poolDictionary[objectName][i];
+                    }
                 }
             }
             return null;
         }
+
+        // public GameObject ShootWithUzi()
+        // {
+        //     for (int i = 0; i < _poolDictionary[objectna]; i++)
+        //     {
+        //         if (!uziAmmo[i].activeInHierarchy)
+        //         {
+        //             return uziAmmo[i];
+        //         }
+        //     }
+        //     return null;
+        // }
         
         public GameObject ShootWithCcCanon()
         {
