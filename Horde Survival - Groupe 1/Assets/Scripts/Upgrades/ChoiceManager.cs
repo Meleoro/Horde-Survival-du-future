@@ -54,7 +54,7 @@ public class ChoiceManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        if(Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.P))
             LevelUp();
     }
 
@@ -77,6 +77,7 @@ public class ChoiceManager : MonoBehaviour
         }
     }
 
+    
     // PROPOSE UNE NOUVELLE ARME AU JOUEUR
     public void SelectNewWeapon()
     {
@@ -120,6 +121,7 @@ public class ChoiceManager : MonoBehaviour
             i.UpdateButton();
         }
     }
+    
     
     // PROPOSE UNE AMELIORATION AU JOUEUR (ARMES + STATS)
     public void SelectChoices()
