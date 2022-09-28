@@ -16,6 +16,11 @@ public class SpawnManager : MonoBehaviour
     
     public List<GameObject> ennemies;
 
+    [Header("SpawnLimites")] 
+    public float heightCamera;
+    public float widthCamera;
+
+
     [Header("Autres")]
     private float timerSpawn;
     private bool spawnOnX;
@@ -92,15 +97,15 @@ public class SpawnManager : MonoBehaviour
             // EN HAUT
             if (up == 0)
             {
-                spawnX = Random.Range(-17, 17);
-                spawnY = Random.Range(10, 12);
+                spawnX = Random.Range(-widthCamera, widthCamera);
+                spawnY = Random.Range(heightCamera, heightCamera + 2);
             }
 
             // EN BAS
             else
             {
-                spawnX = Random.Range(-17, 17);
-                spawnY = Random.Range(-12, -10);
+                spawnX = Random.Range(-widthCamera, widthCamera);
+                spawnY = Random.Range(-heightCamera - 2, -heightCamera);
             }
         }
             
@@ -112,19 +117,19 @@ public class SpawnManager : MonoBehaviour
             // A GAUCHE
             if (left == 0)
             {
-                spawnX = Random.Range(-19, -17);
-                spawnY = Random.Range(-10, 10);
+                spawnX = Random.Range(-widthCamera - 2, -widthCamera);
+                spawnY = Random.Range(-heightCamera, heightCamera);
             }
 
             // A DROITE
             else
             {
-                spawnX = Random.Range(17, 19);
-                spawnY = Random.Range(-10, 10);
+                spawnX = Random.Range(widthCamera, widthCamera + 2);
+                spawnY = Random.Range(-heightCamera, heightCamera);
             }
         }
             
-        GameObject newEnnemy =  Instantiate(entity, RefCharacter.Instance.transform.position + new Vector3(spawnX, spawnY, 0), Quaternion.identity);
+        GameObject newEnnemy = Instantiate(entity, RefCamera.Instance.transform.position + new Vector3(spawnX, spawnY, 0), Quaternion.identity);
         
         ennemies.Add(newEnnemy);
     }
