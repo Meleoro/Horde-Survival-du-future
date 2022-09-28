@@ -14,7 +14,7 @@ public class SpawnManager : MonoBehaviour
     private float vagueDuration;
     private float timerVague;
     
-    [HideInInspector] public List<GameObject> ennemies;
+    public List<GameObject> ennemies;
 
     [Header("Autres")]
     private float timerSpawn;

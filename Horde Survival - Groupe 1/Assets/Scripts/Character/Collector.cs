@@ -6,11 +6,12 @@ public class Collector : MonoBehaviour
 {
    private void OnTriggerEnter2D(Collider2D collision)
    {
-      /*var exp = collision.GetComponent<EXP>();
+      var exp = collision.GetComponent<EXP>();
       if (exp != null)
       {
          exp.Collect();
-      }*/
+         ExpManager.pointCount += 1;
+      }
       
       ICollectible collectible = collision.GetComponent<ICollectible>();
       if (collectible != null)

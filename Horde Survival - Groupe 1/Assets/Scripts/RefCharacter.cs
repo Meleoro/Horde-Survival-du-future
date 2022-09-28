@@ -6,10 +6,10 @@ using UnityEngine;
 public class RefCharacter : MonoBehaviour
 {
     public static RefCharacter Instance;
+    private GameObject nearestEnnemy;
 
     private void Awake()
     {
-
         Instance = this;
     }
 }
