@@ -26,6 +26,9 @@ namespace Character
         
         [SerializeField] private Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
+        
+        [SerializeField] private Levels _weaponStats;
+        [SerializeField] private Upgrade weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
 
@@ -49,29 +52,13 @@ namespace Character
         }
         private void Update()
         {
-            //Shoot(initialBulletPos.position,playerData);
+            weaponUsed.Shoot(initialBulletPos.position,_weaponStats,weaponUsed);
         }
         private void FixedUpdate()
         {
             HandleMovement();
             HandleRotation();
         }
-        // private void Shoot(Vector2 initialPos, PlayerData weaponData)
-        // {
-        //     GameObject ammoUsed = ObjectPooling.Instance.GetObject(_bullet);
-        //     if (ammoUsed != null && Cooldown())
-        //     {
-        //         //Placement & activation
-        //         ammoUsed.transform.position = initialPos;
-        //         ammoUsed.SetActive(true);
-        //         
-        //         //Physic
-        //         ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.basicAttackSpeed;
-        //         
-        //         //Cooldown
-        //         _nextFireTime = Time.time + weaponData.basicAttackCooldown;
-        //     }
-        // }
         void OnMovement(InputAction.CallbackContext context)
         {
             movement = context.ReadValue<Vector2>();
@@ -89,14 +76,8 @@ namespace Character
             float a = Mathf.Atan2(_aim.x, _aim.y) * Mathf.Rad2Deg;
             _rb.rotation = -a;
         }
-        bool Cooldown()
-        {
-            if(Time.time > _nextFireTime) return true;
-            return false;
-        }
         
-        
-        public GameObject EnnemyNear()
+        public GameObject EnemyNear()
         {
             radius = 2;
             detectEnnemy = false;

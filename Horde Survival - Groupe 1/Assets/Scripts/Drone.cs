@@ -10,12 +10,6 @@ public class Drone : MonoBehaviour
     public float rotationSpeed = 30f;
     private float _nextFireTime;
 
-
-    private void Update()
-    {
-        //Shoot(transform.position,ObjectPooling.Instance.ShootWithMinigun(),weaponData);
-    }
-
     void FixedUpdate()
     {
         //transform.RotateAround(playerTr.position, new Vector3(0,0,1),rotationSpeed * Time.deltaTime);
