@@ -12,7 +12,6 @@ public class HurtZone : MonoBehaviour
                  if (col.gameObject.CompareTag("Player"))
                  { 
                      other.TakeDamage(1);
-                     gameObject.SetActive(false);
                  }
              }
 }
