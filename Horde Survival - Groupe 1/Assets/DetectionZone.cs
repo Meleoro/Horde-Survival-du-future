@@ -16,6 +16,6 @@ public class DetectionZone : MonoBehaviour
 
     private void Update()
     {
-        transform.position = transform.position +  _pC.movement;
+        //.position = transform.position +  _pC.movement;
     }
 }

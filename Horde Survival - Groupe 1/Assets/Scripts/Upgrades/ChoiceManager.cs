@@ -18,11 +18,10 @@ public class ChoiceManager : MonoBehaviour
 
     [Header("Others")] 
     public int currentLevel;
-    private bool oneWeapon;
-    private bool twoWeapons;
-    private bool oneUpgrade;
+    private int nbrWeapons;
     private bool endLoop;
     private bool notTheSame;
+    private int compteur;
 
     
     private void Awake()
@@ -38,6 +37,16 @@ public class ChoiceManager : MonoBehaviour
     {
         transform.localPosition = new Vector3(0, 1000, 0);
         currentLevel = 0;
+
+        foreach (Upgrade k in weapons)
+        {
+            k.currentLevel = 0;
+        }
+        
+        foreach (Upgrade k in availableUpgrades)
+        {
+            k.currentLevel = 0;
+        }
         
         LevelUp();
     }
@@ -116,16 +125,26 @@ public class ChoiceManager : MonoBehaviour
     {
         selectedOptions.Clear();
         
+        GetNrbWeapons();
+        
         // SELECTION DES TROIS CHOIX
         for (int i = 0; i < 3; i++)
         {
             endLoop = false;
+            compteur = 0;
 
             // TANT QU'ON A PAS UN NOUVEAU CHOIX VALABLE DE SELECTIONNÉ
             while (!endLoop)
             {
                 int choice = random.Range(0, availableUpgrades.Count);
                 notTheSame = true;
+
+                compteur += 1;
+
+                if (compteur >= 50)
+                {
+                    break;
+                }
 
                 //VERIFICATION QUE LE CHOIX EST PAS DEJA PRESENT
                 foreach (int k in selectedOptions)
@@ -140,12 +159,10 @@ public class ChoiceManager : MonoBehaviour
                 if (notTheSame)
                 {
                     // SI ON PEUT AJOUTER UNE ARME AUX CHOIX
-                    if (availableUpgrades[choice].isWeapon && !twoWeapons)
+                    if (availableUpgrades[choice].isWeapon && nbrWeapons > 0)
                     {
-                        // Pour dire qu'on a une arme dans les options
-                        if (!oneWeapon)
-                            oneWeapon = true;
-                    
+                        nbrWeapons -= 1;
+                        
                         selectedOptions.Add(choice);
                         listButtons[i].Upgrade = availableUpgrades[choice];
 
@@ -153,10 +170,8 @@ public class ChoiceManager : MonoBehaviour
                     }
                 
                     // SI ON PEUT AJOUTER UNE UPGRADE AUX CHOIX
-                    else if (!availableUpgrades[choice].isWeapon && !oneUpgrade)
+                    else if (!availableUpgrades[choice].isWeapon && nbrWeapons == 0)
                     {
-                        oneUpgrade = true;
-                    
                         selectedOptions.Add(choice);
                         listButtons[i].Upgrade = availableUpgrades[choice];
 
@@ -170,6 +185,17 @@ public class ChoiceManager : MonoBehaviour
         foreach (ButtonChoice i in listButtons)
         {
             i.UpdateButton();
+        }
+    }
+
+    void GetNrbWeapons()
+    {
+        nbrWeapons = 0;
+        
+        foreach (Upgrade k in availableUpgrades)
+        {
+            if (k.isWeapon)
+                nbrWeapons += 1;
         }
     }
 }
