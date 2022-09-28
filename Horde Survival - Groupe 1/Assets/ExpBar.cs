@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour
+public class ExpBar : MonoBehaviour
 {
     public Slider slider;
     public Gradient grad;
     public Image fill;
 
-    public void SetMaxHealth(int health)
+    public static int currentXp;
+
+    public void SetStartExp()
     {
-        slider.maxValue = health;
-        slider.value = health;
+        currentXp = 0;
+        slider.maxValue = 10;
+        slider.value = 0;
 
         fill.color = grad.Evaluate(1f);
     }
 
-    public void SetHealth(int Health)
+    public void UpdateExp()
     {
-        slider.value = Health;
-
+        slider.value = currentXp;
         fill.color = grad.Evaluate(slider.normalizedValue);
     }
-    
 }
