@@ -43,7 +43,7 @@ namespace Upgrades
                 ammoUsed.SetActive(true);
     
                 //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = dronePos * levelList[currentLevel].fireRate;
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = dronePos.normalized * levelList[currentLevel].fireRate;
             
                 //Cooldown
                 drone.nextFireTime = Time.time + levelList[currentLevel].reload;
