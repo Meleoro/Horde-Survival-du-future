@@ -5,7 +5,7 @@ using UnityEngine;
 public class HurtZone : MonoBehaviour
 {
     
-    public PlayerHealth other;
+    public PlayerHealthManager other;
     
     void OnCollisionEnter2D(Collision2D col)
              {
