@@ -15,6 +15,7 @@ public class Upgrade : ScriptableObject
 
     [Header("If is Weapon")] 
     public GameObject weapon;
+    public GameObject bullet;
     public List<Levels> levelList = new List<Levels>();
 
     [Header("Else")] 
@@ -31,9 +32,23 @@ public class Levels
     public float degats;
     public float portee;
     public float fireRate;
-    public int munitions;
-    public float rechargement;
+    public float bulletsPerShot;
+    public int ammoMax;
+    public int currentAmmo;
+    public float reload;
 
     [Header("UZI")] 
     public bool doubleUZI;
+
+    [Header("Canon CC")] 
+    public bool doubleTir;
+
+    [Header("LanceGrenade")] 
+    public int nbrRebonds;
+    public bool firstSplit;
+    public bool secondSplit;
+    
+    [Header("Minigun")] 
+    public bool ballesPerçantes;
+    public bool noRecul;
 }
