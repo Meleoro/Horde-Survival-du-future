@@ -27,7 +27,7 @@ namespace Character
         [SerializeField] private Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
         
-        private Levels _weaponStats;
+        [SerializeField] private Levels _weaponStats;
         [SerializeField] private Upgrade weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;

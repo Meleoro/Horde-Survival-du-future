@@ -21,7 +21,8 @@ public class Upgrade : ScriptableObject
             ammoUsed.SetActive(true);
             
             //Physic
-            ammoUsed.GetComponent<Rigidbody2D>().velocity = _pC.EnemyNear().transform.position * weaponStats. fireRate;
+            ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.levelList[0].fireRate;
+            //_pC.EnemyNear().transform.position
 
             //Cooldown
             _nextFireTime = Time.time + weaponStats.reload;

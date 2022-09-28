@@ -86,6 +86,10 @@ public class SpawnManager : MonoBehaviour
     
     private void SpawnEntity(GameObject entity)
     {
+        if (entity == null)
+        {
+            return;
+        }
         // Pour eviter que le spawn se fasse toujours en haut, a gauche, ect.
         spawnOnX = !spawnOnX;
             
