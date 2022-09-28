@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using random = UnityEngine.Random;
+using Random = System.Random;
 
 public class ChoiceManager : MonoBehaviour
 {
@@ -125,8 +126,15 @@ public class ChoiceManager : MonoBehaviour
     {
         selectedOptions.Clear();
         
+        // ON CHOISIT LE NOMBRE D'ARME PRESENT DANS LES UPGRADES
         GetNrbWeapons();
         
+        if (nbrWeapons > 0)
+        {
+            nbrWeapons = random.Range(1, nbrWeapons + 1);
+        }
+        
+
         // SELECTION DES TROIS CHOIX
         for (int i = 0; i < 3; i++)
         {
