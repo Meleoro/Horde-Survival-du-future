@@ -8,8 +8,15 @@ public class ExpManager : MonoBehaviour
     public static int pointCount;
     public int levelCount = 0;
 
+    public ExpBar other;
+
     //collision entre le joueur et le point d'exp
     //compteur +1
+
+    void Start()
+    {
+        other.SetStartExp();
+    }
 
     void Update()
     { 
@@ -18,6 +25,8 @@ public class ExpManager : MonoBehaviour
             levelCount += 1;
             Debug.Log("Level up !");
         }
+        
+        other.UpdateExp();
   
     }
     

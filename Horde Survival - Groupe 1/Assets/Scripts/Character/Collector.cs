@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Collector : MonoBehaviour
 {
+
    private void OnTriggerEnter2D(Collider2D collision)
    {
       var exp = collision.GetComponent<EXP>();
@@ -11,6 +12,7 @@ public class Collector : MonoBehaviour
       {
          exp.Collect();
          ExpManager.pointCount += 1;
+         ExpBar.currentXp += 1;
          Debug.Log("EXP +1 !");
       }
       
