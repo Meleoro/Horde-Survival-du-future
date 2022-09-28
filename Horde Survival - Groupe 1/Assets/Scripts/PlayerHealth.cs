@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -10,6 +11,8 @@ public class PlayerHealth : MonoBehaviour
     public int currentHealth;
 
     public HealthBar healthBar;
+
+    public GameObject player;
     
     // Start is called before the first frame update
     void Start()
@@ -21,10 +24,11 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*Cette partie du script fonctionne
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakeDamage(1);
-        }
+        }*/
     }
 
     void TakeDamage(int damage)

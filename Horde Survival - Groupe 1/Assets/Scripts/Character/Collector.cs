@@ -11,6 +11,7 @@ public class Collector : MonoBehaviour
       {
          exp.Collect();
          ExpManager.pointCount += 1;
+         Debug.Log("EXP +1 !");
       }
       
       ICollectible collectible = collision.GetComponent<ICollectible>();

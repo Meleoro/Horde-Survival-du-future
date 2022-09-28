@@ -36,8 +36,8 @@ public class EXP : Collectible, ICollectible
     {
         if (hasTarget)
         {
-            Vector2 targetDirection = targetPosition - transform.position.normalized;
-            rb.velocity = new Vector2(targetDirection.x, targetDirection.y) * moveSpeed;
+            Vector2 targetDirection = targetPosition - transform.position;
+            rb.velocity = targetDirection.normalized * moveSpeed;
         }
     }
 

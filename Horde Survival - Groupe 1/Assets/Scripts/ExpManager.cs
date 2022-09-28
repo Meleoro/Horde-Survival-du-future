@@ -16,6 +16,7 @@ public class ExpManager : MonoBehaviour
         if(pointCount == 3 && levelCount == 0)
         { 
             levelCount += 1;
+            Debug.Log("Level up !");
         }
   
     }

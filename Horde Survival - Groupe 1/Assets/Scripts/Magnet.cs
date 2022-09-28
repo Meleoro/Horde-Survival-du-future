@@ -5,11 +5,12 @@ using UnityEngine;
 
 public class Magnet : MonoBehaviour
 {
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        //if (collision.gameObject.TryGetComponent(EXP)(out EXP exp))
+        if (collision.gameObject.TryGetComponent(out EXP exp))
         {
-            
+            exp.SetTarget(transform.parent.position);
         }
     }
 }
