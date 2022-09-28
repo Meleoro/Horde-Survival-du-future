@@ -13,7 +13,7 @@ public class Drone : MonoBehaviour
 
     private void Update()
     {
-        Shoot(transform.position,ObjectPooling.Instance.ShootWithMinigun(),weaponData);
+        //Shoot(transform.position,ObjectPooling.Instance.ShootWithMinigun(),weaponData);
     }
 
     void FixedUpdate()

@@ -9,6 +9,7 @@ namespace Character
     {
         #region Variables
 
+        [HideInInspector]
         public Vector2 movement;
         private Vector2 _aim;
         private float _nextFireTime;

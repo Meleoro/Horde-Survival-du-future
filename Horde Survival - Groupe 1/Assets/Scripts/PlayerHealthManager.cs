@@ -4,7 +4,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealthManager : MonoBehaviour
 {
     public int maxHealth = 10;
 
