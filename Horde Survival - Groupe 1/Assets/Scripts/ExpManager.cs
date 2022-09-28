@@ -26,11 +26,11 @@ public class ExpManager : MonoBehaviour
             Debug.Log("Level up !");
         }
 
-        /*if (levelCount == 1 && other.currentXp == 10)
+        if (levelCount == 1 && ExpBar.currentXp == 10)
         {
-            other.currentXp = 0;
+            ExpBar.currentXp = 0;
             levelCount += 1;
-        }*/
+        }
         
         other.UpdateExp();
   
