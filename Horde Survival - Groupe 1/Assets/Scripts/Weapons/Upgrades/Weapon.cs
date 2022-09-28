@@ -11,6 +11,7 @@ namespace Upgrades
     public class Weapon : ScriptableObject
     {
         private float _nextFireTime;
+        public Vector2 spawnPos;
     
         public void Shoot(Vector2 initialPos, bool cooldown, PlayerController pc)
         {
@@ -20,6 +21,7 @@ namespace Upgrades
             {
                 //Placement & activation
                 ammoUsed.transform.position = initialPos;
+                spawnPos = initialPos;
                 ammoUsed.SetActive(true);
     
                 //Physic
@@ -37,6 +39,7 @@ namespace Upgrades
             {
                 //Placement & activation
                 ammoUsed.transform.position = dronePos;
+                spawnPos = dronePos;
                 ammoUsed.SetActive(true);
     
                 //Physic

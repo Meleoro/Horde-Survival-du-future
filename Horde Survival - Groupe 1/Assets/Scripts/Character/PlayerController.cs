@@ -1,5 +1,3 @@
-using Character.Projectiles;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using Upgrades;
@@ -29,8 +27,9 @@ namespace Character
         #region Declaration
         
         [SerializeField] private Transform initialBulletPos;
+        public Vector3 playerPos;
         [SerializeField] private PlayerData playerData;
-        
+
         [SerializeField] private Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
@@ -42,6 +41,7 @@ namespace Character
             _playerControls = new PlayerInputActions();
             _rb = GetComponent<Rigidbody2D>();
             nextFireTime = 0f;
+            playerPos = transform.position;
         }
         private void OnEnable()
         {
