@@ -22,10 +22,21 @@ public class ButtonChoice : MonoBehaviour
 
         Time.timeScale = 1;
 
+        // SI ON AJOUTE UNE ARME AU PERSONNAGE
         if (ChoiceManager.Instance.currentLevel <= 2)
         {
             ChoiceManager.Instance.weapons.RemoveAt(currentIndex);
             ChoiceManager.Instance.availableUpgrades.Add(Upgrade);
+        }
+        
+        // VERIFICATION SI L'ARME A ATTEINT SON NIVEAU MAX
+        else if (Upgrade.isWeapon)
+        {
+            if (Upgrade.currentLevel >= Upgrade.levelList.Count - 1)
+            {
+                Debug.Log(12);
+                ChoiceManager.Instance.availableUpgrades.RemoveAt(currentIndex);
+            }
         }
         
         ChoiceManager.Instance.transform.localPosition = new Vector3(0, 1000, 0);
