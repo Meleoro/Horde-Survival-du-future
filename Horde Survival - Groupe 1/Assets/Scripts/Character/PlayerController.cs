@@ -13,6 +13,8 @@ namespace Character
         [HideInInspector]
         public Vector2 movement;
         private Vector2 _aim;
+        [HideInInspector]
+        public Vector3 nearestEnemyPos;
         public float nextFireTime = 0f;
         public int level = 0;
 
@@ -53,8 +55,8 @@ namespace Character
         }
         private void Update()
         {
+            nearestEnemyPos = EnemyNear().transform.position;
             weaponUsed.Shoot(initialBulletPos.position,level,Cooldown(),this);
-            Debug.Log(Cooldown());
         }
         private void FixedUpdate()
         {
@@ -95,7 +97,7 @@ namespace Character
             // ON CREE UN RAYCAST DE PLSU EN PLSU GRAND JUSQU'A AVOIR AU MOINS 3 ENNEMIES DEDANS
             while (!detectEnnemy)
             {
-                if (colliderArray.Length < 3)
+                if (colliderArray.Length < 1)
                 {
                     radius += 2;
 

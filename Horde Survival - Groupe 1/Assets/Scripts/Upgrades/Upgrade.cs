@@ -21,13 +21,12 @@ public class Upgrade : ScriptableObject
             ammoUsed.SetActive(true);
     
             //Physic
-            ammoUsed.GetComponent<Rigidbody2D>().velocity = pc.EnemyNear().transform.position * levelList[currentLevel].fireRate;
+            ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel].fireRate;
             
             //Cooldown
             pc.nextFireTime = Time.time + levelList[currentLevel].reload;
         }
     }
-     
 
     [Header("Upgrade / Weapon")]
     public string name;
