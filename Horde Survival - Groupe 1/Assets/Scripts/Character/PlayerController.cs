@@ -42,7 +42,7 @@ namespace Character
         }
         private void Update()
         {
-            Shoot(initialBulletPos.position,ObjectPooling.Instance.ShootWithUzi(),playerData);
+            //Shoot(initialBulletPos.position,ObjectPooling.Instance.ShootWithUzi(),playerData);
         }
         private void FixedUpdate()
         {

@@ -99,8 +99,6 @@ public class BulletLanceGrenade : MonoBehaviour
 
         foreach(Collider2D k in colliderArray)
         {
-            Debug.Log(k.gameObject);
-            
             float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
 
             if (dist < minDist && dist > 1f)
