@@ -42,28 +42,29 @@ namespace Character
         }
         private void Update()
         {
-            Shoot(initialBulletPos.position,ObjectPooling.Instance.ShootWithUzi(),playerData);
+            //Shoot(initialBulletPos.position,playerData);
         }
         private void FixedUpdate()
         {
             HandleMovement();
             HandleRotation();
         }
-        private void Shoot(Vector2 initialPos, GameObject ammoUsed, PlayerData weaponData)
-        {
-            if (ammoUsed != null && Cooldown())
-            {
-                //Placement & activation
-                ammoUsed.transform.position = initialPos;
-                ammoUsed.SetActive(true);
-                
-                //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.basicAttackSpeed;
-                
-                //Cooldown
-                _nextFireTime = Time.time + weaponData.basicAttackCooldown;
-            }
-        }
+        // private void Shoot(Vector2 initialPos, PlayerData weaponData)
+        // {
+        //     GameObject ammoUsed = ObjectPooling.Instance.GetObject(_bullet);
+        //     if (ammoUsed != null && Cooldown())
+        //     {
+        //         //Placement & activation
+        //         ammoUsed.transform.position = initialPos;
+        //         ammoUsed.SetActive(true);
+        //         
+        //         //Physic
+        //         ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.basicAttackSpeed;
+        //         
+        //         //Cooldown
+        //         _nextFireTime = Time.time + weaponData.basicAttackCooldown;
+        //     }
+        // }
         void OnMovement(InputAction.CallbackContext context)
         {
             movement = context.ReadValue<Vector2>();
