@@ -14,6 +14,7 @@ namespace Character
         public Vector2 movement;
         private Vector2 _aim;
         private float _nextFireTime;
+        private int _level = 0;
 
         #endregion
 
@@ -52,7 +53,7 @@ namespace Character
         }
         private void Update()
         {
-            weaponUsed.Shoot(initialBulletPos.position,_weaponStats,weaponUsed);
+            weaponUsed.Shoot(initialBulletPos.position,_weaponStats,weaponUsed,_level);
         }
         private void FixedUpdate()
         {

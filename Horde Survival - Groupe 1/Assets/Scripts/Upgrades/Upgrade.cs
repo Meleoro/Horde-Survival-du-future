@@ -11,7 +11,7 @@ public class Upgrade : ScriptableObject
     private float _nextFireTime;
     private PlayerController _pC;
     
-    public void Shoot(Vector2 initialPos, Levels weaponStats, Upgrade weaponData)
+    public void Shoot(Vector2 initialPos, Levels weaponStats, Upgrade weaponData, int currentLevel)
     {
         GameObject ammoUsed = ObjectPooling.Instance.GetObject(weaponData.bullet.name);
         if (ammoUsed != null && Cooldown())
@@ -21,11 +21,11 @@ public class Upgrade : ScriptableObject
             ammoUsed.SetActive(true);
             
             //Physic
-            ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.levelList[0].fireRate;
+            ammoUsed.GetComponent<Rigidbody2D>().velocity = Vector2.up * weaponData.levelList[currentLevel].fireRate;
             //_pC.EnemyNear().transform.position
 
             //Cooldown
-            _nextFireTime = Time.time + weaponStats.reload;
+            _nextFireTime = Time.time + weaponData.levelList[currentLevel].reload;
         }
     }
     
