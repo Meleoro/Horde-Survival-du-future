@@ -349,17 +349,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60926ed8739873c4a94d9bf5e0baf621, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &561847071 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4666382149448289938, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
-  m_PrefabInstance: {fileID: 1631452667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &561847074 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 375978046, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
   m_PrefabInstance: {fileID: 1631452667}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561847071}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
@@ -380,18 +375,6 @@ PrefabInstance:
       propertyPath: drone2
       value: 
       objectReference: {fileID: 2008508895}
-    - target: {fileID: 1639245067, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
-      propertyPath: drone1
-      value: 
-      objectReference: {fileID: 561847071}
-    - target: {fileID: 1639245067, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
-      propertyPath: drone2
-      value: 
-      objectReference: {fileID: 2008508892}
-    - target: {fileID: 403017019795549203, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
-      propertyPath: weaponUsed
-      value: 
-      objectReference: {fileID: 11400000, guid: 272b7194090032c4480dc03b65cfde12, type: 2}
     - target: {fileID: 403017019795549203, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
       propertyPath: healthManager
       value: 
@@ -1192,17 +1175,12 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 783112870, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
---- !u!1 &2008508892 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4666382149410248426, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
-  m_PrefabInstance: {fileID: 1631452667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2008508895 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6882984574769513517, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
   m_PrefabInstance: {fileID: 1631452667}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2008508892}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
