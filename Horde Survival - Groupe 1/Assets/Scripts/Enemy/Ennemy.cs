@@ -49,7 +49,12 @@ public class Ennemy : MonoBehaviour
             if (health <= 0)
             {
                 Dies();
-                Instantiate(loot, transform.position, transform.rotation);
+                
+                ComboManager.Instance.IncreaeMultiplier(0.2f);
+
+                GameObject Xp = Instantiate(loot, transform.position, transform.rotation);
+
+                Xp.GetComponent<EXP>().valeurXp = ComboManager.Instance.currentMultiplier;
             }
         }
         
