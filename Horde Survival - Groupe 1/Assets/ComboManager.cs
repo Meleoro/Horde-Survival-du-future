@@ -2,6 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class ComboManager : MonoBehaviour
 {
@@ -9,20 +11,39 @@ public class ComboManager : MonoBehaviour
     public float maxMultiplier;
     public float timerModifier;
 
+    [Header("Références")] 
+    public TextMeshProUGUI multiplier;
+    public Image slider;
+
     [Header("Variables")] 
     private float currentMultiplier;
     private float timer;
+    public static ComboManager Instance;
+
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
 
     private void Update()
     {
+        multiplier.text = "X " + currentMultiplier;
+        slider.fillAmount = timer;
+        
         if (timer > 0)
         {
             timer -= (Time.deltaTime * currentMultiplier) / timerModifier;
         }
         else
         {
-            currentMultiplier = 0;
+            currentMultiplier = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.V))
+        {
+            IncreaeMultiplier(0.1f);
         }
     }
 
