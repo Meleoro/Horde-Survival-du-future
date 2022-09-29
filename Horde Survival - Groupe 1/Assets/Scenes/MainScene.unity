@@ -170,6 +170,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2808851707361879148, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
   m_PrefabInstance: {fileID: 629937874}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &313098012 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4666382149448289938, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
+  m_PrefabInstance: {fileID: 1631452667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &313098015 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 375978046, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
+  m_PrefabInstance: {fileID: 1631452667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 313098012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &360876026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -265,6 +281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
+      propertyPath: controller
+      value: 
+      objectReference: {fileID: 1096107264}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
 --- !u!4 &379767487 stripped
@@ -340,10 +360,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 403017019795549203, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
-      propertyPath: enemyLayer.m_Bits
-      value: 64
-      objectReference: {fileID: 0}
+    - target: {fileID: 1639245061, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
+      propertyPath: drone1
+      value: 
+      objectReference: {fileID: 313098015}
+    - target: {fileID: 1639245061, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
+      propertyPath: drone2
+      value: 
+      objectReference: {fileID: 748005588}
+    - target: {fileID: 1639245067, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
+      propertyPath: drone1
+      value: 
+      objectReference: {fileID: 313098012}
+    - target: {fileID: 1639245067, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
+      propertyPath: drone2
+      value: 
+      objectReference: {fileID: 748005585}
     - target: {fileID: 2808851707361879145, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
       propertyPath: m_Name
       value: Player
@@ -441,6 +473,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 572fb932734f42d4c900be6a319f85e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &748005585 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4666382149410248426, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
+  m_PrefabInstance: {fileID: 1631452667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &748005588 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6882984574769513517, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
+  m_PrefabInstance: {fileID: 1631452667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748005585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &764516833
@@ -733,26 +781,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
---- !u!1 &1639245056 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2808851707361879145, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
-  m_PrefabInstance: {fileID: 629937874}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1639245061
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1639245056}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c7c2e29d551e304aa33dabf583f9734, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  drone1: {fileID: 0}
-  drone2: {fileID: 0}
-  currentWeapons: []
 --- !u!1001 &1848419275
 PrefabInstance:
   m_ObjectHideFlags: 0

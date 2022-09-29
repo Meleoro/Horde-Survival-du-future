@@ -20,6 +20,7 @@ public class ChoiceManager : MonoBehaviour
 
     [Header("Others")] 
     public int currentLevel;
+    public GameObject controller;
     private int nbrWeapons;
     private bool endLoop;
     private bool notTheSame;
@@ -38,6 +39,7 @@ public class ChoiceManager : MonoBehaviour
     private void Start()
     {
         transform.localPosition = new Vector3(0, 1000, 0);
+        controller.SetActive(false);
         currentLevel = 0;
 
         foreach (Weapon k in weapons)
@@ -68,6 +70,7 @@ public class ChoiceManager : MonoBehaviour
     public void LevelUp()
     {
         transform.localPosition = new Vector3(0, 0, 0);
+        controller.SetActive(true);
         
         currentLevel += 1;
         Time.timeScale = 0;

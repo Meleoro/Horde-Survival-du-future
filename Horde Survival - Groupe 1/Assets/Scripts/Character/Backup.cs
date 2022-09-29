@@ -31,7 +31,7 @@ public class Backup : MonoBehaviour
     {
         compteur = 0;
         
-        if (backup)
+        if (backup && !WeaponManager.Instance.cooldownSwitch)
         {
             foreach (Weapon k in WeaponManager.Instance.currentWeapons)
             {

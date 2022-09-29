@@ -187,10 +187,11 @@ MonoBehaviour:
   enemyLayer:
     serializedVersion: 2
     m_Bits: 64
-  _nextFireTime: 0
+  nextTimeFire: 0
   initialBulletPos: {fileID: 3914616135394496884}
   playerData: {fileID: 11400000, guid: 6634118c00c412547b040d678ade2a08, type: 2}
   weaponUsed: {fileID: 11400000, guid: 6d7ab52acb34be045a53638ad18bdfbb, type: 2}
+  playerTr: {fileID: 0}
 --- !u!114 &244547868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,7 +211,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2808851707361879145}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8c7c2e29d551e304aa33dabf583f9734, type: 3}
   m_Name: 

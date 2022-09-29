@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: Canon CC
   m_EditorClassIdentifier: 
-  isReloading: 0
+  isReloading: 1
   isOnCooldown: 0
-  spawnPos: {x: -8.327629, y: -0.6076926}
   name: Canon CC
   image: {fileID: 0}
   currentLevel: 1
@@ -24,10 +23,11 @@ MonoBehaviour:
   levelList:
   - desciption: "Fusil \xE0 pompe"
     degats: 10
-    bulletSpeed: 0
-    portee: 10
+    bulletSpeed: 15
+    portee: 1
     fireRate: 1
     bulletsPerShot: 1
+    dispersion: 0
     ammoMax: 1
     currentAmmo: 0
     reload: 2
@@ -44,6 +44,24 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 0
+    currentAmmo: -1
+    reload: 0
+    doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  - desciption: 
+    degats: 0
+    bulletSpeed: 0
+    portee: 0
+    fireRate: 0
+    bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -60,6 +78,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -76,6 +95,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -92,6 +112,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -108,6 +129,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -124,22 +146,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
-    doubleUZI: 0
-    doubleTir: 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0

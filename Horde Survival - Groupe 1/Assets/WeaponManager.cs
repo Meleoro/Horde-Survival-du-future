@@ -11,7 +11,7 @@ public class WeaponManager : MonoBehaviour
     public static WeaponManager Instance;
     
     private PlayerInputActions _playerControls;
-    private bool cooldownSwitch;
+    public bool cooldownSwitch;
 
     public DroneAttack drone1;
     public DroneAttack drone2;
@@ -85,6 +85,9 @@ public class WeaponManager : MonoBehaviour
             
             currentWeapons[0].isReloading = true;
             currentWeapons[1].isReloading = true;
+            
+            Debug.Log(currentWeapons[0]);
+            Debug.Log(currentWeapons[1]);
             
             StartCoroutine(SwitchWeaponCooldown1());
         }
