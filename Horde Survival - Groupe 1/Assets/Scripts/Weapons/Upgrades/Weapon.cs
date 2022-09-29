@@ -44,7 +44,11 @@ namespace Upgrades
                 
                 //Cooldown & Reload
                 if(_currentAmmo > 0) pc.nextTimeFire = Time.time + levelList[currentLevel].fireRate;
-                else pc.nextTimeFire = Time.time + levelList[currentLevel].reload;
+                else
+                {
+                    pc.nextTimeFire = Time.time + levelList[currentLevel].reload;
+                    _currentAmmo = levelList[currentLevel].ammoMax;
+                }
             }
         }
         public void DroneShoot(Transform dronePos, DroneAttack drone)
@@ -65,7 +69,11 @@ namespace Upgrades
                 
                 //Cooldown & Reload
                 if(_currentAmmo > 0) drone.nextFireTimeDrone = Time.time + levelList[currentLevel].fireRate;
-                else drone.nextFireTimeDrone = Time.time + levelList[currentLevel].reload;
+                else
+                {
+                    drone.nextFireTimeDrone = Time.time + levelList[currentLevel].reload;
+                    _currentAmmo = levelList[currentLevel].ammoMax;
+                }
             }
             
         }

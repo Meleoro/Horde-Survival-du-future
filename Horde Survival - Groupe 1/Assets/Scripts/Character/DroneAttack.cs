@@ -26,8 +26,6 @@ public class DroneAttack : MonoBehaviour
     {
         if (weapon != null)
         {
-            Debug.Log(2);
-            
             weapon.DroneShoot(tr, this);
         }
     }

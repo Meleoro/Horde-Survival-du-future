@@ -1,6 +1,7 @@
 using System;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Upgrades;
 
 namespace Character.Projectiles
@@ -10,8 +11,9 @@ namespace Character.Projectiles
         private Rigidbody2D _rb;
         private Transform _tr;
         private Vector2 _pC;
-        
 
+        public float bulletLifeTime;
+        private float _countdown;
 
         private void Start()
         {
@@ -21,8 +23,12 @@ namespace Character.Projectiles
 
         private void Update()
         {
-            if (Vector2.Distance(_tr.position, _pC) > 30f)
+            _countdown += Time.deltaTime; 
+            
+            if(_countdown >= bulletLifeTime) 
             {
+                Debug.Log(1);
+                _countdown = 0f;
                 gameObject.SetActive(false);
             }
         }

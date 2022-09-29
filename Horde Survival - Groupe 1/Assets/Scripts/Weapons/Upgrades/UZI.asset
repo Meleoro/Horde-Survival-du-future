@@ -16,7 +16,7 @@ MonoBehaviour:
   isOnCooldown: 0
   name: UZI
   image: {fileID: 0}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
@@ -41,9 +41,9 @@ MonoBehaviour:
     degats: 10
     bulletSpeed: 10
     portee: 15
-    fireRate: 5
+    fireRate: 0.08
     bulletsPerShot: 0
-    ammoMax: 20
+    ammoMax: 10
     currentAmmo: 0
     reload: 2
     doubleUZI: 1
