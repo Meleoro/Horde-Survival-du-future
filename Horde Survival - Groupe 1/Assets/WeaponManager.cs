@@ -64,11 +64,14 @@ public class WeaponManager : MonoBehaviour
         {
             PlayerController.Instance.weaponUsed = currentWeapons[0];
             drone1.weapon = currentWeapons[1]; 
+            drone2.weapon = null;
         }
         
         else if (currentWeapons.Count == 1)
         {
             PlayerController.Instance.weaponUsed = currentWeapons[0];
+            drone1.weapon = null;
+            drone2.weapon = null;
         }
     }
 

@@ -38,16 +38,16 @@ namespace Upgrades
                 ammoUsed.SetActive(true);
     
                 //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel].bulletSpeed;
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
 
                 _currentAmmo -= 1;
                 
                 //Cooldown & Reload
-                if(_currentAmmo > 0) pc.nextTimeFire = Time.time + levelList[currentLevel].fireRate;
+                if(_currentAmmo > 0) pc.nextTimeFire = Time.time + levelList[currentLevel - 1].fireRate;
                 else
                 {
-                    pc.nextTimeFire = Time.time + levelList[currentLevel].reload;
-                    _currentAmmo = levelList[currentLevel].ammoMax;
+                    pc.nextTimeFire = Time.time + levelList[currentLevel - 1].reload;
+                    _currentAmmo = levelList[currentLevel - 1].ammoMax;
                 }
             }
         }
