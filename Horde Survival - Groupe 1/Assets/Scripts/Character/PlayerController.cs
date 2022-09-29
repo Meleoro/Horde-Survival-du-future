@@ -143,11 +143,6 @@ namespace Character
                 Debug.Log("Oof");
                 healthManager.TakeDamage(1);
             }
-            if (col.gameObject.CompareTag("xpPoint"))
-            { 
-                Debug.Log("Oof");
-                healthManager.TakeDamage(1);
-            }
         }
     }
 }
