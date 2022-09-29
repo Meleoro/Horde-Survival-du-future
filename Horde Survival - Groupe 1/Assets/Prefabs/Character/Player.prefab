@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2808851707205286958}
   - component: {fileID: 2808851707205286959}
+  - component: {fileID: 368519022}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 2808851707205286953}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2808851707361879148}
@@ -73,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
+  m_Sprite: {fileID: 644884414, guid: b14c5e982906b644d99458c896b9cb69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -84,6 +85,26 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &368519022
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2808851707205286953}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5c49755053b5e1043991fba03eaa503b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2808851707361879145
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,7 +175,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -190,7 +211,8 @@ MonoBehaviour:
   nextTimeFire: 0
   initialBulletPos: {fileID: 3914616135394496884}
   playerData: {fileID: 11400000, guid: 6634118c00c412547b040d678ade2a08, type: 2}
-  weaponUsed: {fileID: 11400000, guid: 6d7ab52acb34be045a53638ad18bdfbb, type: 2}
+  healthManager: {fileID: 0}
+  weaponUsed: {fileID: 11400000, guid: 272b7194090032c4480dc03b65cfde12, type: 2}
   playerTr: {fileID: 0}
 --- !u!114 &244547868
 MonoBehaviour:
@@ -216,6 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7c2e29d551e304aa33dabf583f9734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldownSwitch: 0
   drone1: {fileID: 0}
   drone2: {fileID: 0}
   currentWeapons: []

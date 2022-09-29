@@ -25,6 +25,7 @@ namespace Character
         
         [SerializeField] public Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
+        [SerializeField] private PlayerHealthManager healthManager;
         public Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
@@ -133,6 +134,20 @@ namespace Character
             }
 
             return _nearestEnemy;
+        }
+        
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag("Ennemy"))
+            { 
+                Debug.Log("Oof");
+                healthManager.TakeDamage(1);
+            }
+            if (col.gameObject.CompareTag("xpPoint"))
+            { 
+                Debug.Log("Oof");
+                healthManager.TakeDamage(1);
+            }
         }
     }
 }

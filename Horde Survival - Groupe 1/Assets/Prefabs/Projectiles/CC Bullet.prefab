@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -536522478442350578}
   m_Layer: 0
   m_Name: CC Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -98,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0344cf5542c5440ba7acc368a6c691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bulletLifeTime: 8
 --- !u!50 &-536522478442350578
 Rigidbody2D:
   serializedVersion: 4
