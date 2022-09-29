@@ -1,7 +1,6 @@
-using Character.Projectiles;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 using Upgrades;
 
 namespace Character
@@ -11,41 +10,34 @@ namespace Character
     {
         #region Variables
 
-        [HideInInspector]
-        public Vector2 movement;
+        [HideInInspector] public Vector2 movement;
+        [HideInInspector] public Vector3 nearestEnemyPos;
         private Vector2 _aim;
-        [HideInInspector]
-        public Vector3 nearestEnemyPos;
-        public float nextFireTime;      
-        private float radius;
-        private bool detectEnnemy;
+        public static Vector2 PlayerPos;
+        public LayerMask enemyLayer;
+        [HideInInspector] public float nextFireTime;      
+        private float _radius;
+        private bool _detectEnemy;
         
         #endregion
 
-        public LayerMask ennemyLayer;
-
-        private GameObject nearestEnnemy;
-
-        public static PlayerController Instance;
-        
         #region Declaration
         
-        public Transform initialBulletPos;
+        [SerializeField] private Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
-        
         [SerializeField] private Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
+        private Transform _playerTr;
 
+        private GameObject _nearestEnemy;
         #endregion
 
         private void Awake()
         {
             _playerControls = new PlayerInputActions();
             _rb = GetComponent<Rigidbody2D>();
-            nextFireTime = 0f;
-
-            Instance = this;
+            _playerTr = GetComponent<Transform>();
         }
         private void OnEnable()
         {
@@ -60,8 +52,10 @@ namespace Character
         }
         private void Update()
         {
+            PlayerPos = _playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
-            //weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
+            
+            weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
         }
         private void FixedUpdate()
         {
@@ -94,24 +88,24 @@ namespace Character
         
         public GameObject EnemyNear()
         {
-            radius = 2;
-            detectEnnemy = false;
+            _radius = 2;
+            _detectEnemy = false;
         
-            Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
+            Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, _radius, enemyLayer);
 
             // ON CREE UN RAYCAST DE PLSU EN PLSU GRAND JUSQU'A AVOIR AU MOINS 3 ENNEMIES DEDANS
-            while (!detectEnnemy)
+            while (!_detectEnemy)
             {
                 if (colliderArray.Length < 1)
                 {
-                    radius += 2;
+                    _radius += 2;
 
-                    colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
+                    colliderArray = Physics2D.OverlapCircleAll(transform.position, _radius, enemyLayer);
                 }
 
                 else
                 {
-                    detectEnnemy = true;
+                    _detectEnemy = true;
                 }
             }
 
@@ -129,11 +123,11 @@ namespace Character
                 if (dist < minDist && dist > 1f)
                 {
                     minDist = dist;
-                    nearestEnnemy = k.gameObject;
+                    _nearestEnemy = k.gameObject;
                 }
             }
 
-            return nearestEnnemy;
+            return _nearestEnemy;
         }
     }
 }

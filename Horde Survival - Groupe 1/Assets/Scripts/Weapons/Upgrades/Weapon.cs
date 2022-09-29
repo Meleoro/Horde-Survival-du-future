@@ -11,18 +11,17 @@ namespace Upgrades
     public class Weapon : ScriptableObject
     {
         private float _nextFireTime;
-        public bool isReloading;
+        public Vector2 spawnPos;
     
         public void Shoot(Vector2 initialPos, bool cooldown, PlayerController pc)
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
-
-            Debug.Log(ammoUsed);
-
+        
             if (ammoUsed != null && cooldown)
             {
                 //Placement & activation
                 ammoUsed.transform.position = initialPos;
+                spawnPos = initialPos;
                 ammoUsed.SetActive(true);
     
                 //Physic
@@ -40,10 +39,11 @@ namespace Upgrades
             {
                 //Placement & activation
                 ammoUsed.transform.position = dronePos;
+                spawnPos = dronePos;
                 ammoUsed.SetActive(true);
     
                 //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = dronePos * levelList[currentLevel].fireRate;
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = dronePos.normalized * levelList[currentLevel].fireRate;
             
                 //Cooldown
                 drone.nextFireTime = Time.time + levelList[currentLevel].reload;
