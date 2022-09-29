@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,11 +6,19 @@ using UnityEngine.UI;
 
 public class ExpBar : MonoBehaviour
 {
+    public static ExpBar Instance;
+    
     public Slider slider;
     public Gradient grad;
     public Image fill;
 
-    public static int currentXp;
+    public int currentXp;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
+
 
     public void SetStartExp()
     {

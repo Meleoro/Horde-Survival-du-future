@@ -24,7 +24,7 @@ namespace Character
         #region Declaration
         
         [SerializeField] public Transform initialBulletPos;
-        [SerializeField] private PlayerData playerData;
+        [SerializeField] public PlayerData playerData;
         public Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
@@ -83,7 +83,9 @@ namespace Character
         }
         void HandleMovement()
         {
-            _rb.velocity = new Vector2(movement.x * playerData.characterSpeed, movement.y * playerData.characterSpeed);
+            float newSpeed = (playerData.characterSpeed * UpgradeManager.Instance.speedPourc / 100);;
+            
+            _rb.velocity = new Vector2(movement.x * newSpeed, movement.y * newSpeed);
         }
         void HandleRotation()
         {

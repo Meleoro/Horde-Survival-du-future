@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Character;
 using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
@@ -18,4 +19,11 @@ public class UpgradeManager : MonoBehaviour
     {
         Instance = this;
     }
+
+    public void IncreaseSpeed()
+    {
+        PlayerController.Instance.playerData.characterSpeed +=
+            (PlayerController.Instance.playerData.characterSpeed * speedPourc / 100);
+    }
+    
 }

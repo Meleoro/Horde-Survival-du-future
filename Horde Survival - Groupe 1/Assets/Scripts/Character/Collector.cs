@@ -12,7 +12,7 @@ public class Collector : MonoBehaviour
       {
          exp.Collect();
          ExpManager.pointCount += 1;
-         ExpBar.currentXp += 1;
+         ExpBar.Instance.currentXp += 1;
          Debug.Log("EXP +1 !");
       }
       

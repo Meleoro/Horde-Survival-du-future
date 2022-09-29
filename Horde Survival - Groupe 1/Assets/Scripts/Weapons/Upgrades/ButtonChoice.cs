@@ -52,12 +52,16 @@ public class ButtonChoice : MonoBehaviour
             else if (Upgrade.health)
             {
                 UpgradeManager.Instance.healthGain += Upgrade.healthGain;
+                
+                PlayerHealthManager.Instance.IncreaseHealth();
             }
             
             // SI LE JOUEUR AMELIORE SA VITESSe
             else if (Upgrade.speed)
             {
                 UpgradeManager.Instance.speedPourc += Upgrade.speedGain;
+                
+                UpgradeManager.Instance.IncreaseSpeed();
             }
 
             // SI LE JOUEUR AMELIORE LA VITESSE DE SES DRONES

@@ -172,17 +172,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2808851707361879148, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
   m_PrefabInstance: {fileID: 629937874}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &313098012 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4666382149448289938, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
-  m_PrefabInstance: {fileID: 1631452667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &313098015 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 375978046, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
   m_PrefabInstance: {fileID: 1631452667}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 313098012}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
@@ -370,14 +365,6 @@ PrefabInstance:
       propertyPath: drone2
       value: 
       objectReference: {fileID: 748005588}
-    - target: {fileID: 1639245067, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
-      propertyPath: drone1
-      value: 
-      objectReference: {fileID: 313098012}
-    - target: {fileID: 1639245067, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
-      propertyPath: drone2
-      value: 
-      objectReference: {fileID: 748005585}
     - target: {fileID: 2808851707361879145, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
       propertyPath: m_Name
       value: Player
@@ -477,17 +464,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572fb932734f42d4c900be6a319f85e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &748005585 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4666382149410248426, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
-  m_PrefabInstance: {fileID: 1631452667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &748005588 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6882984574769513517, guid: 0df734cbec887b546bbaf62a7a83a9a3, type: 3}
   m_PrefabInstance: {fileID: 1631452667}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 748005585}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}

@@ -12,18 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: Health
   m_EditorClassIdentifier: 
+  isReloading: 0
+  isOnCooldown: 0
   name: Vie
   image: {fileID: 0}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 0
   weapon: {fileID: 0}
   bullet: {fileID: 0}
   levelList:
   - desciption: Devenir un tank pour les nuls
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -36,9 +40,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -51,9 +57,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -66,9 +74,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -81,9 +91,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -96,9 +108,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -111,9 +125,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -126,9 +142,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -139,11 +157,11 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  description: +10 de vie
+  description: +20% de vie
   damages: 0
   damagesGain: 0
   health: 1
-  healthGain: 10
+  healthGain: 20
   speed: 0
   speedGain: 0
   droneSpd: 0
