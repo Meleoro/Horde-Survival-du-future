@@ -1,33 +1,39 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Upgrades;
 
 public class DroneAttack : MonoBehaviour
 {
-    [SerializeField] private Transform playerTr;
     public Weapon weapon;
-    private Transform _droneTr;
-    
-    public float rotationSpeed = 30f;
-    [HideInInspector] public float nextFireTime;
+    public Transform tr;
+    [HideInInspector]
+    public float nextFireTimeDrone;
 
     private void Start()
     {
-        _droneTr = GetComponent<Transform>();
+        tr = GetComponent<Transform>();
     }
-    
+
+    private void Update()
+    {
+        DroneCooldown();
+    }
+
     void FixedUpdate()
     {
         if (weapon != null)
         {
-            //weapon.Shoot(this, _droneTr.position);
+            Debug.Log(2);
+            
+            weapon.DroneShoot(tr, this);
         }
     }
-    
-    public bool Cooldown()
+    public bool DroneCooldown()
     {
-        if(Time.time > nextFireTime) return true;
+        if(Time.time > nextFireTimeDrone) return true;
         return false;
     }
 }

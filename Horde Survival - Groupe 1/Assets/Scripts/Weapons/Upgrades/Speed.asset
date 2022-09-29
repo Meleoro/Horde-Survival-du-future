@@ -12,13 +12,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: Speed
   m_EditorClassIdentifier: 
+  isReloading: 0
+  isOnCooldown: 0
+  spawnPos: {x: 0, y: 0}
   name: 
   image: {fileID: 0}
   currentLevel: 0
   isWeapon: 0
   weapon: {fileID: 0}
   bullet: {fileID: 0}
-  levelList: []
+  levelList:
+  - desciption: 
+    degats: 0
+    bulletSpeed: 0
+    portee: 0
+    fireRate: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
+    doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   description: +5 de vitesse
   damages: 0
   damagesGain: 0
