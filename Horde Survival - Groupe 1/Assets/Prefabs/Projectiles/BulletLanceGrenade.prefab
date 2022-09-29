@@ -106,11 +106,12 @@ MonoBehaviour:
   grenade: {fileID: 614827286038339249}
   nbrRebond: 0
   limiteRebonds: 3
-  isTheOriginal: 1
+  isTheOriginal: 0
   canBounce: 1
   ennemyLayer:
     serializedVersion: 2
     m_Bits: 64
+  lanceGrenade: {fileID: 11400000, guid: 6d7ab52acb34be045a53638ad18bdfbb, type: 2}
 --- !u!50 &79638967910091859
 Rigidbody2D:
   serializedVersion: 4

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using Upgrades;
 
 public class BulletLanceGrenade : MonoBehaviour
 {
@@ -20,8 +21,10 @@ public class BulletLanceGrenade : MonoBehaviour
     public bool isTheOriginal;
     public bool canBounce;
     public LayerMask ennemyLayer;
+    private bool split1;
+    private bool split2;
 
-    [Header("Autres")] 
+    [Header("Autres")] public Weapon lanceGrenade;
     private GameObject nearestEnnemy;
     private GameObject nearestEnnemy2;
     private Vector2 direction2;
@@ -31,12 +34,11 @@ public class BulletLanceGrenade : MonoBehaviour
 
     private void Start()
     {
+        limiteRebonds = lanceGrenade.levelList[lanceGrenade.currentLevel - 1].nbrRebonds;
+        split1 = lanceGrenade.levelList[lanceGrenade.currentLevel - 1].firstSplit;
+        split2 = lanceGrenade.levelList[lanceGrenade.currentLevel - 1].secondSplit;
+        
         direction = rb.velocity;
-
-        if (!isTheOriginal)
-        {
-            ChangeDirectionOpti();
-        }
     }
 
     private void Update()
@@ -107,6 +109,7 @@ public class BulletLanceGrenade : MonoBehaviour
 
             if (dist < minDist && dist > 1f)
             {
+                minDist2 = minDist;
                 nearestEnnemy2 = nearestEnnemy;
                 
                 minDist = dist;
@@ -122,6 +125,8 @@ public class BulletLanceGrenade : MonoBehaviour
         
         direction = nearestEnnemy.transform.position - transform.position;
         direction2 = nearestEnnemy2.transform.position - transform.position;
+        
+        Debug.Log(direction2);
     }
 
 
@@ -129,13 +134,14 @@ public class BulletLanceGrenade : MonoBehaviour
     public void Split()
     {
         GameObject grenade2 = Instantiate(grenade, transform.position, Quaternion.identity);
-
+        
         BulletLanceGrenade script = grenade2.GetComponent<BulletLanceGrenade>();
+        
+        grenade2.GetComponent<Rigidbody2D>().velocity = direction2.normalized * bulletSpeed;
         
         script.isTheOriginal = false;
         script.canBounce = false;
         script.nbrRebond = nbrRebond;
-        script.direction = direction2;
     }
     
 
@@ -144,11 +150,16 @@ public class BulletLanceGrenade : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Ennemy") && canBounce)
         {
+            Debug.Log(12);
+            
             nbrRebond += 1;
             
             ChangeDirectionOpti();
             
-            if(nbrRebond == 1)
+            if(nbrRebond == 1 && split1)
+                Split();
+
+            if (nbrRebond == 2 && split2)
                 Split();
 
             if (nbrRebond >= limiteRebonds)
