@@ -1,27 +1,20 @@
-using System;
 using UnityEngine;
 
 namespace Character.Projectiles
 {
     public class Bullet : MonoBehaviour
     {
-        private Transform _droneTr;
+        private Rigidbody2D _rb;
 
-        [SerializeField]
-        private int bulletRange = 25;
 
-        private void Start()
+
+        
+        private void OnTriggerEnter2D(Collider2D other)
         {
-            _droneTr = GetComponent<Transform>();
-        }
-
-        private void Update()
-        {
-
-            if (Vector2.Distance(_droneTr.position, PlayerController.PlayerPos) > bulletRange) 
+            if (other.gameObject.CompareTag("Ennemy"))
             {
                 gameObject.SetActive(false);
-            }
+            }        
         }
     }
 }
