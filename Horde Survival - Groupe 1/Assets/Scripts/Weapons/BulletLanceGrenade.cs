@@ -30,6 +30,7 @@ public class BulletLanceGrenade : MonoBehaviour
     private Vector2 direction2;
     private float radius;
     private bool detectEnnemy;
+    public float timer;
     
 
     private void Start()
@@ -39,11 +40,20 @@ public class BulletLanceGrenade : MonoBehaviour
         split2 = lanceGrenade.levelList[lanceGrenade.currentLevel - 1].secondSplit;
         
         direction = rb.velocity;
+        timer = 0;
     }
 
     private void Update()
     {
         rb.velocity = direction.normalized * bulletSpeed;
+
+        timer += Time.deltaTime;
+
+        if (timer > lanceGrenade.levelList[lanceGrenade.currentLevel - 1].portee)
+        {
+            gameObject.SetActive(false);
+            timer = 0;
+        }
     }
 
 
@@ -107,7 +117,7 @@ public class BulletLanceGrenade : MonoBehaviour
         {
             float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
 
-            if (dist < minDist && dist > 1f)
+            if (dist < minDist && dist > 2f)
             {
                 minDist2 = minDist;
                 nearestEnnemy2 = nearestEnnemy;
@@ -116,7 +126,7 @@ public class BulletLanceGrenade : MonoBehaviour
                 nearestEnnemy = k.gameObject;
             }
             
-            else if (dist < minDist2 && dist > 1f)
+            else if (dist < minDist2 && dist > 2f)
             {
                 minDist2 = dist;
                 nearestEnnemy2 = k.gameObject;
@@ -125,8 +135,6 @@ public class BulletLanceGrenade : MonoBehaviour
         
         direction = nearestEnnemy.transform.position - transform.position;
         direction2 = nearestEnnemy2.transform.position - transform.position;
-        
-        Debug.Log(direction2);
     }
 
 
@@ -150,8 +158,6 @@ public class BulletLanceGrenade : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Ennemy") && canBounce)
         {
-            Debug.Log(12);
-            
             nbrRebond += 1;
             
             ChangeDirectionOpti();
@@ -164,6 +170,8 @@ public class BulletLanceGrenade : MonoBehaviour
 
             if (nbrRebond >= limiteRebonds)
             {
+                timer = 0;
+                
                 if (isTheOriginal)
                 {
                     gameObject.SetActive(false);
@@ -171,7 +179,7 @@ public class BulletLanceGrenade : MonoBehaviour
 
                 else
                 {
-                    Destroy(gameObject);
+                    gameObject.SetActive(false);
                 }
             }
         }
