@@ -9,9 +9,11 @@ public class DronePosition : MonoBehaviour
     
     void FixedUpdate()
     {
+        float newSpeed = rotationSpeed + (rotationSpeed * UpgradeManager.Instance.speedDronePourc / 100);
+        
         //position Drone
         transform.position = playerTr.position;
         //Rotation Drone
-        transform.Rotate(new Vector3(0,0,rotationSpeed)* Time.deltaTime);
+        transform.Rotate(new Vector3(0,0,newSpeed)* Time.deltaTime);
     }
 }

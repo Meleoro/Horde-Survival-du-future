@@ -38,13 +38,13 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  description: +10% de vitesse
+  description: +20% de vitesse
   damages: 0
   damagesGain: 0
   health: 0
   healthGain: 0
   speed: 1
-  speedGain: 10
+  speedGain: 20
   droneSpd: 0
   droneSpdGain: 0
   XPMagnet: 0

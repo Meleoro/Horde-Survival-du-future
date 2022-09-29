@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: XPMagnet
   m_EditorClassIdentifier: 
+  isReloading: 0
+  isOnCooldown: 0
   name: 
   image: {fileID: 0}
   currentLevel: 0
@@ -19,7 +21,7 @@ MonoBehaviour:
   weapon: {fileID: 0}
   bullet: {fileID: 0}
   levelList: []
-  description: '+10% '
+  description: "+20% de rayon d'aspirateur \xE0 XP"
   damages: 0
   damagesGain: 0
   health: 0
@@ -29,6 +31,6 @@ MonoBehaviour:
   droneSpd: 0
   droneSpdGain: 0
   XPMagnet: 1
-  XPMagnetGain: 10
+  XPMagnetGain: 20
   XPBoost: 0
   XPBoostGain: 0

@@ -21,7 +21,7 @@ MonoBehaviour:
   weapon: {fileID: 0}
   bullet: {fileID: 0}
   levelList: []
-  description: +5 de vitesse pour chaque drone
+  description: +10% vitesse pour chaque drone
   damages: 0
   damagesGain: 0
   health: 0
@@ -29,7 +29,7 @@ MonoBehaviour:
   speed: 0
   speedGain: 0
   droneSpd: 1
-  droneSpdGain: 0
+  droneSpdGain: 10
   XPMagnet: 0
   XPMagnetGain: 0
   XPBoost: 0

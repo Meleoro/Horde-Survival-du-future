@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: Damages
   m_EditorClassIdentifier: 
+  isReloading: 0
+  isOnCooldown: 0
   name: Degats
   image: {fileID: 0}
   currentLevel: 0
@@ -21,9 +23,11 @@ MonoBehaviour:
   levelList:
   - desciption: Tu es puissant
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -36,9 +40,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -51,9 +57,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -66,9 +74,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -81,9 +91,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -96,9 +108,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -111,9 +125,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -126,9 +142,11 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -139,9 +157,9 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  description: "+5 d\xE9g\xE2ts pour chaque attaque"
+  description: "+10% de d\xE9g\xE2ts"
   damages: 1
-  damagesGain: 5
+  damagesGain: 10
   health: 0
   healthGain: 0
   speed: 0

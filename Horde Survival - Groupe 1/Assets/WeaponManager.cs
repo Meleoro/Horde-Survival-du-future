@@ -51,7 +51,7 @@ public class WeaponManager : MonoBehaviour
             }
         }
 
-        /*
+        
         // ON ATTRIBUE LES ARMES A CHAQUE SCRIPT
         if (currentWeapons.Count == 3)
         {
@@ -69,7 +69,7 @@ public class WeaponManager : MonoBehaviour
         else if (currentWeapons.Count == 1)
         {
             PlayerController.Instance.weaponUsed = currentWeapons[0];
-        }*/
+        }
     }
 
 

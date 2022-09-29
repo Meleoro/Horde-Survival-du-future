@@ -347,6 +347,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2808851707361879148}
     m_Modifications:
+    - target: {fileID: 1170137467226113021, guid: a2c55e5b303e93c4d9055ded989cd167, type: 3}
+      propertyPath: magnet
+      value: 
+      objectReference: {fileID: 4496438992008841264}
+    - target: {fileID: 1170137467226113021, guid: a2c55e5b303e93c4d9055ded989cd167, type: 3}
+      propertyPath: radius
+      value: 2.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1170137467226113022, guid: a2c55e5b303e93c4d9055ded989cd167, type: 3}
       propertyPath: m_Name
       value: MagnetColl
@@ -397,6 +405,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2c55e5b303e93c4d9055ded989cd167, type: 3}
+--- !u!58 &4496438992008841264 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1170137467226113020, guid: a2c55e5b303e93c4d9055ded989cd167, type: 3}
+  m_PrefabInstance: {fileID: 3340446767643904972}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4496438992008841267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1170137467226113023, guid: a2c55e5b303e93c4d9055ded989cd167, type: 3}
