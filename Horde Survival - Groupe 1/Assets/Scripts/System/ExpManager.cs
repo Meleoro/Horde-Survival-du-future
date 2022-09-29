@@ -2,6 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using System.Collections.Generic;
+using System;
+using UnityEngine.UIElements.Experimental;
 
 public class ExpManager : MonoBehaviour
 {
@@ -13,6 +16,8 @@ public class ExpManager : MonoBehaviour
     //collision entre le joueur et le point d'exp
     //compteur +1
 
+    //public Variables expLevel = Array(1, 2, 3, 4, 5);
+    
     void Start()
     {
         other.SetStartExp();
