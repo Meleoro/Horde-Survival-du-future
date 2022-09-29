@@ -52,6 +52,8 @@ public class ButtonChoice : MonoBehaviour
             else if (Upgrade.health)
             {
                 UpgradeManager.Instance.healthGain += Upgrade.healthGain;
+                
+                PlayerHealthManager.Instance.IncreaseHealth();
             }
             
             // SI LE JOUEUR AMELIORE SA VITESSe

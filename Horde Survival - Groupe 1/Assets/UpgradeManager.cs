@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Character;
 using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
@@ -18,4 +19,5 @@ public class UpgradeManager : MonoBehaviour
     {
         Instance = this;
     }
+
 }

@@ -269,6 +269,14 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 1096107264}
+    - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
+      propertyPath: availableUpgrades.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
+      propertyPath: availableUpgrades.Array.data[2]
+      value: 
+      objectReference: {fileID: 11400000, guid: e25d66093193ffb4c85eccec77003912, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
 --- !u!4 &379767487 stripped
@@ -537,6 +545,30 @@ PrefabInstance:
       propertyPath: other
       value: 
       objectReference: {fileID: 511774017}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.data[1]
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.data[2]
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.data[3]
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.data[4]
+      value: 30
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
 --- !u!1001 &764516833

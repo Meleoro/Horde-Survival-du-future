@@ -84,7 +84,9 @@ namespace Character
         }
         void HandleMovement()
         {
-            _rb.velocity = new Vector2(movement.x * playerData.characterSpeed, movement.y * playerData.characterSpeed);
+            float newSpeed = playerData.characterSpeed + (playerData.characterSpeed * UpgradeManager.Instance.speedPourc / 100);
+            
+            _rb.velocity = new Vector2(movement.x * newSpeed, movement.y * newSpeed);
         }
         void HandleRotation()
         {
