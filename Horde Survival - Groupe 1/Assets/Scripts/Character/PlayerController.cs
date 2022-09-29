@@ -60,7 +60,7 @@ namespace Character
             PlayerPos = playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
             
-            //weaponUsed.PlayerShoot(this,initialBulletPos.position);
+            weaponUsed.PlayerShoot(this,initialBulletPos.position);
         }
         
         public bool PlayerCooldown()

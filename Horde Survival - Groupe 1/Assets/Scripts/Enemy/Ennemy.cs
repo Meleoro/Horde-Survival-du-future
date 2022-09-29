@@ -26,9 +26,23 @@ public class Ennemy : MonoBehaviour
             StartCoroutine(Dies());
     }
 
-    private void OnCollisionEnter2D(Collision2D col)
+    // private void OnCollisionEnter2D(Collision2D col)
+    // {
+    //     if (col.gameObject.tag == "Player" || col.gameObject.tag == "Explosion")
+    //     {
+    //         health -= 1;
+    //
+    //         if (health <= 0)
+    //         {
+    //             Dies();
+    //             Instantiate(loot, transform.position, transform.rotation);
+    //         }
+    //     }
+    // }
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (col.gameObject.tag == "Player" || col.gameObject.tag == "Explosion")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Explosion")
         {
             health -= 1;
 
@@ -38,10 +52,7 @@ public class Ennemy : MonoBehaviour
                 Instantiate(loot, transform.position, transform.rotation);
             }
         }
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
+        
         if (other.gameObject.tag == "Ennemy")
         {
             Vector2 direction = transform.position - other.transform.position;
