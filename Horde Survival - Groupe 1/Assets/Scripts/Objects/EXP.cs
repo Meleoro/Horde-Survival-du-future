@@ -8,6 +8,8 @@ public class EXP : Collectible, ICollectible
     public static event Action OnExCollected;
     Rigidbody2D rb;
 
+    public float valeurXp;
+
     bool hasTarget;
     Vector3 targetPosition;
     private float moveSpeed = 5f;

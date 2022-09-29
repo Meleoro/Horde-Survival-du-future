@@ -21,7 +21,7 @@ public class ComboManager : MonoBehaviour
     public RectTransform sliderPos;
 
     [Header("Variables")] 
-    private float currentMultiplier;
+    public float currentMultiplier;
     private float timer;
     public static ComboManager Instance;
     private bool canShakeAgain;
