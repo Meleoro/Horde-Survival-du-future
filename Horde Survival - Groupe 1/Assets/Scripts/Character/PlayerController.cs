@@ -25,7 +25,7 @@ namespace Character
         
         [SerializeField] public Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
-        [SerializeField] private Weapon weaponUsed;
+        public Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
         private Transform _playerTr;
@@ -58,7 +58,7 @@ namespace Character
             PlayerPos = _playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
             
-            weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
+            weaponUsed.Shoot(initialBulletPos.position,this);
         }
         private void FixedUpdate()
         {
@@ -83,11 +83,6 @@ namespace Character
             _rb.rotation = -a;
         }
         
-        private bool Cooldown()
-        {
-            if(Time.time > nextFireTime) return true;
-            return false;
-        }
         
         public GameObject EnemyNear()
         {

@@ -6,7 +6,7 @@ using Upgrades;
 public class DroneAttack : MonoBehaviour
 {
     [SerializeField] private Transform playerTr;
-    [SerializeField] private Weapon weapon;
+    public Weapon weapon;
     private Transform _droneTr;
     
     public float rotationSpeed = 30f;
@@ -21,7 +21,7 @@ public class DroneAttack : MonoBehaviour
     {
         if (weapon != null)
         {
-            weapon.Shoot(Cooldown(),this, _droneTr.position);
+            weapon.Shoot(this, _droneTr.position);
         }
     }
     
