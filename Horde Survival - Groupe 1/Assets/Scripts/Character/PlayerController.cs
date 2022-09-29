@@ -13,9 +13,8 @@ namespace Character
         [HideInInspector] public Vector2 movement;
         [HideInInspector] public Vector3 nearestEnemyPos;
         private Vector2 _aim;
-        public static Vector2 PlayerPos;
+        public static Vector3 PlayerPos;
         public LayerMask enemyLayer;
-        [HideInInspector] public float _nextFireTime;      
         private float _radius;
         private bool _detectEnemy;
         
@@ -28,7 +27,7 @@ namespace Character
         public Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
-        private Transform _playerTr;
+        public Transform playerTr;
         public static PlayerController Instance;
 
         private GameObject _nearestEnemy;
@@ -38,9 +37,10 @@ namespace Character
         {
             _playerControls = new PlayerInputActions();
             _rb = GetComponent<Rigidbody2D>();
-            _playerTr = GetComponent<Transform>();
+            playerTr = GetComponent<Transform>();
 
             Instance = this;
+            weaponUsed.Initialize();
         }
         private void OnEnable()
         {
@@ -55,10 +55,11 @@ namespace Character
         }
         private void Update()
         {
-            PlayerPos = _playerTr.position;
+            PlayerPos = playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
             
-            weaponUsed.Shoot(this,initialBulletPos.position);
+            weaponUsed.PlayerShoot(this,initialBulletPos.position);
+            weaponUsed.PlayerCooldown();
         }
         private void FixedUpdate()
         {
@@ -81,12 +82,6 @@ namespace Character
         {
             float a = Mathf.Atan2(_aim.x, _aim.y) * Mathf.Rad2Deg;
             _rb.rotation = -a;
-        }
-        
-        public bool Cooldown()
-        {
-            if(Time.time > _nextFireTime) return true;
-            return false;
         }
 
         public GameObject EnemyNear()

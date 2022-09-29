@@ -58,7 +58,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4666382149410248427}
   - component: {fileID: 4666382149410248424}
-  - component: {fileID: 745151767}
+  - component: {fileID: 6882984574769513517}
   m_Layer: 0
   m_Name: Drone02
   m_TagString: Untagged
@@ -133,7 +133,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &745151767
+--- !u!114 &6882984574769513517
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,10 +145,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTr: {fileID: 0}
-  weapon: {fileID: 11400000, guid: 6d7ab52acb34be045a53638ad18bdfbb, type: 2}
-  rotationSpeed: 30
-  nextFireTime: 0
+  weapon: {fileID: 11400000, guid: 272b7194090032c4480dc03b65cfde12, type: 2}
 --- !u!1 &4666382149448289938
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,7 +156,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4666382149448289939}
   - component: {fileID: 4666382149448289936}
-  - component: {fileID: 1356542307}
+  - component: {fileID: 375978046}
   m_Layer: 0
   m_Name: Drone01
   m_TagString: Untagged
@@ -234,7 +231,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &1356542307
+--- !u!114 &375978046
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,7 +243,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerTr: {fileID: 0}
-  weapon: {fileID: 11400000, guid: 6d7ab52acb34be045a53638ad18bdfbb, type: 2}
-  rotationSpeed: 30
-  nextFireTime: 0
+  weapon: {fileID: 11400000, guid: 272b7194090032c4480dc03b65cfde12, type: 2}

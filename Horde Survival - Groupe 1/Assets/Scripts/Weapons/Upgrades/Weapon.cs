@@ -15,54 +15,69 @@ namespace Upgrades
         private float _endReloadTime;
         public bool isReloading;
         public bool isOnCooldown;
-        private float _nextFireTime;
-        public Vector2 spawnPos;
+        private float _nextFireTimePlayer;
+        private float _nextFireTimeDrone;
         private int _currentAmmo;
 
         public void Initialize()
         {
             _currentAmmo = levelList[currentLevel].ammoMax;
+            _nextFireTimeDrone = 0f;
+            _nextFireTimePlayer = 0f;
         }
 
-        public void Shoot( PlayerController pc, Vector2 initialPos)
+        public void PlayerShoot( PlayerController pc, Vector2 initialPos)
         {
             
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
-        
-            if (ammoUsed != null && pc.Cooldown())
+
+            if (ammoUsed != null && PlayerCooldown())
             {
                 //Placement & activation
                 ammoUsed.transform.position = initialPos;
-                spawnPos = initialPos;
                 ammoUsed.SetActive(true);
     
                 //Physic
                 ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel].bulletSpeed;
-            
-                //Cooldown
-                _nextFireTime = Time.time + levelList[currentLevel].reload;
+
+                _currentAmmo -= 1;
+                
+                //Cooldown & Reload
+                if(_currentAmmo > 0) _nextFireTimePlayer = Time.time + levelList[currentLevel].fireRate;
+                else _nextFireTimePlayer = Time.time + levelList[currentLevel].reload;
             }
         }
-        public void Shoot( DroneAttack drone, Vector3 dronePos)
+        public void DroneShoot(Transform dronePos, bool cooldown)
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
             
-                if (ammoUsed != null && drone.Cooldown())
+            Debug.Log(ammoUsed);
+            
+                if (ammoUsed != null && cooldown)
                 {
-                    Debug.Log(2);
+                    Debug.Log(dronePos);
                     //Placement & activation
-                    ammoUsed.transform.position = dronePos;
-                    spawnPos = dronePos;
+                    ammoUsed.transform.position = dronePos.position;
                     ammoUsed.SetActive(true);
+
+                    Vector3 dir = dronePos.position - PlayerController.PlayerPos;
     
                     //Physic
-                    ammoUsed.GetComponent<Rigidbody2D>().velocity = dronePos.normalized * levelList[currentLevel].bulletSpeed;
+                    ammoUsed.GetComponent<Rigidbody2D>().velocity = dir * levelList[currentLevel].bulletSpeed;
                 
-                    //FireRate
-                    _nextFireTime = Time.time + levelList[currentLevel].fireRate;
+                    //Cooldown & Reload
+                    if(_currentAmmo > 0) _nextFireTimeDrone = Time.time + levelList[currentLevel].fireRate;
+                    else _nextFireTimeDrone = Time.time + levelList[currentLevel].reload;
                 }
             
         }
+        
+        public bool PlayerCooldown()
+        {
+            if(Time.time > _nextFireTimePlayer) return true;
+            return false;
+        }
+        
 
         [Header("Upgrade / Weapon")]
         public string name;
