@@ -60,8 +60,6 @@ public class ButtonChoice : MonoBehaviour
             else if (Upgrade.speed)
             {
                 UpgradeManager.Instance.speedPourc += Upgrade.speedGain;
-                
-                UpgradeManager.Instance.IncreaseSpeed();
             }
 
             // SI LE JOUEUR AMELIORE LA VITESSE DE SES DRONES

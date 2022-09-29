@@ -20,10 +20,4 @@ public class UpgradeManager : MonoBehaviour
         Instance = this;
     }
 
-    public void IncreaseSpeed()
-    {
-        PlayerController.Instance.playerData.characterSpeed +=
-            (PlayerController.Instance.playerData.characterSpeed * speedPourc / 100);
-    }
-    
 }
