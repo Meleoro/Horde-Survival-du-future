@@ -126,6 +126,7 @@ namespace Upgrades
         public float portee;
         public float fireRate;
         public float bulletsPerShot;
+        public float dispersion;
         public int ammoMax;
         public int currentAmmo;
         public float reload;

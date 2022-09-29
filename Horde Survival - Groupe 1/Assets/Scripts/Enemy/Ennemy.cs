@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem.UI;
 
 public class Ennemy : MonoBehaviour
 {
@@ -10,6 +11,8 @@ public class Ennemy : MonoBehaviour
     public float health;
     public bool dies;
     public float explosionForce;
+
+    public GameObject loot;
 
     [Header("Autres")] public CircleCollider2D explosion;
     
@@ -32,6 +35,7 @@ public class Ennemy : MonoBehaviour
             if (health <= 0)
             {
                 Dies();
+                Instantiate(loot, transform.position, transform.rotation);
             }
         }
     }

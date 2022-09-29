@@ -31,8 +31,12 @@ public class BulletLanceGrenade : MonoBehaviour
 
     private void Start()
     {
-        if(canBounce)
+        direction = rb.velocity;
+
+        if (!isTheOriginal)
+        {
             ChangeDirectionOpti();
+        }
     }
 
     private void Update()

@@ -80,6 +80,7 @@ public class ButtonChoice : MonoBehaviour
         }
         
         ChoiceManager.Instance.transform.localPosition = new Vector3(0, 1000, 0);
+        ChoiceManager.Instance.controller.SetActive(false);
     }
 
     public void UpdateButton()

@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4408639142409593424
 Transform:
   m_ObjectHideFlags: 0
@@ -105,7 +105,7 @@ MonoBehaviour:
   damages: 0
   grenade: {fileID: 614827286038339249}
   nbrRebond: 0
-  limiteRebonds: 4
+  limiteRebonds: 3
   isTheOriginal: 1
   canBounce: 1
   ennemyLayer:
