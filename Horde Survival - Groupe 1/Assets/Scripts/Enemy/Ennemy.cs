@@ -21,9 +21,7 @@ public class Ennemy : MonoBehaviour
         Vector2 direction = RefCharacter.Instance.transform.position - transform.position;
         
         transform.Translate(direction.normalized * speed * Time.deltaTime);
-
-        if (dies)
-            StartCoroutine(Dies());
+        
     }
 
     // private void OnCollisionEnter2D(Collision2D col)
@@ -42,14 +40,13 @@ public class Ennemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Explosion")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Explosion" || other.gameObject.tag == "Bullet" )
         {
             health -= 1;
 
             if (health <= 0)
             {
-                Dies();
-                
+                StartCoroutine(Dies());
                 ComboManager.Instance.IncreaeMultiplier(0.2f);
 
                 GameObject Xp = Instantiate(loot, transform.position, transform.rotation);

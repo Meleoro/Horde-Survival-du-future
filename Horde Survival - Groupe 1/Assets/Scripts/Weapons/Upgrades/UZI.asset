@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: UZI
   m_EditorClassIdentifier: 
   isReloading: 0
-  isOnCooldown: 0
+  isOnCooldown: 1
   name: UZI
   image: {fileID: 0}
   currentLevel: 1
@@ -27,8 +27,9 @@ MonoBehaviour:
     portee: 10
     fireRate: 2
     bulletsPerShot: 0
-    ammoMax: 20
-    currentAmmo: 20
+    dispersion: 0
+    ammoMax: 10
+    currentAmmo: 3
     reload: 5
     doubleUZI: 0
     doubleTir: 0
@@ -41,8 +42,9 @@ MonoBehaviour:
     degats: 10
     bulletSpeed: 10
     portee: 15
-    fireRate: 0.08
+    fireRate: 0.15
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 10
     currentAmmo: 0
     reload: 2
@@ -59,6 +61,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -75,6 +78,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -91,6 +95,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -107,6 +112,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -123,6 +129,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -139,6 +146,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0

@@ -24,7 +24,8 @@ namespace Character
         #region Declaration
         
         [SerializeField] public Transform initialBulletPos;
-        [SerializeField] public PlayerData playerData;
+        [SerializeField] private PlayerData playerData;
+        [SerializeField] private PlayerHealthManager healthManager;
         public Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
@@ -83,9 +84,7 @@ namespace Character
         }
         void HandleMovement()
         {
-            float newSpeed = (playerData.characterSpeed * UpgradeManager.Instance.speedPourc / 100);;
-            
-            _rb.velocity = new Vector2(movement.x * newSpeed, movement.y * newSpeed);
+            _rb.velocity = new Vector2(movement.x * playerData.characterSpeed, movement.y * playerData.characterSpeed);
         }
         void HandleRotation()
         {
@@ -135,6 +134,15 @@ namespace Character
             }
 
             return _nearestEnemy;
+        }
+        
+        private void OnTriggerEnter2D(Collider2D col)
+        {
+            if (col.gameObject.CompareTag("Ennemy"))
+            { 
+                Debug.Log("Oof");
+                healthManager.TakeDamage(1);
+            }
         }
     }
 }
