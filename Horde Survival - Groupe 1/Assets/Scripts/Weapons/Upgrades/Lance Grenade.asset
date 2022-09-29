@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: Lance Grenade
   m_EditorClassIdentifier: 
+  spawnPos: {x: -14.018537, y: -2.697577}
+  isReloading: 0
+  isOnCooldown: 0
   name: lance Grenade
   image: {fileID: 0}
   currentLevel: 0
@@ -22,7 +25,7 @@ MonoBehaviour:
   - desciption: 
     degats: 0
     portee: 0
-    fireRate: 5
+    fireRate: 10
     bulletsPerShot: 0
     ammoMax: 0
     currentAmmo: 0
