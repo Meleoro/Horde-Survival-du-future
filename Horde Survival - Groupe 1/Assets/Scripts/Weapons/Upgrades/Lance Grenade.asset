@@ -13,11 +13,10 @@ MonoBehaviour:
   m_Name: Lance Grenade
   m_EditorClassIdentifier: 
   isReloading: 0
-  isOnCooldown: 0
-  spawnPos: {x: -11.814045, y: 3.0864635}
+  isOnCooldown: 1
   name: lance Grenade
   image: {fileID: 0}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
@@ -28,12 +27,13 @@ MonoBehaviour:
     portee: 20
     fireRate: 1
     bulletsPerShot: 1
+    dispersion: 0
     ammoMax: 2
-    currentAmmo: 0
+    currentAmmo: 1
     reload: 3
     doubleUZI: 0
     doubleTir: 0
-    nbrRebonds: 0
+    nbrRebonds: 2
     firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
@@ -44,6 +44,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -60,6 +61,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -76,6 +78,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -92,6 +95,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -108,6 +112,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -124,6 +129,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
@@ -140,6 +146,7 @@ MonoBehaviour:
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
+    dispersion: 0
     ammoMax: 0
     currentAmmo: 0
     reload: 0
