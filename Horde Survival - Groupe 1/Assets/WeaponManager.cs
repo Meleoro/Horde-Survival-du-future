@@ -23,18 +23,18 @@ public class WeaponManager : MonoBehaviour
     {
         foreach(Weapon k in currentWeapons)
         {
-            if(!k.isReloading)
-                StartCoroutine(ShootCooldown(k.levelList[k.currentLevel - 1].fireRate, k));
+            /*if(!k.isReloading)
+                StartCoroutine(ShootCooldown(k.levelList[k.currentLevel - 1].fireRate, k));*/
         }
     }
 
     IEnumerator ShootCooldown(float cooldown, Weapon weapon)
     {
-        weapon.Shoot(PlayerController.Instance.initialBulletPos.position, true, PlayerController.Instance);
-        weapon.isReloading = true;
+        //weapon.Shoot(PlayerController.Instance.initialBulletPos.position, true, PlayerController.Instance);
+        //weapon.isReloading = true;
 
         yield return new WaitForSeconds(cooldown);
 
-        weapon.isReloading = false;
+        //weapon.isReloading = false;
     }
 }
