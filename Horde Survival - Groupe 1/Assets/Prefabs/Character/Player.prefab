@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 244547868}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,10 +182,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movement: {x: 0, y: 0}
   nearestEnemyPos: {x: 0, y: 0, z: 0}
-  nextFireTime: 0
-  ennemyLayer:
+  enemyLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 0
+  nextFireTime: 0
   initialBulletPos: {fileID: 3914616135394496884}
   playerData: {fileID: 11400000, guid: 6634118c00c412547b040d678ade2a08, type: 2}
   weaponUsed: {fileID: 11400000, guid: 6d7ab52acb34be045a53638ad18bdfbb, type: 2}
