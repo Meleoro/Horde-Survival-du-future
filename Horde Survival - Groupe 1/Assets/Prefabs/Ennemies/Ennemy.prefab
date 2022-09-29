@@ -11,10 +11,9 @@ GameObject:
   - component: {fileID: 1665647368470869398}
   - component: {fileID: 1665647368470869401}
   - component: {fileID: 1665647368470869400}
-  - component: {fileID: -8618623778109623760}
+  - component: {fileID: 16811872}
   - component: {fileID: 4806127789896020566}
   - component: {fileID: 1338974609}
-  - component: {fileID: 16811872}
   m_Layer: 6
   m_Name: Ennemy
   m_TagString: Ennemy
@@ -107,8 +106,8 @@ MonoBehaviour:
   explosionForce: 10
   loot: {fileID: 7014358610161431345, guid: 04ee6e1d286a7ac4e9e1ea295360679b, type: 3}
   explosion: {fileID: 16811872}
---- !u!61 &-8618623778109623760
-BoxCollider2D:
+--- !u!58 &16811872
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -117,22 +116,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.04675503, y: -0.015650153}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.6875, y: 0.6875}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
+  m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 0.40816644, y: 0.65633154}
-  m_EdgeRadius: 0
+  m_Radius: 0.34375
 --- !u!50 &4806127789896020566
 Rigidbody2D:
   serializedVersion: 4
@@ -167,19 +156,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   other: {fileID: 0}
---- !u!58 &16811872
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665647368470869403}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.34375
