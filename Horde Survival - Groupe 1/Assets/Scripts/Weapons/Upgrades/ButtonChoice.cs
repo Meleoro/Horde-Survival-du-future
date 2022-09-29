@@ -45,37 +45,37 @@ public class ButtonChoice : MonoBehaviour
             // SI LE JOUEUR AMELIORE SES DEGATS
             if (Upgrade.damages)
             {
-                
+                UpgradeManager.Instance.degatsPourc += Upgrade.damagesGain;
             }
             
             // SI LE JOUEUR AMELIORE SES HP
             else if (Upgrade.health)
             {
-                
+                UpgradeManager.Instance.healthGain += Upgrade.healthGain;
             }
             
             // SI LE JOUEUR AMELIORE SA VITESSe
             else if (Upgrade.speed)
             {
-                
+                UpgradeManager.Instance.speedPourc += Upgrade.speedGain;
             }
 
             // SI LE JOUEUR AMELIORE LA VITESSE DE SES DRONES
             else if (Upgrade.droneSpd)
             {
-                
+                UpgradeManager.Instance.speedDronePourc += Upgrade.droneSpdGain;
             }
             
             // SI LE JOUEUR AMELIORE SON AIMANT A XP
             else if (Upgrade.XPMagnet)
             {
-                
+                UpgradeManager.Instance.XPMagnetPourc += Upgrade.XPMagnetGain;
             }
             
             // SI LE JOUEUR AMELIORE LE TAUX D'XP RECU
             else if (Upgrade.XPBoost)
             {
-                
+                UpgradeManager.Instance.XPBoostXP += Upgrade.XPBoostGain;
             }
         }
         

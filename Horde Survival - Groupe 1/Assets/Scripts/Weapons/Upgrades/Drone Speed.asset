@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: Drone Speed
   m_EditorClassIdentifier: 
+  isReloading: 0
+  isOnCooldown: 0
   name: 
   image: {fileID: 0}
   currentLevel: 0
@@ -27,7 +29,7 @@ MonoBehaviour:
   speed: 0
   speedGain: 0
   droneSpd: 1
-  droneSpdGain: 5
+  droneSpdGain: 0
   XPMagnet: 0
   XPMagnetGain: 0
   XPBoost: 0

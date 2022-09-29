@@ -96,22 +96,22 @@ namespace Upgrades
         public string description;
     
         public bool damages;
-        public float damagesGain;
+        public int damagesGain;
     
         public bool health;
-        public float healthGain;
+        public int healthGain;
     
         public bool speed;
-        public float speedGain;
+        public int speedGain;
     
         public bool droneSpd;
-        public float droneSpdGain;
+        public int droneSpdGain;
 
         public bool XPMagnet;
-        public float XPMagnetGain;
+        public int XPMagnetGain;
 
         public bool XPBoost;
-        public float XPBoostGain;
+        public int XPBoostGain;
     }
 
     [Serializable]
