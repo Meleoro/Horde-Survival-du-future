@@ -1014,6 +1014,8 @@ MonoBehaviour:
     numberOfProjectiles: 50
   - prefab: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
     numberOfProjectiles: 6
+  - prefab: {fileID: 9124585523636447651, guid: 000370840dc35cd46b737c56d87b4457, type: 3}
+    numberOfProjectiles: 4
 --- !u!4 &1289564050
 Transform:
   m_ObjectHideFlags: 0

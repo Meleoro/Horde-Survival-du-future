@@ -18,6 +18,7 @@ namespace Character
         private float _radius;
         public float nextTimeFire;
         private bool _detectEnemy;
+        private bool invinsibilite;
         
         #endregion
 
@@ -140,7 +141,7 @@ namespace Character
         
         private void OnCollisionEnter2D(Collision2D col)
         {
-            if (col.gameObject.CompareTag("Ennemy"))
+            if (col.gameObject.CompareTag("Ennemy") && !invinsibilite)
             {
                 healthManager.TakeDamage(1);
             }

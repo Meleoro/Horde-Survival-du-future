@@ -16,7 +16,7 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Canon CC
   image: {fileID: 0}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 1
   weapon: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   bullet: {fileID: 9124585523636447651, guid: 000370840dc35cd46b737c56d87b4457, type: 3}
@@ -24,7 +24,7 @@ MonoBehaviour:
   - desciption: "Fusil \xE0 pompe"
     degats: 10
     bulletSpeed: 15
-    portee: 1
+    portee: 0.1
     fireRate: 1
     bulletsPerShot: 1
     dispersion: 0
