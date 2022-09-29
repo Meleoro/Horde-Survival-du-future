@@ -1,12 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Upgrades;
 using Character;
+using Unity.VisualScripting;
 
 public class WeaponManager : MonoBehaviour
 {
     public static WeaponManager Instance;
+    
+    private PlayerInputActions _playerControls;
+    private bool cooldownSwitch;
+
+    public DroneAttack drone1;
+    public DroneAttack drone2;
 
     public List<Weapon> currentWeapons = new List<Weapon>();
 
@@ -17,18 +25,88 @@ public class WeaponManager : MonoBehaviour
 
         else
             Destroy(gameObject);
+        
+        _playerControls = new PlayerInputActions();
     }
 
-    void Update()
+    private void OnEnable()
     {
-        foreach(Weapon k in currentWeapons)
+        _playerControls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        _playerControls.Disable();
+    }
+
+
+    private void Update()
+    {
+        // SI LE JOUEUR VEUT SWITCH
+        if (_playerControls.Player.ChangeWeapon.WasPerformedThisFrame())
         {
-            Debug.Log(k.isReloading);
-            
-            if(!k.isReloading && !k.isOnCooldown)
-                StartCoroutine(ShootCooldown(k.levelList[k.currentLevel - 1].fireRate, k));
+            if (!cooldownSwitch)
+            {
+                SwitchWeapon();
+            }
+        }
+
+
+        // ON ATTRIBUE LES ARMES A CHAQUE SCRIPT
+        if (currentWeapons.Count == 3)
+        {
+            PlayerController.Instance.weaponUsed = currentWeapons[0];
+            drone1.weapon = currentWeapons[1];
+            drone2.weapon = currentWeapons[2];
+        }
+        
+        else if (currentWeapons.Count == 2)
+        {
+            PlayerController.Instance.weaponUsed = currentWeapons[0];
+            drone1.weapon = currentWeapons[1];
+        }
+        
+        else if (currentWeapons.Count == 1)
+        {
+            PlayerController.Instance.weaponUsed = currentWeapons[0];
         }
     }
+
+
+    void SwitchWeapon()
+    {
+        // SI ON A ACTUELLEMENT 2 ARMES QUE L'ON VEUT SWITCH
+        if (currentWeapons.Count == 2)
+        {
+            Weapon stockage0 = currentWeapons[0];
+            
+            currentWeapons[0] = currentWeapons[1];
+            currentWeapons[1] = stockage0;
+        }
+        
+        // SI ON A ACTUELLEMENT 3 ARMES QUE L'ON VEUT SWITCH
+        else if (currentWeapons.Count == 3)
+        {
+            Weapon stockage0 = currentWeapons[0];
+            Weapon stockage1 = currentWeapons[1];
+            
+            currentWeapons[0] = currentWeapons[1];
+            currentWeapons[1] = currentWeapons[2];
+            currentWeapons[2] = stockage1;
+        }
+
+        StartCoroutine(SwitchWeaponCooldown());
+    }
+
+    IEnumerator SwitchWeaponCooldown()
+    {
+        cooldownSwitch = true;
+        
+        yield return new WaitForSeconds(1);
+        
+        cooldownSwitch = false;
+    }
+    
 
     IEnumerator ShootCooldown(float cooldown, Weapon weapon)
     {
