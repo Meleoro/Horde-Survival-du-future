@@ -11,7 +11,7 @@ namespace Enemy
         {
             if (col.gameObject.CompareTag("Player"))
             { 
-                Debug.Log(3);
+                Debug.Log("Oof");
                 other.TakeDamage(1);
             }
         }

@@ -13,7 +13,7 @@ namespace Upgrades
         private float _nextFireTime;
         private float _endReloadTime;
         public Vector2 spawnPos;
-        public bool isReloading;
+        public bool isReloading = false;
         public bool isOnCooldown;
     
         public void Shoot(Vector2 initialPos, PlayerController pc)
@@ -22,17 +22,25 @@ namespace Upgrades
         
             if (ammoUsed != null && Cooldown() && !isReloading)
             {
-                //Placement & activation
-                ammoUsed.transform.position = initialPos;
-                spawnPos = initialPos;
-                ammoUsed.SetActive(true);
+                for (int i = 0; i <  levelList[currentLevel].ammoMax; i++)
+                {
+                    //Placement & activation
+                    ammoUsed.transform.position = initialPos;
+                    spawnPos = initialPos;
+                    ammoUsed.SetActive(true);
     
-                //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel].fireRate;
+                    //Physic
+                    ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel].bulletSpeed;
             
-                //Cooldown
-               _nextFireTime = Time.time + levelList[currentLevel].reload;
+                    //Cooldown
+                    _nextFireTime = Time.time + levelList[currentLevel].reload;
+                }
+                
+                //Reload Time
+                _endReloadTime = Time.time + levelList[currentLevel].reload;
+                isReloading = true;
             }
+            Reload();
         }
         public void Shoot( DroneAttack drone, Vector3 dronePos)
         {
@@ -42,27 +50,30 @@ namespace Upgrades
             {
                 for (int i = 0; i < levelList[currentLevel].ammoMax; i++)
                 {
+                    Debug.Log(2);
                     //Placement & activation
                     ammoUsed.transform.position = dronePos;
                     spawnPos = dronePos;
                     ammoUsed.SetActive(true);
     
                     //Physic
-                    ammoUsed.GetComponent<Rigidbody2D>().velocity = dronePos.normalized * levelList[currentLevel].fireRate;
+                    ammoUsed.GetComponent<Rigidbody2D>().velocity = dronePos.normalized * levelList[currentLevel].bulletSpeed;
             
                     //FireRate
                     _nextFireTime = Time.time + levelList[currentLevel].fireRate;
                 }
 
                 //Reload Time
-                _nextFireTime = Time.time + levelList[currentLevel].reload;
+                _endReloadTime = Time.time + levelList[currentLevel].reload;
                 isReloading = true;
             }
+            
+            Reload();
         }
 
         void Reload()
         {
-            isReloading = Time.time > _endReloadTime;
+            isReloading = Time.time < _endReloadTime;
         }
         
         private bool Cooldown()
@@ -111,6 +122,8 @@ namespace Upgrades
 
         [Header("General")]
         public float degats;
+
+        public float bulletSpeed;
         public float portee;
         public float fireRate;
         public float bulletsPerShot;
