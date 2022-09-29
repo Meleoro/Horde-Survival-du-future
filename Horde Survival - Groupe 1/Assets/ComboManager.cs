@@ -11,6 +11,7 @@ public class ComboManager : MonoBehaviour
     [Header("Parameters")] 
     public float maxMultiplier;
     public float timerModifier;
+    public Gradient gradient;
 
     [Header("Références")] 
     public TextMeshProUGUI multiplier;
@@ -55,6 +56,9 @@ public class ComboManager : MonoBehaviour
         
         multiplier.text = "X " + currentMultiplier;
         slider.fillAmount = timer;
+
+        multiplier.color = gradient.Evaluate(currentMultiplier / maxMultiplier);
+        slider.color = gradient.Evaluate(currentMultiplier / maxMultiplier);
 
         
         // CHANGEMENT DE POSITION
