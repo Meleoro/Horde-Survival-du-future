@@ -37,6 +37,7 @@ public class Backup : MonoBehaviour
             {
                 if (!k.isReloading && !k.isOnCooldown)
                 {
+                    Debug.Log(k);
                     Shoot(k);
                 }
 
@@ -61,7 +62,7 @@ public class Backup : MonoBehaviour
                 bullet = Instantiate(weapon.bullet, drone1.transform.position, quaternion.Euler(Quaternion.identity.x, Quaternion.identity.y, 
                     Quaternion.identity.z + dispersion));
                 
-                bullet.GetComponent<Bullet>().GetComponent<Rigidbody2D>().velocity = (drone1.transform.position - transform.position).normalized * infos.bulletSpeed;
+                bullet.GetComponent<Rigidbody2D>().velocity = (drone1.transform.position - transform.position).normalized * infos.bulletSpeed;
             }
             
             else if (compteur == 2)
@@ -69,7 +70,7 @@ public class Backup : MonoBehaviour
                 bullet = Instantiate(weapon.bullet, drone2.transform.position, quaternion.Euler(Quaternion.identity.x, Quaternion.identity.y, 
                     Quaternion.identity.z + dispersion));
                 
-                bullet.GetComponent<Bullet>().GetComponent<Rigidbody2D>().velocity = drone2.transform.position.normalized * infos.bulletSpeed;
+                bullet.GetComponent<Rigidbody2D>().velocity = drone2.transform.position.normalized * infos.bulletSpeed;
             }
             
             else
@@ -77,17 +78,15 @@ public class Backup : MonoBehaviour
                 bullet = Instantiate(weapon.bullet, transform.position, quaternion.Euler(Quaternion.identity.x, Quaternion.identity.y, 
                     Quaternion.identity.z + dispersion));
                 
-                bullet.GetComponent<Bullet>().GetComponent<Rigidbody2D>().velocity = 
+                bullet.GetComponent<Rigidbody2D>().velocity = 
                     (PlayerController.Instance.EnemyNear().transform.position - transform.position).normalized * infos.bulletSpeed;
             }
 
             Destroy(bullet, infos.portee);
         }
-        
-        
 
         infos.currentAmmo -= 1;
-
+        
         StartCoroutine(ShootCooldown(infos.fireRate, weapon));
     }
     
@@ -97,6 +96,7 @@ public class Backup : MonoBehaviour
         // SI LE JOUEUR A VIDÉ SON CHARGEUR
         if (weapon.levelList[weapon.currentLevel - 1].currentAmmo <= 0)
         {
+            
             weapon.isReloading = true;
             
             yield return new WaitForSeconds(weapon.levelList[weapon.currentLevel - 1].reload);
