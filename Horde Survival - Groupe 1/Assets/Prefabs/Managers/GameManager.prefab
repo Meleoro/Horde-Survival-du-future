@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6366703095613722953}
   - component: {fileID: 6366703095613722954}
-  - component: {fileID: 631845885}
   - component: {fileID: 4853050273419080903}
   m_Layer: 0
   m_Name: GameManager
@@ -57,22 +56,6 @@ MonoBehaviour:
   - {fileID: 0}
   heightCamera: 22
   widthCamera: 15
---- !u!114 &631845885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6366703095613722955}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d82a8bfcbba7324a82f3ba4b0a02fc0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxMultiplier: 4
-  timerModifier: 2
-  multiplier: {fileID: 0}
-  slider: {fileID: 0}
 --- !u!114 &4853050273419080903
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86,6 +69,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxMultiplier: 4
-  timerModifier: 2
+  timerModifier: 3
   multiplier: {fileID: 0}
   slider: {fileID: 0}
+  all: {fileID: 0}
+  multiplierPos: {fileID: 0}
+  sliderPos: {fileID: 0}
