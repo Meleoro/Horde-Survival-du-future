@@ -55,10 +55,10 @@ namespace Character
         }
         private void Update()
         {
-            //PlayerPos = _playerTr.position;
-            //nearestEnemyPos = EnemyNear().transform.position;
+            PlayerPos = _playerTr.position;
+            nearestEnemyPos = EnemyNear().transform.position;
             
-            //weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
+            weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
         }
         private void FixedUpdate()
         {

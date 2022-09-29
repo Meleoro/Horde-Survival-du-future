@@ -34,7 +34,7 @@ public class WeaponManager : MonoBehaviour
     {
         GameObject nearestEnnemy = PlayerController.Instance.EnemyNear();
         
-        weapon.Shoot(PlayerController.Instance.initialBulletPos.position, true, PlayerController.Instance, nearestEnnemy);
+        //weapon.Shoot(PlayerController.Instance.initialBulletPos.position, true, PlayerController.Instance, nearestEnnemy);
 
         weapon.levelList[weapon.currentLevel - 1].currentAmmo -= 1;
 

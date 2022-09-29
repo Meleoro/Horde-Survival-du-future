@@ -15,7 +15,7 @@ namespace Upgrades
         public bool isReloading;
         public bool isOnCooldown;
     
-        public void Shoot(Vector2 initialPos, bool cooldown, PlayerController pc, GameObject nearestEnnemy)
+        public void Shoot(Vector2 initialPos, bool cooldown, PlayerController pc)
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
         
@@ -27,7 +27,7 @@ namespace Upgrades
                 ammoUsed.SetActive(true);
     
                 //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = (nearestEnnemy.transform.position - pc.transform.position).normalized * levelList[currentLevel].fireRate;
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel].fireRate;
             
                 //Cooldown
                 pc.nextFireTime = Time.time + levelList[currentLevel].reload;
