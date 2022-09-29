@@ -16,6 +16,7 @@ namespace Character
         public static Vector3 PlayerPos;
         public LayerMask enemyLayer;
         private float _radius;
+        public float nextTimeFire;
         private bool _detectEnemy;
         
         #endregion
@@ -55,11 +56,17 @@ namespace Character
         }
         private void Update()
         {
+            PlayerCooldown();
             PlayerPos = playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
             
             weaponUsed.PlayerShoot(this,initialBulletPos.position);
-            weaponUsed.PlayerCooldown();
+        }
+        
+        public bool PlayerCooldown()
+        {
+            if(Time.time > nextTimeFire) return true;
+            return false;
         }
         private void FixedUpdate()
         {

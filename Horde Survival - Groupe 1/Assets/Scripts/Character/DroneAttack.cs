@@ -2,13 +2,15 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Upgrades;
 
 public class DroneAttack : MonoBehaviour
 {
     public Weapon weapon;
     public Transform tr;
-    private float _nextFireTimeDrone;
+    [HideInInspector]
+    public float nextFireTimeDrone;
 
     private void Start()
     {
@@ -26,12 +28,12 @@ public class DroneAttack : MonoBehaviour
         {
             Debug.Log(2);
             
-            weapon.DroneShoot(tr, DroneCooldown());
+            weapon.DroneShoot(tr, this);
         }
     }
     public bool DroneCooldown()
     {
-        if(Time.time > _nextFireTimeDrone) return true;
+        if(Time.time > nextFireTimeDrone) return true;
         return false;
     }
 }
