@@ -63,7 +63,7 @@ public class WeaponManager : MonoBehaviour
         else if (currentWeapons.Count == 2)
         {
             PlayerController.Instance.weaponUsed = currentWeapons[0];
-            drone1.weapon = currentWeapons[1];
+            drone1.weapon = currentWeapons[1]; 
         }
         
         else if (currentWeapons.Count == 1)

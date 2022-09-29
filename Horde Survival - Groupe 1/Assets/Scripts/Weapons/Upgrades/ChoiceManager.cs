@@ -63,6 +63,7 @@ public class ChoiceManager : MonoBehaviour
             LevelUp();
     }
 
+    
     // MONTEE DE NIVEAU
     public void LevelUp()
     {
@@ -82,43 +83,53 @@ public class ChoiceManager : MonoBehaviour
         }
     }
 
-    
     // PROPOSE UNE NOUVELLE ARME AU JOUEUR
     public void SelectNewWeapon()
     {
         selectedOptions.Clear();
-
+        
         // SELECTION DES TROIS CHOIX
         for (int i = 0; i < 3; i++)
         {
-            endLoop = false;
-
-            while (!endLoop)
+            if (i < weapons.Count)
             {
-                int choice = random.Range(0, weapons.Count);
-                notTheSame = true;
+                listButtons[i].gameObject.SetActive(true);
                 
-                //VERIFICATION QUE LE CHOIX EST PAS DEJA PRESENT
-                foreach (int k in selectedOptions)
-                {
-                    if (choice == k)
-                    {
-                        notTheSame = false;
-                    }
-                }
-                
-                
-                // L'OPTION N'EST PAS DEJA PRESENTE DANS LES CHOIX
-                if (notTheSame)
-                {
-                    selectedOptions.Add(choice);
-                    listButtons[i].Upgrade = weapons[choice];
-                    listButtons[i].currentIndex = choice;
+                endLoop = false;
 
-                    endLoop = true;
-                }
+                while (!endLoop)
+                {
+                    int choice = random.Range(0, weapons.Count);
+                    notTheSame = true;
+                    
+                    //VERIFICATION QUE LE CHOIX EST PAS DEJA PRESENT
+                    foreach (int k in selectedOptions) 
+                    {
+                        if (choice == k)
+                        {
+                            notTheSame = false;
+                        }
+                    }
+                
+                
+                    // L'OPTION N'EST PAS DEJA PRESENTE DANS LES CHOIX
+                    if (notTheSame)
+                    {
+                        selectedOptions.Add(choice);
+                        listButtons[i].Upgrade = weapons[choice];
+                        listButtons[i].currentIndex = choice;
+
+                        endLoop = true; 
+                    }
+                } 
+            }
+
+            else
+            {
+                listButtons[i].gameObject.SetActive(false);
             }
         }
+        
         
         // ON ACTUALISE LES BOUTTONS
         foreach (ButtonChoice i in listButtons)
