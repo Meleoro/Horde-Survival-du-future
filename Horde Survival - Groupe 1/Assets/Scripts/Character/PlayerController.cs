@@ -25,10 +25,12 @@ namespace Character
         public LayerMask ennemyLayer;
 
         private GameObject nearestEnnemy;
+
+        public static PlayerController Instance;
         
         #region Declaration
         
-        [SerializeField] private Transform initialBulletPos;
+        public Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
         
         [SerializeField] private Weapon weaponUsed;
@@ -42,6 +44,8 @@ namespace Character
             _playerControls = new PlayerInputActions();
             _rb = GetComponent<Rigidbody2D>();
             nextFireTime = 0f;
+
+            Instance = this;
         }
         private void OnEnable()
         {
@@ -57,7 +61,7 @@ namespace Character
         private void Update()
         {
             nearestEnemyPos = EnemyNear().transform.position;
-            weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
+            //weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
         }
         private void FixedUpdate()
         {

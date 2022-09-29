@@ -11,11 +11,14 @@ namespace Upgrades
     public class Weapon : ScriptableObject
     {
         private float _nextFireTime;
+        public bool isReloading;
     
         public void Shoot(Vector2 initialPos, bool cooldown, PlayerController pc)
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
-        
+
+            Debug.Log(ammoUsed);
+
             if (ammoUsed != null && cooldown)
             {
                 //Placement & activation

@@ -28,6 +28,7 @@ public class ButtonChoice : MonoBehaviour
         {
             ChoiceManager.Instance.weapons.RemoveAt(currentIndex);
             ChoiceManager.Instance.availableUpgrades.Add(Upgrade);
+            WeaponManager.Instance.currentWeapons.Add(Upgrade);
         }
         
         // VERIFICATION SI L'ARME A ATTEINT SON NIVEAU MAX
