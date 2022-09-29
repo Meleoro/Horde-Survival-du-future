@@ -51,7 +51,7 @@ public class WeaponManager : MonoBehaviour
             }
         }
 
-
+        /*
         // ON ATTRIBUE LES ARMES A CHAQUE SCRIPT
         if (currentWeapons.Count == 3)
         {
@@ -69,7 +69,7 @@ public class WeaponManager : MonoBehaviour
         else if (currentWeapons.Count == 1)
         {
             PlayerController.Instance.weaponUsed = currentWeapons[0];
-        }
+        }*/
     }
 
 
@@ -82,6 +82,11 @@ public class WeaponManager : MonoBehaviour
             
             currentWeapons[0] = currentWeapons[1];
             currentWeapons[1] = stockage0;
+            
+            currentWeapons[0].isReloading = true;
+            currentWeapons[1].isReloading = true;
+            
+            StartCoroutine(SwitchWeaponCooldown1());
         }
         
         // SI ON A ACTUELLEMENT 3 ARMES QUE L'ON VEUT SWITCH
@@ -93,49 +98,49 @@ public class WeaponManager : MonoBehaviour
             currentWeapons[0] = currentWeapons[1];
             currentWeapons[1] = currentWeapons[2];
             currentWeapons[2] = stockage1;
+            
+            currentWeapons[0].isReloading = true;
+            currentWeapons[1].isReloading = true;
+            currentWeapons[2].isReloading = true;
+            
+            StartCoroutine(SwitchWeaponCooldown2());
         }
-
-        StartCoroutine(SwitchWeaponCooldown());
     }
 
-    IEnumerator SwitchWeaponCooldown()
+    IEnumerator SwitchWeaponCooldown1()
     {
         cooldownSwitch = true;
         
         yield return new WaitForSeconds(1);
         
+        currentWeapons[0].isReloading = false;
+        currentWeapons[1].isReloading = false;
+        
+        currentWeapons[0].isOnCooldown = false;
+        currentWeapons[1].isOnCooldown = false;
+
+        currentWeapons[0].levelList[currentWeapons[0].currentLevel - 1].currentAmmo =
+            currentWeapons[0].levelList[currentWeapons[0].currentLevel - 1].ammoMax;
+        currentWeapons[1].levelList[currentWeapons[1].currentLevel - 1].currentAmmo =
+            currentWeapons[1].levelList[currentWeapons[1].currentLevel - 1].ammoMax;
+        
         cooldownSwitch = false;
     }
     
-
-    IEnumerator ShootCooldown(float cooldown, Weapon weapon)
+    IEnumerator SwitchWeaponCooldown2()
     {
-        GameObject nearestEnnemy = PlayerController.Instance.EnemyNear();
+        cooldownSwitch = true;
         
-        //weapon.Shoot(PlayerController.Instance.initialBulletPos.position, true, PlayerController.Instance, nearestEnnemy);
-
-        weapon.levelList[weapon.currentLevel - 1].currentAmmo -= 1;
-
+        yield return new WaitForSeconds(1);
         
-        // SI LE JOUEUR A VIDÉ SON CHARGEUR
-        if (weapon.levelList[weapon.currentLevel - 1].currentAmmo <= 0)
-        {
-            weapon.isReloading = true;
-            
-            yield return new WaitForSeconds(weapon.levelList[weapon.currentLevel - 1].reload);
-
-            weapon.isReloading = false;
-        }
-
+        currentWeapons[0].isReloading = false;
+        currentWeapons[1].isReloading = false;
+        currentWeapons[2].isReloading = false;
         
-        // SI IL A ENCORE DES BALLES
-        else
-        {
-            weapon.isOnCooldown = true;
-
-            yield return new WaitForSeconds(cooldown);
-
-            weapon.isOnCooldown = false;
-        }
+        currentWeapons[0].isOnCooldown = false;
+        currentWeapons[1].isOnCooldown = false;
+        currentWeapons[2].isOnCooldown = false;
+        
+        cooldownSwitch = false;
     }
 }

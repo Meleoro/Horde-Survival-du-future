@@ -59,7 +59,7 @@ public class ChoiceManager : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKey(KeyCode.Q) && Input.GetKey(KeyCode.P))
+        if(Input.GetKeyDown(KeyCode.Q) && Input.GetKey(KeyCode.P))
             LevelUp();
     }
 

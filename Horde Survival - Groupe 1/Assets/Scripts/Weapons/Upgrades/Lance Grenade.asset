@@ -12,24 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: Lance Grenade
   m_EditorClassIdentifier: 
-  spawnPos: {x: -14.018537, y: -2.697577}
   isReloading: 0
   isOnCooldown: 0
+  spawnPos: {x: -11.814045, y: 3.0864635}
   name: lance Grenade
   image: {fileID: 0}
   currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
-  bullet: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
+  bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
   levelList:
-  - desciption: 
-    degats: 0
-    portee: 0
-    fireRate: 10
-    bulletsPerShot: 0
-    ammoMax: 0
+  - desciption: Lance un projectile qui rebondit d'ennemi en ennemi
+    degats: 10
+    bulletSpeed: 10
+    portee: 20
+    fireRate: 1
+    bulletsPerShot: 1
+    ammoMax: 2
     currentAmmo: 0
-    reload: 0.5
+    reload: 3
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -39,21 +40,7 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
-    doubleUZI: 0
-    doubleTir: 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: 
-    degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
@@ -69,6 +56,7 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
@@ -84,6 +72,7 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
@@ -99,6 +88,7 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
@@ -114,6 +104,7 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0
@@ -129,6 +120,23 @@ MonoBehaviour:
     noRecul: 0
   - desciption: 
     degats: 0
+    bulletSpeed: 0
+    portee: 0
+    fireRate: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
+    doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  - desciption: 
+    degats: 0
+    bulletSpeed: 0
     portee: 0
     fireRate: 0
     bulletsPerShot: 0

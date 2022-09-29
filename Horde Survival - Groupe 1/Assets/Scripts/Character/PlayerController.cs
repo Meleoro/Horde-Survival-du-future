@@ -58,7 +58,7 @@ namespace Character
             PlayerPos = _playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
             
-            weaponUsed.Shoot(this,initialBulletPos.position);
+            //weaponUsed.Shoot(this,initialBulletPos.position);
         }
         private void FixedUpdate()
         {
