@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Character.Projectiles;
 using UnityEngine;
 using UnityEngine.InputSystem.UI;
 
@@ -14,7 +15,8 @@ public class Ennemy : MonoBehaviour
 
     public GameObject loot;
 
-    [Header("Autres")] public CircleCollider2D explosion;
+    [Header("Autres")] 
+    public GameObject explosion;
     
     void Update()
     {
@@ -37,15 +39,19 @@ public class Ennemy : MonoBehaviour
     //         }
     //     }
     // }
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Explosion" || other.gameObject.tag == "Bullet" )
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Explosion" || other.gameObject.tag == "Bullet" && !dies)
         {
-            health -= 1;
+            health -= other.gameObject.GetComponent<Bullet>().degats
+                + (other.gameObject.GetComponent<Bullet>().degats * UpgradeManager.Instance.degatsPourc / 100);
 
             if (health <= 0)
             {
+                dies = true;
+                
                 StartCoroutine(Dies());
                 ComboManager.Instance.IncreaeMultiplier(0.2f);
 
@@ -53,20 +59,33 @@ public class Ennemy : MonoBehaviour
 
                 Xp.GetComponent<EXP>().valeurXp = ComboManager.Instance.currentMultiplier;
             }
-        }
-        
-        if (other.gameObject.tag == "Ennemy")
-        {
+            
             Vector2 direction = transform.position - other.transform.position;
             
-            other.GetComponent<Rigidbody2D>().AddForce(-direction.normalized * explosionForce, ForceMode2D.Impulse);
+            GetComponent<Rigidbody2D>().AddForce(direction.normalized * other.gameObject.GetComponent<Bullet>().degats / 2, ForceMode2D.Impulse);
+        }
+    }
+
+
+    public void Damage(float damage)
+    {
+        health -= damage;
+        
+        if (health <= 0)
+        {
+            StartCoroutine(Dies());
+            ComboManager.Instance.IncreaeMultiplier(0.2f);
+
+            GameObject Xp = Instantiate(loot, transform.position, transform.rotation);
+
+            Xp.GetComponent<EXP>().valeurXp = ComboManager.Instance.currentMultiplier;
         }
     }
 
 
     IEnumerator Dies()
     {
-        explosion.enabled = true;
+        explosion.SetActive(true);
         
         yield return new WaitForSeconds(0.05f);
         

@@ -30,9 +30,10 @@ namespace Upgrades
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
 
+            ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
+
             if (ammoUsed != null && pc.PlayerCooldown())
             {
-                Debug.Log(4);
                 //Placement & activation
                 ammoUsed.transform.position = initialPos;
                 ammoUsed.SetActive(true);
@@ -54,6 +55,8 @@ namespace Upgrades
         public void DroneShoot(Transform dronePos, DroneAttack drone)
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
+            
+            ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
 
             if (ammoUsed != null && drone.DroneCooldown())
             {
@@ -65,14 +68,14 @@ namespace Upgrades
                 Vector3 dir = dronePos.position - PlayerController.PlayerPos;
     
                 //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = dir * levelList[currentLevel].bulletSpeed;
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = dir * levelList[currentLevel - 1].bulletSpeed;
                 
                 //Cooldown & Reload
-                if(_currentAmmo > 0) drone.nextFireTimeDrone = Time.time + levelList[currentLevel].fireRate;
+                if(_currentAmmo > 0) drone.nextFireTimeDrone = Time.time + levelList[currentLevel - 1].fireRate;
                 else
                 {
-                    drone.nextFireTimeDrone = Time.time + levelList[currentLevel].reload;
-                    _currentAmmo = levelList[currentLevel].ammoMax;
+                    drone.nextFireTimeDrone = Time.time + levelList[currentLevel - 1].reload;
+                    _currentAmmo = levelList[currentLevel - 1].ammoMax;
                 }
             }
             

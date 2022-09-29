@@ -12,17 +12,23 @@ public class EXP : Collectible, ICollectible
 
     bool hasTarget;
     Vector3 targetPosition;
-    private float moveSpeed = 5f;
+    private float moveSpeed = 10f;
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
+    private void Start()
+    {
+        valeurXp = ComboManager.Instance.currentMultiplier;
+    }
+
     public override void Collect()
     {
+        ExpBar.Instance.currentXp += valeurXp;
+        
         Destroy(gameObject);
-        OnExCollected?.Invoke();
     }
     
     /*public interface ICollectible

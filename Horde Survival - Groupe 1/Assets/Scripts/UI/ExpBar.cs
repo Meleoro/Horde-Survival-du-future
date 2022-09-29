@@ -12,7 +12,7 @@ public class ExpBar : MonoBehaviour
     public Gradient grad;
     public Image fill;
 
-    public int currentXp;
+    public float currentXp;
 
     private void Awake()
     {
