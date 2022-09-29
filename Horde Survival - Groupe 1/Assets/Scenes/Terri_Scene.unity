@@ -566,6 +566,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2808851707361879150, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3914616135394496884, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
@@ -1005,9 +1009,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolData:
   - prefab: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
-    numberOfProjectiles: 20
+    numberOfProjectiles: 30
   - prefab: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
-    numberOfProjectiles: 20
+    numberOfProjectiles: 50
   - prefab: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
     numberOfProjectiles: 6
 --- !u!4 &1289564050

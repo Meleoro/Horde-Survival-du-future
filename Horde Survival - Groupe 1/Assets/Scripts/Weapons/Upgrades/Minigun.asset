@@ -22,14 +22,14 @@ MonoBehaviour:
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
   levelList:
   - desciption: Tire une puissante salve de tirs
-    degats: 4
-    bulletSpeed: 10
-    portee: 20
+    degats: 2
+    bulletSpeed: 15
+    portee: 5
     fireRate: 0.05
     bulletsPerShot: 1
     dispersion: 0
-    ammoMax: 50
-    currentAmmo: 50
+    ammoMax: 30
+    currentAmmo: 30
     reload: 5
     doubleUZI: 0
     doubleTir: 0
