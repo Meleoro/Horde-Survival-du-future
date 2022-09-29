@@ -19,16 +19,14 @@ public class DroneAttack : MonoBehaviour
 
     private void Update()
     {
-        //DroneCooldown();
+        DroneCooldown();
     }
 
     void FixedUpdate()
     {
         if (weapon != null)
         {
-            //Debug.Log(2);
-            
-            //weapon.DroneShoot(tr, this);
+            weapon.DroneShoot(tr, this);
         }
     }
     public bool DroneCooldown()
