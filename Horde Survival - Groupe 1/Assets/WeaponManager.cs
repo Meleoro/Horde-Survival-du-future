@@ -23,18 +23,41 @@ public class WeaponManager : MonoBehaviour
     {
         foreach(Weapon k in currentWeapons)
         {
-            /*if(!k.isReloading)
-                StartCoroutine(ShootCooldown(k.levelList[k.currentLevel - 1].fireRate, k));*/
+            Debug.Log(k.isReloading);
+            
+            if(!k.isReloading && !k.isOnCooldown)
+                StartCoroutine(ShootCooldown(k.levelList[k.currentLevel - 1].fireRate, k));
         }
     }
 
     IEnumerator ShootCooldown(float cooldown, Weapon weapon)
     {
-        //weapon.Shoot(PlayerController.Instance.initialBulletPos.position, true, PlayerController.Instance);
-        //weapon.isReloading = true;
+        GameObject nearestEnnemy = PlayerController.Instance.EnemyNear();
+        
+        weapon.Shoot(PlayerController.Instance.initialBulletPos.position, true, PlayerController.Instance, nearestEnnemy);
 
-        yield return new WaitForSeconds(cooldown);
+        weapon.levelList[weapon.currentLevel - 1].currentAmmo -= 1;
 
-        //weapon.isReloading = false;
+        
+        // SI LE JOUEUR A VIDÉ SON CHARGEUR
+        if (weapon.levelList[weapon.currentLevel - 1].currentAmmo <= 0)
+        {
+            weapon.isReloading = true;
+            
+            yield return new WaitForSeconds(weapon.levelList[weapon.currentLevel - 1].reload);
+
+            weapon.isReloading = false;
+        }
+
+        
+        // SI IL A ENCORE DES BALLES
+        else
+        {
+            weapon.isOnCooldown = true;
+
+            yield return new WaitForSeconds(cooldown);
+
+            weapon.isOnCooldown = false;
+        }
     }
 }
