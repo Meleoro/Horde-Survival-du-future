@@ -15,7 +15,7 @@ namespace Character
         private Vector2 _aim;
         public static Vector2 PlayerPos;
         public LayerMask enemyLayer;
-        [HideInInspector] public float nextFireTime;      
+        [HideInInspector] public float _nextFireTime;      
         private float _radius;
         private bool _detectEnemy;
         
@@ -58,7 +58,7 @@ namespace Character
             PlayerPos = _playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
             
-            weaponUsed.Shoot(initialBulletPos.position,this);
+            weaponUsed.Shoot(this,initialBulletPos.position);
         }
         private void FixedUpdate()
         {
@@ -83,7 +83,12 @@ namespace Character
             _rb.rotation = -a;
         }
         
-        
+        public bool Cooldown()
+        {
+            if(Time.time > _nextFireTime) return true;
+            return false;
+        }
+
         public GameObject EnemyNear()
         {
             _radius = 2;

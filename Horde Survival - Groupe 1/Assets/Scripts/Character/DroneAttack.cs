@@ -25,7 +25,7 @@ public class DroneAttack : MonoBehaviour
         }
     }
     
-    bool Cooldown()
+    public bool Cooldown()
     {
         if(Time.time > nextFireTime) return true;
         return false;

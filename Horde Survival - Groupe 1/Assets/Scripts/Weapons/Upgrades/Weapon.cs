@@ -2,53 +2,52 @@ using System;
 using System.Collections.Generic;
 using Character;
 using Character.Projectiles;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace Upgrades
 {
+
     [CreateAssetMenu(fileName = "New Upgrade", menuName = "Upgrade")]
     public class Weapon : ScriptableObject
     {
-        private float _nextFireTime;
         private float _endReloadTime;
-        public Vector2 spawnPos;
-        public bool isReloading = false;
+        public bool isReloading;
         public bool isOnCooldown;
-    
-        public void Shoot(Vector2 initialPos, PlayerController pc)
+        private float _nextFireTime;
+        public Vector2 spawnPos;
+        private int _currentAmmo;
+
+        public void Initialize()
         {
+            _currentAmmo = levelList[currentLevel].ammoMax;
+        }
+
+        public void Shoot( PlayerController pc, Vector2 initialPos)
+        {
+            
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
         
-            if (ammoUsed != null && Cooldown() && !isReloading)
+            if (ammoUsed != null && pc.Cooldown())
             {
-                for (int i = 0; i <  levelList[currentLevel].ammoMax; i++)
-                {
-                    //Placement & activation
-                    ammoUsed.transform.position = initialPos;
-                    spawnPos = initialPos;
-                    ammoUsed.SetActive(true);
+                //Placement & activation
+                ammoUsed.transform.position = initialPos;
+                spawnPos = initialPos;
+                ammoUsed.SetActive(true);
     
-                    //Physic
-                    ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel].bulletSpeed;
+                //Physic
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel].bulletSpeed;
             
-                    //Cooldown
-                    _nextFireTime = Time.time + levelList[currentLevel].reload;
-                }
-                
-                //Reload Time
-                _endReloadTime = Time.time + levelList[currentLevel].reload;
-                isReloading = true;
+                //Cooldown
+                _nextFireTime = Time.time + levelList[currentLevel].reload;
             }
-            Reload();
         }
         public void Shoot( DroneAttack drone, Vector3 dronePos)
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
-
-            if (ammoUsed != null && Cooldown() && !isReloading)
-            {
-                for (int i = 0; i < levelList[currentLevel].ammoMax; i++)
+            
+                if (ammoUsed != null && drone.Cooldown())
                 {
                     Debug.Log(2);
                     //Placement & activation
@@ -58,28 +57,11 @@ namespace Upgrades
     
                     //Physic
                     ammoUsed.GetComponent<Rigidbody2D>().velocity = dronePos.normalized * levelList[currentLevel].bulletSpeed;
-            
+                
                     //FireRate
                     _nextFireTime = Time.time + levelList[currentLevel].fireRate;
                 }
-
-                //Reload Time
-                _endReloadTime = Time.time + levelList[currentLevel].reload;
-                isReloading = true;
-            }
             
-            Reload();
-        }
-
-        void Reload()
-        {
-            isReloading = Time.time < _endReloadTime;
-        }
-        
-        private bool Cooldown()
-        {
-            if(Time.time > _nextFireTime) return true;
-            return false;
         }
 
         [Header("Upgrade / Weapon")]
