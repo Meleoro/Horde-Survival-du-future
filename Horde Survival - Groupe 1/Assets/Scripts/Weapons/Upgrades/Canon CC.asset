@@ -12,67 +12,146 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40d41ab02f106134494af3dbe7d95bed, type: 3}
   m_Name: Canon CC
   m_EditorClassIdentifier: 
+  spawnPos: {x: -2.3999999, y: 1}
+  isReloading: 1
+  isOnCooldown: 0
   name: Canon CC
   image: {fileID: 0}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 1
-  weapon: {fileID: 0}
+  weapon: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
+  bullet: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   levelList:
-  - desciption: Est cool tir fort
-    degats: 0
-    portee: 0
-    fireRate: 0
-    munitions: 0
-    rechargement: 0
+  - desciption: "Fusil \xE0 pompe"
+    degats: 10
+    portee: 10
+    fireRate: 1
+    bulletsPerShot: 10
+    ammoMax: 2
+    currentAmmo: 0
+    reload: 2
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
   - desciption: 
     degats: 0
     portee: 0
     fireRate: 0
-    munitions: 0
-    rechargement: 0
+    bulletsPerShot: 0
+    ammoMax: 0
+    currentAmmo: 0
+    reload: 0
     doubleUZI: 0
+    doubleTir: 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  description: 
   damages: 0
+  damagesGain: 0
   health: 0
+  healthGain: 0
+  speed: 0
+  speedGain: 0
+  droneSpd: 0
+  droneSpdGain: 0
+  XPMagnet: 0
+  XPMagnetGain: 0
+  XPBoost: 0
+  XPBoostGain: 0

@@ -23,12 +23,13 @@ namespace Character
 
         #region Declaration
         
-        [SerializeField] private Transform initialBulletPos;
+        [SerializeField] public Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
         [SerializeField] private Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
         private Transform _playerTr;
+        public static PlayerController Instance;
 
         private GameObject _nearestEnemy;
         #endregion
@@ -38,6 +39,8 @@ namespace Character
             _playerControls = new PlayerInputActions();
             _rb = GetComponent<Rigidbody2D>();
             _playerTr = GetComponent<Transform>();
+
+            Instance = this;
         }
         private void OnEnable()
         {
@@ -52,10 +55,10 @@ namespace Character
         }
         private void Update()
         {
-            PlayerPos = _playerTr.position;
-            nearestEnemyPos = EnemyNear().transform.position;
+            //PlayerPos = _playerTr.position;
+            //nearestEnemyPos = EnemyNear().transform.position;
             
-            weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
+            //weaponUsed.Shoot(initialBulletPos.position,Cooldown(),this);
         }
         private void FixedUpdate()
         {
@@ -93,7 +96,7 @@ namespace Character
         
             Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, _radius, enemyLayer);
 
-            // ON CREE UN RAYCAST DE PLSU EN PLSU GRAND JUSQU'A AVOIR AU MOINS 3 ENNEMIES DEDANS
+            // ON CREE UN RAYCAST DE PLUS EN PLUS GRAND JUSQU'A AVOIR AU MOINS 1 ENNEMI DEDANS
             while (!_detectEnemy)
             {
                 if (colliderArray.Length < 1)
