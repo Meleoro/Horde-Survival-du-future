@@ -394,6 +394,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
+--- !u!1 &631845882 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6366703095613722955, guid: c5edfeee55f90c54992268065cddc873, type: 3}
+  m_PrefabInstance: {fileID: 764516833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &631845885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631845882}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d82a8bfcbba7324a82f3ba4b0a02fc0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxMultiplier: 4
+  timerModifier: 2
 --- !u!1 &637905481
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,29 +514,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
-      propertyPath: widthCamera
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
-      propertyPath: heightCamera
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
-      propertyPath: ennemies.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
-      propertyPath: ennemies.Array.data[0]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: ennemies.Array.data[1]
       value: 
       objectReference: {fileID: 16811860}
-    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
-      propertyPath: ennemies.Array.data[2]
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6366703095613722955, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: m_Name
       value: GameManager
@@ -729,6 +728,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c7c2e29d551e304aa33dabf583f9734, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  drone1: {fileID: 0}
+  drone2: {fileID: 0}
   currentWeapons: []
 --- !u!1001 &1848419275
 PrefabInstance:

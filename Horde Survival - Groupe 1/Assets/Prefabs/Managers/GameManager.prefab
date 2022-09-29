@@ -50,5 +50,5 @@ MonoBehaviour:
   ennemies:
   - {fileID: 0}
   - {fileID: 0}
-  heightCamera: 15
-  widthCamera: 22
+  heightCamera: 22
+  widthCamera: 15
