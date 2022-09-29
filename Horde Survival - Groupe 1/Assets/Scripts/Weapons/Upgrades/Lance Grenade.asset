@@ -24,7 +24,7 @@ MonoBehaviour:
   - desciption: Lance un projectile qui rebondit d'ennemi en ennemi
     degats: 5
     bulletSpeed: 10
-    portee: 20
+    portee: 4
     fireRate: 1
     bulletsPerShot: 1
     dispersion: 0

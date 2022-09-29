@@ -31,6 +31,7 @@ namespace Upgrades
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
 
             ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
+            ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
 
             if (ammoUsed != null && pc.PlayerCooldown())
             {

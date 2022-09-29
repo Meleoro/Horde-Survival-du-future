@@ -85,6 +85,8 @@ public class BulletLanceGrenade : MonoBehaviour
     // SELECTIONNE UNE NOUVELLE DIRECTION POUR LE PROJECTILE
     public void ChangeDirectionOpti()
     {
+        Debug.Log(12);
+
         radius = 2;
         detectEnnemy = false;
         
@@ -117,7 +119,7 @@ public class BulletLanceGrenade : MonoBehaviour
         {
             float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
 
-            if (dist < minDist && dist > 2f)
+            if (dist < minDist && dist > 3f)
             {
                 minDist2 = minDist;
                 nearestEnnemy2 = nearestEnnemy;
@@ -126,7 +128,7 @@ public class BulletLanceGrenade : MonoBehaviour
                 nearestEnnemy = k.gameObject;
             }
             
-            else if (dist < minDist2 && dist > 2f)
+            else if (dist < minDist2 && dist > 3f)
             {
                 minDist2 = dist;
                 nearestEnnemy2 = k.gameObject;

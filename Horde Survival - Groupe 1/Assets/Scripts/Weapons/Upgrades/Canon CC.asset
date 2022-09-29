@@ -24,7 +24,7 @@ MonoBehaviour:
   - desciption: "Fusil \xE0 pompe"
     degats: 10
     bulletSpeed: 15
-    portee: 0.1
+    portee: 0.3
     fireRate: 1
     bulletsPerShot: 1
     dispersion: 0
