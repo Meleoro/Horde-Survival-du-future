@@ -27,6 +27,7 @@ namespace Character
         [SerializeField] public Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
         [SerializeField] private PlayerHealthManager healthManager;
+        public Animator anim;
         public Weapon weaponUsed;
         private Rigidbody2D _rb;
         private PlayerInputActions _playerControls;
@@ -64,6 +65,24 @@ namespace Character
             
             if(weaponUsed != null)
                 weaponUsed.PlayerShoot(this,initialBulletPos.position);
+            
+            Debug.Log(movement);
+            
+            if (movement != Vector2.zero)
+                anim.SetBool("walk", true);
+
+            else
+                anim.SetBool("walk", false);
+            
+            if (movement.normalized.x < 0)
+            {
+                transform.rotation = Quaternion.Euler(0, 180, 0);
+            }
+            else
+            {
+                transform.rotation = Quaternion.Euler(0, 0, 0);
+            }
+            
         }
         
         public bool PlayerCooldown()
