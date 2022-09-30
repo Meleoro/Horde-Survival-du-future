@@ -39,8 +39,8 @@ namespace Character.Projectiles
             
             if(_countdown >= bulletLifeTime) 
             {
-                _countdown = 0f;
                 gameObject.SetActive(false);
+                _countdown = 0f;
             }
             
         }
