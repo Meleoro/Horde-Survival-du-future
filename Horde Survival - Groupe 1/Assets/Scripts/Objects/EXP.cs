@@ -28,6 +28,8 @@ public class EXP : Collectible, ICollectible
     {
         ExpBar.Instance.currentXp += valeurXp - 1;
         
+        ScoreManager.Instance.AddPoint((int) valeurXp);
+        
         Destroy(gameObject);
     }
     
