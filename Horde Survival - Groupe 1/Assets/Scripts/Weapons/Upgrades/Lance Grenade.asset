@@ -13,24 +13,24 @@ MonoBehaviour:
   m_Name: Lance Grenade
   m_EditorClassIdentifier: 
   isReloading: 0
-  isOnCooldown: 1
+  isOnCooldown: 0
   name: lance Grenade
   image: {fileID: 0}
-  currentLevel: 1
+  currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
   levelList:
   - desciption: Lance un projectile qui rebondit d'ennemi en ennemi
-    degats: 10
+    degats: 40
     bulletSpeed: 10
     portee: 20
     fireRate: 1
     bulletsPerShot: 1
     dispersion: 0
-    ammoMax: 2
-    currentAmmo: 1
-    reload: 3
+    ammoMax: 3
+    currentAmmo: 3
+    reload: 5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 2
@@ -39,15 +39,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
+    degats: 40
+    bulletSpeed: 10
+    portee: 20
+    fireRate: 1
+    bulletsPerShot: 1
     dispersion: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
+    ammoMax: 3
+    currentAmmo: 1
+    reload: 5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -56,15 +56,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
+    degats: 40
+    bulletSpeed: 10
+    portee: 20
+    fireRate: 1
+    bulletsPerShot: 1
     dispersion: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
+    ammoMax: 3
+    currentAmmo: 1
+    reload: 5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0

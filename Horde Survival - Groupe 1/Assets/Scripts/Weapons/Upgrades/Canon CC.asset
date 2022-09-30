@@ -22,15 +22,15 @@ MonoBehaviour:
   bullet: {fileID: 9124585523636447651, guid: 000370840dc35cd46b737c56d87b4457, type: 3}
   levelList:
   - desciption: "Fusil \xE0 pompe"
-    degats: 10
-    bulletSpeed: 15
+    degats: 20
+    bulletSpeed: 10
     portee: 1
-    fireRate: 1
+    fireRate: 0.3
     bulletsPerShot: 1
     dispersion: 0
-    ammoMax: 1
-    currentAmmo: 1
-    reload: 2
+    ammoMax: 2
+    currentAmmo: 2
+    reload: 0.5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -40,15 +40,15 @@ MonoBehaviour:
     noRecul: 0
   - desciption: "Fusil \xE0 pompe. Permet d'infliger de l\xE9ger d\xE9gats sur une
       zone proche."
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
+    degats: 20
+    bulletSpeed: 10
+    portee: 1
+    fireRate: 0.3
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
-    currentAmmo: -1
-    reload: 0
+    ammoMax: 2
+    currentAmmo: 1
+    reload: 0.5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -57,15 +57,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
+    degats: 20
+    bulletSpeed: 10
+    portee: 1
+    fireRate: 0.3
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
+    ammoMax: 2
+    currentAmmo: 1
+    reload: 0.5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
