@@ -65,9 +65,7 @@ namespace Character
             
             if(weaponUsed != null)
                 weaponUsed.PlayerShoot(this,initialBulletPos.position);
-            
-            Debug.Log(movement);
-            
+
             if (movement != Vector2.zero)
                 anim.SetBool("walk", true);
 
