@@ -16,20 +16,21 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Minigun
   image: {fileID: 0}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
+  audio: {fileID: 0}
   levelList:
   - desciption: Tir de puissant projectiles
     degats: 15
     bulletSpeed: 20
-    portee: 15
+    portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 0
+    currentAmmo: 12
     reload: 6
     doubleUZI: 0
     doubleTir: 0
@@ -42,7 +43,7 @@ MonoBehaviour:
   - desciption: "Augmente les d\xE9g\xE2ts"
     degats: 18
     bulletSpeed: 20
-    portee: 15
+    portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
@@ -60,7 +61,7 @@ MonoBehaviour:
   - desciption: "Augmente les d\xE9g\xE2ts"
     degats: 20
     bulletSpeed: 20
-    portee: 15
+    portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
@@ -78,7 +79,7 @@ MonoBehaviour:
   - desciption: Diminue le temps de rechargement
     degats: 20
     bulletSpeed: 20
-    portee: 15
+    portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
@@ -96,7 +97,7 @@ MonoBehaviour:
   - desciption: 'Augmente la taille des chargeurs '
     degats: 20
     bulletSpeed: 20
-    portee: 15
+    portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
@@ -114,7 +115,7 @@ MonoBehaviour:
   - desciption: Diminue le temps de rechargement
     degats: 20
     bulletSpeed: 20
-    portee: 15
+    portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
@@ -132,7 +133,7 @@ MonoBehaviour:
   - desciption: "Augmente les d\xE9g\xE2ts"
     degats: 40
     bulletSpeed: 20
-    portee: 15
+    portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
