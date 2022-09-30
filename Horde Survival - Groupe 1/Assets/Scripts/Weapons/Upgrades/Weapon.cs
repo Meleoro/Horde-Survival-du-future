@@ -30,6 +30,8 @@ namespace Upgrades
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
 
+            audio.Play();
+            
             ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
             ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
             ammoUsed.GetComponent<Bullet>()._countdown = 0;
@@ -64,6 +66,8 @@ namespace Upgrades
         public void DroneShoot(Transform dronePos, DroneAttack drone)
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
+            
+            audio.Play();
             
             ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
             ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
@@ -108,6 +112,7 @@ namespace Upgrades
         [Header("If is Weapon")] 
         public GameObject weapon;
         public GameObject bullet;
+        public AudioSource audio;
         public List<Levels> levelList = new List<Levels>();
 
         [Header("If is Stats")] 
