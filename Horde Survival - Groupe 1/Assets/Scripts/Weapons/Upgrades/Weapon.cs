@@ -31,13 +31,13 @@ namespace Upgrades
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
 
             //audio.Play();
-            
-            ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
-            ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
-            ammoUsed.GetComponent<Bullet>()._countdown = 0;
 
             if (ammoUsed != null && pc.PlayerCooldown())
-            {
+            {            
+                ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
+                ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
+                ammoUsed.GetComponent<Bullet>()._countdown = 0;
+                
                 //Placement & activation
                 ammoUsed.transform.position = initialPos;
                 ammoUsed.SetActive(true);
@@ -68,13 +68,13 @@ namespace Upgrades
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
             
             //audio.Play();
-            
-            ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
-            ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
-            ammoUsed.GetComponent<Bullet>()._countdown = 0;
 
             if (ammoUsed != null && drone.DroneCooldown())
             {
+                ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
+                ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
+                ammoUsed.GetComponent<Bullet>()._countdown = 0;
+                
                 //Placement & activation
                 ammoUsed.transform.position = dronePos.position;
                 ammoUsed.SetActive(true);
