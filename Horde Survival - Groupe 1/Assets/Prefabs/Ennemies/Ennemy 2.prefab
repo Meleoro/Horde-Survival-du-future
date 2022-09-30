@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: cf75dcef618bd5742b869a3df2e38872, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.7019608}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
@@ -105,6 +105,7 @@ MonoBehaviour:
   health: 30
   dies: 0
   explosionForce: 10
+  rb: {fileID: 4806127789896020566}
   loot: {fileID: 7014358610161431345, guid: 04ee6e1d286a7ac4e9e1ea295360679b, type: 3}
   explosion: {fileID: 3622229435596443396}
 --- !u!50 &4806127789896020566
