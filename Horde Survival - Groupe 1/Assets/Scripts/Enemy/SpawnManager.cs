@@ -180,6 +180,7 @@ public class SpawnManager : MonoBehaviour
         
         GameObject newEnnemy = Instantiate(entity, RefCamera.Instance.transform.position + new Vector3(spawnX, spawnY, 10), Quaternion.identity);
         
+        newEnnemy.GetComponent<Ennemy>().index = ennemies.Count;
         ennemies.Add(newEnnemy);
     }
 
