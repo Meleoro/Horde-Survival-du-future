@@ -100,7 +100,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0344cf5542c5440ba7acc368a6c691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 0494241f2fc11694eb7fa47f52916a00, type: 2}
   bulletLifeTime: 8
+  _countdown: 0
   degats: 0
   grenade: 0
   CCBullet: 1
