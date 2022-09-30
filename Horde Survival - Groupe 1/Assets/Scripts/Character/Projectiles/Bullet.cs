@@ -17,6 +17,7 @@ namespace Character.Projectiles
         public float degats;
 
         public bool grenade;
+        public bool CCBullet;
 
         private void Start()
         {
@@ -26,7 +27,14 @@ namespace Character.Projectiles
 
         private void Update()
         {
-
+            if (_countdown == 0)
+            {
+                if (CCBullet)
+                {
+                    GetComponent<BulletPompe>().Shoot();
+                }
+            }
+            
             _countdown += Time.deltaTime; 
             
             if(_countdown >= bulletLifeTime) 
