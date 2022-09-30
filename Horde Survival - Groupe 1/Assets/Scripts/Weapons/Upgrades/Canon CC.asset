@@ -24,12 +24,12 @@ MonoBehaviour:
   - desciption: 
     degats: 30
     bulletSpeed: 15
-    portee: 0
+    portee: 15
     fireRate: 0
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 1
-    currentAmmo: 0
+    currentAmmo: 1
     reload: 2
     doubleUZI: 0
     doubleTir: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
   - desciption: 
     degats: 30
     bulletSpeed: 15
-    portee: 0
+    portee: 15
     fireRate: 0
     bulletsPerShot: 0
     dispersion: 0
@@ -58,7 +58,7 @@ MonoBehaviour:
   - desciption: 
     degats: 45
     bulletSpeed: 15
-    portee: 0
+    portee: 15
     fireRate: 0
     bulletsPerShot: 0
     dispersion: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
   - desciption: 
     degats: 55
     bulletSpeed: 15
-    portee: 0
+    portee: 15
     fireRate: 0
     bulletsPerShot: 0
     dispersion: 0
@@ -92,7 +92,7 @@ MonoBehaviour:
   - desciption: 
     degats: 55
     bulletSpeed: 15
-    portee: 0
+    portee: 15
     fireRate: 0
     bulletsPerShot: 0
     dispersion: 0
