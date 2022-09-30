@@ -177,7 +177,7 @@ public class SpawnManager : MonoBehaviour
                 spawnY = Random.Range(-heightCamera, heightCamera);
             }
         }
-            
+        
         GameObject newEnnemy = Instantiate(entity, RefCamera.Instance.transform.position + new Vector3(spawnX, spawnY, 10), Quaternion.identity);
         
         ennemies.Add(newEnnemy);

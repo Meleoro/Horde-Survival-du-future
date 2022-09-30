@@ -7,6 +7,6 @@ public class SceneChanger : MonoBehaviour
 {
     public void NextScene() 
     { 
-        SceneManager.LoadScene("MainScene"); 
+        SceneManager.LoadScene("Terri_Scene"); 
     }
 }
