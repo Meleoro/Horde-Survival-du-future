@@ -20,6 +20,8 @@ public class PlayerHealthManager : MonoBehaviour
 
     public GameObject gameOverPanel;
 
+    public GameObject controller;
+
     private void Awake()
     {
         Instance = this;
@@ -49,6 +51,8 @@ public class PlayerHealthManager : MonoBehaviour
         if (currentHealth == 0)
         {
             gameOverPanel.SetActive(true);
+            Time.timeScale = 0;
+            controller.SetActive(true);
         }
         
         healthBar.SetHealth(currentHealth);
