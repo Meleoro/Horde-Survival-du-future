@@ -18,7 +18,7 @@ public class ChoiceManager : MonoBehaviour
     public List<int> selectedOptions;
 
 
-    [Header("Others")] 
+    [Header("Others")] public int thirdWeaponLevel;
     public int currentLevel;
     public GameObject controller;
     private int nbrWeapons;
@@ -75,7 +75,7 @@ public class ChoiceManager : MonoBehaviour
         currentLevel += 1;
         Time.timeScale = 0;
         
-        if (currentLevel <= 2)
+        if (currentLevel <= 2 || currentLevel == thirdWeaponLevel)
         {
             SelectNewWeapon();
         }

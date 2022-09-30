@@ -14,6 +14,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/BulletPompe.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/ComboManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Restart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Character/Backup.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -88,7 +89,7 @@
       <workItem from="1664265765931" duration="45530000" />
       <workItem from="1664438846109" duration="8973000" />
       <workItem from="1664449788943" duration="14339000" />
-      <workItem from="1664525909797" duration="12277000" />
+      <workItem from="1664525909797" duration="15181000" />
     </task>
     <servers />
   </component>
