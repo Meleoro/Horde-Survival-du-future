@@ -16,21 +16,21 @@ MonoBehaviour:
   isOnCooldown: 0
   name: UZI
   image: {fileID: 0}
-  currentLevel: 1
+  currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   levelList:
-  - desciption: Tir partout
-    degats: 2
-    bulletSpeed: 18
-    portee: 5
-    fireRate: 0.1
+  - desciption: 
+    degats: 10
+    bulletSpeed: 15
+    portee: 0
+    fireRate: 0.4
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 15
+    ammoMax: 12
     currentAmmo: 0
-    reload: 3
+    reload: 1
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -38,16 +38,16 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: Double UZI
+  - desciption: 
     degats: 10
-    bulletSpeed: 10
-    portee: 15
-    fireRate: 0.15
+    bulletSpeed: 15
+    portee: 0
+    fireRate: 0.4
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 10
+    ammoMax: 18
     currentAmmo: 0
-    reload: 2
+    reload: 1
     doubleUZI: 1
     doubleTir: 0
     nbrRebonds: 0
@@ -56,15 +56,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
+    degats: 10
+    bulletSpeed: 15
     portee: 0
-    fireRate: 0
+    fireRate: 0.4
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
+    ammoMax: 18
     currentAmmo: 0
-    reload: 0
+    reload: 0.5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -73,15 +73,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
+    degats: 10
+    bulletSpeed: 15
     portee: 0
-    fireRate: 0
+    fireRate: 0.3
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
+    ammoMax: 18
     currentAmmo: 0
-    reload: 0
+    reload: 0.5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -90,66 +90,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
+    degats: 20
+    bulletSpeed: 15
     portee: 0
-    fireRate: 0
+    fireRate: 0.3
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
+    ammoMax: 18
     currentAmmo: 0
-    reload: 0
-    doubleUZI: 0
-    doubleTir: 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
-    dispersion: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
-    doubleUZI: 0
-    doubleTir: 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
-    dispersion: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
-    doubleUZI: 0
-    doubleTir: 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
-    dispersion: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
+    reload: 0.5
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0

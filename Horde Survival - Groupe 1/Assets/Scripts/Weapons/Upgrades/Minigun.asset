@@ -21,33 +21,16 @@ MonoBehaviour:
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
   levelList:
-  - desciption: Tire une puissante salve de tirs
-    degats: 2
-    bulletSpeed: 15
-    portee: 5
-    fireRate: 0.05
-    bulletsPerShot: 1
-    dispersion: 0
-    ammoMax: 30
-    currentAmmo: 30
-    reload: 5
-    doubleUZI: 0
-    doubleTir: 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: "C'est \xE7a"
-    degats: 10
-    bulletSpeed: 30
+  - desciption: 
+    degats: 15
+    bulletSpeed: 20
     portee: 0
-    fireRate: 0.1
+    fireRate: 0.5
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 50
+    ammoMax: 20
     currentAmmo: 0
-    reload: 5
+    reload: 6
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -56,15 +39,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
+    degats: 18
+    bulletSpeed: 20
     portee: 0
-    fireRate: 0
+    fireRate: 0.5
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
+    ammoMax: 20
     currentAmmo: 0
-    reload: 0
+    reload: 6
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -73,15 +56,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
+    degats: 20
+    bulletSpeed: 20
     portee: 0
-    fireRate: 0
+    fireRate: 0.5
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
+    ammoMax: 20
     currentAmmo: 0
-    reload: 0
+    reload: 6
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -90,15 +73,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
+    degats: 20
+    bulletSpeed: 20
     portee: 0
-    fireRate: 0
+    fireRate: 0.5
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
+    ammoMax: 20
     currentAmmo: 0
-    reload: 0
+    reload: 2
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
@@ -107,49 +90,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: 
-    degats: 0
-    bulletSpeed: 0
+    degats: 20
+    bulletSpeed: 20
     portee: 0
-    fireRate: 0
+    fireRate: 0.3
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 0
+    ammoMax: 20
     currentAmmo: 0
-    reload: 0
-    doubleUZI: 0
-    doubleTir: 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
-    dispersion: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
-    doubleUZI: 0
-    doubleTir: 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: 
-    degats: 0
-    bulletSpeed: 0
-    portee: 0
-    fireRate: 0
-    bulletsPerShot: 0
-    dispersion: 0
-    ammoMax: 0
-    currentAmmo: 0
-    reload: 0
+    reload: 2
     doubleUZI: 0
     doubleTir: 0
     nbrRebonds: 0
