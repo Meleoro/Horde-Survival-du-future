@@ -13,7 +13,7 @@ namespace Character.Projectiles
         private Vector2 _pC;
 
         public float bulletLifeTime;
-        private float _countdown;
+        public float _countdown;
         public float degats;
 
         public bool grenade;

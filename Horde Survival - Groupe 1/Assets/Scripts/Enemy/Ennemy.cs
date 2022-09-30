@@ -12,6 +12,7 @@ public class Ennemy : MonoBehaviour
     public float health;
     public bool dies;
     public float explosionForce;
+    public Rigidbody2D rb;
 
     public GameObject loot;
 
@@ -21,9 +22,19 @@ public class Ennemy : MonoBehaviour
     void Update()
     {
         Vector2 direction = RefCharacter.Instance.transform.position - transform.position;
-        
-        transform.Translate(direction.normalized * speed * Time.deltaTime);
-        
+
+        if (direction.normalized.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+
+            direction = new Vector2(-direction.x, direction.y);
+            transform.Translate(direction.normalized * speed * Time.deltaTime);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+            transform.Translate(direction.normalized * speed * Time.deltaTime);
+        }
     }
 
     // private void OnCollisionEnter2D(Collision2D col)
@@ -59,10 +70,13 @@ public class Ennemy : MonoBehaviour
 
                 Xp.GetComponent<EXP>().valeurXp = ComboManager.Instance.currentMultiplier;
             }
+
+            if (other.GetComponent<BulletPompe>() != null || other.GetComponent<BulletLanceGrenade>() != null)
+            {
+                Vector2 direction = transform.position - other.transform.position;
             
-            Vector2 direction = transform.position - other.transform.position;
-            
-            GetComponent<Rigidbody2D>().AddForce(direction.normalized * other.gameObject.GetComponent<Bullet>().degats / 2, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(direction.normalized * other.gameObject.GetComponent<Bullet>().degats / 2, ForceMode2D.Impulse);
+            }
         }
     }
 

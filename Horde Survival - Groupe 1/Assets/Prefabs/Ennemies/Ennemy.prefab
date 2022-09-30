@@ -105,6 +105,7 @@ MonoBehaviour:
   health: 10
   dies: 0
   explosionForce: 0
+  rb: {fileID: 4806127789896020566}
   loot: {fileID: 7014358610161431345, guid: 04ee6e1d286a7ac4e9e1ea295360679b, type: 3}
   explosion: {fileID: 4861299075512097845}
 --- !u!58 &16811872
