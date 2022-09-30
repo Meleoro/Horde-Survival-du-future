@@ -48,7 +48,7 @@ namespace Character.Projectiles
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (!weapon.levelList[weapon.currentLevel - 1].ballesPerçantes2 && !weapon.levelList[weapon.currentLevel - 1].ballesPerçantes)
+            if (!weapon.levelList[weapon.currentLevel - 1].ballesPerçantes && !weapon.levelList[weapon.currentLevel - 1].ballesPerçantes)
             {
                 if (other.gameObject.CompareTag("Ennemy") && !grenade)
                 {
