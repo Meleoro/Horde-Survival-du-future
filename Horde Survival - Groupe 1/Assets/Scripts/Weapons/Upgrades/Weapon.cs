@@ -67,6 +67,7 @@ namespace Upgrades
             
             ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
             ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
+            ammoUsed.GetComponent<Bullet>()._countdown = 0;
 
             if (ammoUsed != null && drone.DroneCooldown())
             {
@@ -77,7 +78,7 @@ namespace Upgrades
                 Vector3 dir = dronePos.position - PlayerController.PlayerPos;
     
                 //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = dir * levelList[currentLevel - 1].bulletSpeed;
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = dir.normalized * levelList[currentLevel - 1].bulletSpeed;
 
                 if (ammoUsed.CompareTag("BulletGrenade"))
                 {
