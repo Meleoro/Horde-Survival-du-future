@@ -55,7 +55,7 @@ public class BulletLanceGrenade : MonoBehaviour
 
 
     // SELECTIONNE UNE NOUVELLE DIRECTION POUR LE PROJECTILE
-    public void ChangeDirection()
+    /*public void ChangeDirection()
     {
         Vector2 currentPos = transform.position;
         
@@ -76,7 +76,7 @@ public class BulletLanceGrenade : MonoBehaviour
         
         direction = nearestEnnemy.transform.position - transform.position;
         direction2 = nearestEnnemy2.transform.position - transform.position;
-    }
+    }*/
     
     
     // SELECTIONNE UNE NOUVELLE DIRECTION POUR LE PROJECTILE

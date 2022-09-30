@@ -27,7 +27,7 @@ public class CharacterControler : MonoBehaviour
     }
 
 
-    public GameObject NearestEnnemy()
+    /*public GameObject NearestEnnemy()
     {
         Vector2 currentPos = transform.position;
         
@@ -45,5 +45,5 @@ public class CharacterControler : MonoBehaviour
         }
 
         return nearestEnnemy;
-    }
+    }*/
 }

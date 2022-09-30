@@ -16,7 +16,7 @@ public class SpawnManager : MonoBehaviour
     private float vagueDuration;
     private float timerVague;
     
-    public List<GameObject> ennemies;
+    //public List<GameObject> ennemies;
 
     [Header("SpawnLimites")] 
     public float heightCamera;
@@ -180,8 +180,8 @@ public class SpawnManager : MonoBehaviour
         
         GameObject newEnnemy = Instantiate(entity, RefCamera.Instance.transform.position + new Vector3(spawnX, spawnY, 10), Quaternion.identity);
         
-        newEnnemy.GetComponent<Ennemy>().index = ennemies.Count;
-        ennemies.Add(newEnnemy);
+        //newEnnemy.GetComponent<Ennemy>().index = ennemies.Count;
+        //ennemies.Add(newEnnemy);
     }
 
     private void ChangeVague()
