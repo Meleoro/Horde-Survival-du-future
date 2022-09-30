@@ -16,7 +16,7 @@ public class Ennemy : MonoBehaviour
 
     public GameObject loot;
 
-    [Header("Autres")] 
+    [Header("Autres")] public int index;
     public GameObject explosion;
 
     [Header("Hit")] public Color originalColor;
@@ -130,7 +130,8 @@ public class Ennemy : MonoBehaviour
         explosion.SetActive(true);
         
         yield return new WaitForSeconds(0.15f);
-        
+
+        //SpawnManager.Instance.ennemies.RemoveAt(index);
         Destroy(gameObject);
     }
 }
