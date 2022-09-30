@@ -390,14 +390,6 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 1096107264}
-    - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
-      propertyPath: availableUpgrades.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
-      propertyPath: availableUpgrades.Array.data[2]
-      value: 
-      objectReference: {fileID: 11400000, guid: e25d66093193ffb4c85eccec77003912, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
 --- !u!4 &379767487 stripped

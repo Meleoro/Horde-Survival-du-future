@@ -163,6 +163,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0344cf5542c5440ba7acc368a6c691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 6d7ab52acb34be045a53638ad18bdfbb, type: 2}
   bulletLifeTime: 0
+  _countdown: 0
   degats: 0
   grenade: 1
+  CCBullet: 0
