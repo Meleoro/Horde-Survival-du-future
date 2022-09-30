@@ -66,17 +66,17 @@ namespace Character
             if(weaponUsed != null)
                 weaponUsed.PlayerShoot(this,initialBulletPos.position);
 
-            if (movement != Vector2.zero)
+            if (Mathf.Abs(_rb.velocity.x) > 0.1f || Mathf.Abs(_rb.velocity.y) > 0.1f)
                 anim.SetBool("walk", true);
 
             else
                 anim.SetBool("walk", false);
             
-            if (movement.normalized.x < 0)
+            if (_rb.velocity.x < -0.1f)
             {
                 transform.rotation = Quaternion.Euler(0, 180, 0);
             }
-            else
+            else if (_rb.velocity.x > 0.1f)
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             }
