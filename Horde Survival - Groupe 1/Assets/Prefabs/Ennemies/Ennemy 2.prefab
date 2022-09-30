@@ -102,11 +102,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1
-  health: 30
+  health: 60
   dies: 0
   explosionForce: 10
   rb: {fileID: 4806127789896020566}
   loot: {fileID: 7014358610161431345, guid: 04ee6e1d286a7ac4e9e1ea295360679b, type: 3}
+  index: 0
   explosion: {fileID: 3622229435596443396}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   renderer: {fileID: 1665647368470869401}
