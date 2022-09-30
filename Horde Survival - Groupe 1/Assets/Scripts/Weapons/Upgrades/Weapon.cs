@@ -32,6 +32,7 @@ namespace Upgrades
 
             ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
             ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
+            ammoUsed.GetComponent<Bullet>()._countdown = 0;
 
             if (ammoUsed != null && pc.PlayerCooldown())
             {
