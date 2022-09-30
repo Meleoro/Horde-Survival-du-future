@@ -152,6 +152,8 @@ public class ChoiceManager : MonoBehaviour
     // PROPOSE UNE AMELIORATION AU JOUEUR (ARMES + STATS)
     public void SelectChoices()
     {
+        listButtons[2].gameObject.SetActive(true);
+        
         selectedOptions.Clear();
         
         // ON CHOISIT LE NOMBRE D'ARME PRESENT DANS LES UPGRADES

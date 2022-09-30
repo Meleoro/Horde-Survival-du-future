@@ -24,7 +24,7 @@ public class ButtonChoice : MonoBehaviour
         Time.timeScale = 1;
 
         // SI ON AJOUTE UNE ARME AU PERSONNAGE
-        if (ChoiceManager.Instance.currentLevel <= 2)
+        if (ChoiceManager.Instance.currentLevel <= 2 || ChoiceManager.Instance.currentLevel == ChoiceManager.Instance.thirdWeaponLevel)
         {
             ChoiceManager.Instance.weapons.RemoveAt(currentIndex);
             ChoiceManager.Instance.availableUpgrades.Add(Upgrade);
