@@ -333,6 +333,10 @@ PrefabInstance:
       propertyPath: controller
       value: 
       objectReference: {fileID: 1096107264}
+    - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
+      propertyPath: thirdWeaponLevel
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
 --- !u!4 &379767487 stripped
@@ -602,6 +606,10 @@ PrefabInstance:
     - target: {fileID: 2808851707361879150, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
       propertyPath: m_IsTrigger
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2808851707361879151, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 3914616135394496884, guid: da07c36b88bf78f4fbdee540f048a978, type: 3}
       propertyPath: m_LocalPosition.y
@@ -900,7 +908,7 @@ PrefabInstance:
       objectReference: {fileID: 1905673165}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.size
-      value: 4
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.data[2]
@@ -908,6 +916,18 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: bb5ed484a3ecc674f880c059c2347dc1, type: 2}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.data[3]
+      value: 
+      objectReference: {fileID: 11400000, guid: 99e56a52542e5084da92cbfb1e05c541, type: 2}
+    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
+      propertyPath: vagues.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 99e56a52542e5084da92cbfb1e05c541, type: 2}
+    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
+      propertyPath: vagues.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 99e56a52542e5084da92cbfb1e05c541, type: 2}
+    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
+      propertyPath: vagues.Array.data[6]
       value: 
       objectReference: {fileID: 11400000, guid: 99e56a52542e5084da92cbfb1e05c541, type: 2}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
