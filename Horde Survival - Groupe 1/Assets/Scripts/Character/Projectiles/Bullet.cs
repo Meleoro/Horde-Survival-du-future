@@ -11,6 +11,7 @@ namespace Character.Projectiles
         private Rigidbody2D _rb;
         private Transform _tr;
         private Vector2 _pC;
+        public Weapon weapon;
 
         public float bulletLifeTime;
         public float _countdown;
@@ -47,10 +48,13 @@ namespace Character.Projectiles
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("Ennemy") && !grenade)
+            if (!weapon.levelList[weapon.currentLevel - 1].ballesPerçantes2 && !weapon.levelList[weapon.currentLevel - 1].ballesPerçantes)
             {
-                gameObject.SetActive(false);
-            }        
+                if (other.gameObject.CompareTag("Ennemy") && !grenade)
+                {
+                    gameObject.SetActive(false);
+                } 
+            }
         }
     }
 }

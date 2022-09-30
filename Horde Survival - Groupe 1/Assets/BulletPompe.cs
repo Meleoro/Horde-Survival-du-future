@@ -17,8 +17,6 @@ public class BulletPompe : MonoBehaviour
             currentAngle = -currentAngle;
         }
 
-        Debug.Log(currentAngle);
-        
         DuplicateBullet(currentAngle + 10);
         DuplicateBullet(currentAngle - 10);
     }
