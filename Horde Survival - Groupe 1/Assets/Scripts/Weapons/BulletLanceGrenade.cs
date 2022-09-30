@@ -82,56 +82,59 @@ public class BulletLanceGrenade : MonoBehaviour
     // SELECTIONNE UNE NOUVELLE DIRECTION POUR LE PROJECTILE
     public void ChangeDirectionOpti()
     {
-        radius = 2;
-        detectEnnemy = false;
-        
-        Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
-
-        // ON CREE UN RAYCAST DE PLSU EN PLSU GRAND JUSQU'A AVOIR AU MOINS 3 ENNEMIES DEDANS
-        while (!detectEnnemy)
+        if (SpawnManager.Instance.compteurEnnemis > 3)
         {
-            if (colliderArray.Length < 3)
-            {
-                radius += 2;
+            radius = 2;
+            detectEnnemy = false;
+        
+            Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
 
-                colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
+            // ON CREE UN RAYCAST DE PLSU EN PLSU GRAND JUSQU'A AVOIR AU MOINS 3 ENNEMIES DEDANS
+            while (!detectEnnemy)
+            {
+                if (colliderArray.Length < 3)
+                {
+                    radius += 2;
+
+                    colliderArray = Physics2D.OverlapCircleAll(transform.position, radius, ennemyLayer);
+                }
+
+                else
+                {
+                    detectEnnemy = true;
+                }
             }
 
-            else
-            {
-                detectEnnemy = true;
-            }
-        }
 
-
-        // ET DANS ON TRI DANS LES ENNEMIS TROUVES DANS CE RAYCAST
-        Vector2 currentPos = transform.position;
+            // ET DANS ON TRI DANS LES ENNEMIS TROUVES DANS CE RAYCAST
+            Vector2 currentPos = transform.position;
         
-        float minDist = Mathf.Infinity;
-        float minDist2 = Mathf.Infinity;
+            float minDist = Mathf.Infinity;
+            float minDist2 = Mathf.Infinity;
 
-        foreach(Collider2D k in colliderArray)
-        {
-            float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
-
-            if (dist < minDist && dist > 3f)
+            foreach(Collider2D k in colliderArray)
             {
-                minDist2 = minDist;
-                nearestEnnemy2 = nearestEnnemy;
+                float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
+
+                if (dist < minDist && dist > 3f)
+                {
+                    minDist2 = minDist;
+                    nearestEnnemy2 = nearestEnnemy;
                 
-                minDist = dist;
-                nearestEnnemy = k.gameObject;
-            }
+                    minDist = dist;
+                    nearestEnnemy = k.gameObject;
+                }
             
-            else if (dist < minDist2 && dist > 3f)
-            {
-                minDist2 = dist;
-                nearestEnnemy2 = k.gameObject;
+                else if (dist < minDist2 && dist > 3f)
+                {
+                    minDist2 = dist;
+                    nearestEnnemy2 = k.gameObject;
+                }
             }
-        }
         
-        direction = nearestEnnemy.transform.position - transform.position;
-        direction2 = nearestEnnemy2.transform.position - transform.position;
+            direction = nearestEnnemy.transform.position - transform.position;
+            direction2 = nearestEnnemy2.transform.position - transform.position;
+        }
     }
 
 

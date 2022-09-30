@@ -131,7 +131,7 @@ public class Ennemy : MonoBehaviour
         
         yield return new WaitForSeconds(0.15f);
 
-        //SpawnManager.Instance.ennemies.RemoveAt(index);
+        SpawnManager.Instance.compteurEnnemis -= 1;
         Destroy(gameObject);
     }
 }

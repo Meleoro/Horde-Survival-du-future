@@ -32,7 +32,7 @@ namespace Upgrades
 
             //audio.Play();
 
-            if (ammoUsed != null && pc.PlayerCooldown())
+            if (ammoUsed != null && pc.PlayerCooldown() && pc._nearestEnemy != null)
             {            
                 ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
                 ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
@@ -69,7 +69,7 @@ namespace Upgrades
             
             //audio.Play();
 
-            if (ammoUsed != null && drone.DroneCooldown())
+            if (ammoUsed != null && drone.DroneCooldown() && PlayerController.Instance._nearestEnemy != null)
             {
                 ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
                 ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;

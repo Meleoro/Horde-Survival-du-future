@@ -18,12 +18,13 @@ public class SpawnManager : MonoBehaviour
     
     //public List<GameObject> ennemies;
 
-    [Header("SpawnLimites")] 
+    [Header("SpawnLimites")]
     public float heightCamera;
     public float widthCamera;
 
 
-    [Header("Autres")]
+    [Header("Autres")] 
+    public int compteurEnnemis;
     private float timerSpawn;
     private bool spawnOnX;
     private float spawnX;
@@ -179,7 +180,9 @@ public class SpawnManager : MonoBehaviour
         }
         
         GameObject newEnnemy = Instantiate(entity, RefCamera.Instance.transform.position + new Vector3(spawnX, spawnY, 10), Quaternion.identity);
-        
+
+        compteurEnnemis += 1;
+
         //newEnnemy.GetComponent<Ennemy>().index = ennemies.Count;
         //ennemies.Add(newEnnemy);
     }
