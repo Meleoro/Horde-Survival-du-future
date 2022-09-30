@@ -15,7 +15,7 @@ MonoBehaviour:
   isReloading: 0
   isOnCooldown: 0
   name: Minigun
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 2ebcf6e735528df47a1cb77cd69141fb, type: 3}
   currentLevel: 1
   isWeapon: 1
   weapon: {fileID: 0}
