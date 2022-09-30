@@ -19,9 +19,11 @@ public class ScoreManager : MonoBehaviour
 
     public void CalculateScore()
     {
-        score = score + SpawnManager.Instance.minutes * 60 + SpawnManager.Instance.seconds;
+        textScore.gameObject.SetActive(true);
+        
+        int finalScore = score + SpawnManager.Instance.minutes * 60 + SpawnManager.Instance.seconds;
 
-        textScore.text = "Score : " + score;
+        textScore.text = "Score : " + finalScore;
     }
     
     
