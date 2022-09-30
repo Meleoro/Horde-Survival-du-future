@@ -21,7 +21,7 @@ MonoBehaviour:
   weapon: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   bullet: {fileID: 9124585523636447651, guid: 000370840dc35cd46b737c56d87b4457, type: 3}
   levelList:
-  - desciption: 
+  - desciption: Tir 3 projectiles sur l'enemi le plus proche
     degats: 30
     bulletSpeed: 15
     portee: 15
@@ -33,12 +33,13 @@ MonoBehaviour:
     reload: 2
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Diminue le temps de rechargement
     degats: 30
     bulletSpeed: 15
     portee: 15
@@ -50,12 +51,13 @@ MonoBehaviour:
     reload: 1.5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: "Augmente les d\xE9gats"
     degats: 45
     bulletSpeed: 15
     portee: 15
@@ -67,12 +69,13 @@ MonoBehaviour:
     reload: 1.5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Diminue le temps de rechargement
     degats: 55
     bulletSpeed: 15
     portee: 15
@@ -84,12 +87,13 @@ MonoBehaviour:
     reload: 1.5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Augmente la taille des chargeurs
     degats: 55
     bulletSpeed: 15
     portee: 15
@@ -101,6 +105,61 @@ MonoBehaviour:
     reload: 1.5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  - desciption: "Augmente les d\xE9gats de l'arme"
+    degats: 70
+    bulletSpeed: 15
+    portee: 15
+    fireRate: 0
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 2
+    currentAmmo: 0
+    reload: 1.5
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  - desciption: Diminue le temps de rechargement
+    degats: 70
+    bulletSpeed: 15
+    portee: 15
+    fireRate: 0
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 2
+    currentAmmo: 0
+    reload: 1
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  - desciption: Diminue le temps de rechargement
+    degats: 90
+    bulletSpeed: 15
+    portee: 15
+    fireRate: 0
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 2
+    currentAmmo: 0
+    reload: 1
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
