@@ -43,7 +43,7 @@ public class Ennemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Explosion" || other.gameObject.tag == "Bullet" && !dies)
+        if ((other.gameObject.tag == "Bullet" || other.gameObject.tag == "BulletGrenade") && !dies)
         {
             health -= other.gameObject.GetComponent<Bullet>().degats
                 + (other.gameObject.GetComponent<Bullet>().degats * UpgradeManager.Instance.degatsPourc / 100);
@@ -87,7 +87,7 @@ public class Ennemy : MonoBehaviour
     {
         explosion.SetActive(true);
         
-        yield return new WaitForSeconds(0.05f);
+        yield return new WaitForSeconds(0.15f);
         
         Destroy(gameObject);
     }

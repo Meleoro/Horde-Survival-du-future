@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTr: {fileID: 0}
-  rotationSpeed: 200
+  rotationSpeed: 50
 --- !u!1 &4666382149410248426
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +145,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 272b7194090032c4480dc03b65cfde12, type: 2}
+  weapon: {fileID: 11400000, guid: 897dc7f8579393842b46ccad8a31a722, type: 2}
+  tr: {fileID: 0}
+  nextFireTimeDrone: 0
 --- !u!1 &4666382149448289938
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,4 +245,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 209302034833ef945a60433ec3647aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapon: {fileID: 11400000, guid: 272b7194090032c4480dc03b65cfde12, type: 2}
+  weapon: {fileID: 11400000, guid: 897dc7f8579393842b46ccad8a31a722, type: 2}
+  tr: {fileID: 0}
+  nextFireTimeDrone: 0

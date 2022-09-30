@@ -47,12 +47,9 @@ public class BulletLanceGrenade : MonoBehaviour
     {
         rb.velocity = direction.normalized * bulletSpeed;
 
-        timer += Time.deltaTime;
-
-        if (timer > lanceGrenade.levelList[lanceGrenade.currentLevel - 1].portee)
+        if(timer > 0)
         {
-            gameObject.SetActive(false);
-            timer = 0;
+            timer -= Time.deltaTime;
         }
     }
 
@@ -85,8 +82,6 @@ public class BulletLanceGrenade : MonoBehaviour
     // SELECTIONNE UNE NOUVELLE DIRECTION POUR LE PROJECTILE
     public void ChangeDirectionOpti()
     {
-        Debug.Log(12);
-
         radius = 2;
         detectEnnemy = false;
         
@@ -158,9 +153,10 @@ public class BulletLanceGrenade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Ennemy") && canBounce)
+        if (col.gameObject.CompareTag("Ennemy") && canBounce && timer <= 0)
         {
             nbrRebond += 1;
+            timer = 0.2f;
             
             ChangeDirectionOpti();
             
@@ -171,16 +167,16 @@ public class BulletLanceGrenade : MonoBehaviour
                 Split();
 
             if (nbrRebond >= limiteRebonds)
-            {
-                timer = 0;
-                
+            {   
                 if (isTheOriginal)
                 {
+                    timer = 0;
                     gameObject.SetActive(false);
                 }
 
                 else
                 {
+                    timer = 0;
                     gameObject.SetActive(false);
                 }
             }

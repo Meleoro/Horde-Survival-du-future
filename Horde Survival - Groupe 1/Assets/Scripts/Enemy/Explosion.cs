@@ -13,9 +13,9 @@ public class Explosion : MonoBehaviour
         {
             Vector2 direction = transform.position - col.transform.position;
             
-            col.GetComponent<Rigidbody2D>().AddForce(-direction * explosionForce, ForceMode2D.Impulse);
+            col.GetComponent<Rigidbody2D>().AddForce(-direction * explosionForce / 2, ForceMode2D.Impulse);
             
-            col.GetComponent<Ennemy>().Damage(explosionForce * 10);
+            col.GetComponent<Ennemy>().Damage(explosionForce);
         }
     }
 }

@@ -21,21 +21,20 @@ namespace Character.Projectiles
         private void Start()
         {
             _pC = PlayerController.PlayerPos;
-            _tr = GetComponent<Transform>();
+            _tr = GetComponent<Transform>(); 
         }
 
         private void Update()
         {
-            if (!grenade)
-            {
-                _countdown += Time.deltaTime; 
+
+            _countdown += Time.deltaTime; 
             
-                if(_countdown >= bulletLifeTime) 
-                {
-                    _countdown = 0f;
-                    gameObject.SetActive(false);
-                }
+            if(_countdown >= bulletLifeTime) 
+            {
+                _countdown = 0f;
+                gameObject.SetActive(false);
             }
+            
         }
 
         private void OnTriggerEnter2D(Collider2D other)

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5748269649829847447}
   m_Layer: 8
   m_Name: BulletLanceGrenade
-  m_TagString: Bullet
+  m_TagString: BulletGrenade
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.8
+  m_Radius: 0.5
 --- !u!114 &5748269649829847447
 MonoBehaviour:
   m_ObjectHideFlags: 0

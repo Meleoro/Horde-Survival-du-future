@@ -42,10 +42,17 @@ namespace Upgrades
                 //Physic
                 ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
 
+                if (ammoUsed.CompareTag("BulletGrenade"))
+                {
+                    ammoUsed.GetComponent<BulletLanceGrenade>().direction = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
+                    ammoUsed.GetComponent<BulletLanceGrenade>().nbrRebond = 0;
+                }
+
                 _currentAmmo -= 1;
-                
+                levelList[currentLevel - 1].currentAmmo = _currentAmmo;
+
                 //Cooldown & Reload
-                if(_currentAmmo > 0) pc.nextTimeFire = Time.time + levelList[currentLevel - 1].fireRate;
+                if (_currentAmmo > 0) pc.nextTimeFire = Time.time + levelList[currentLevel - 1].fireRate;
                 else
                 {
                     pc.nextTimeFire = Time.time + levelList[currentLevel - 1].reload;
@@ -58,10 +65,10 @@ namespace Upgrades
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
             
             ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
+            ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
 
             if (ammoUsed != null && drone.DroneCooldown())
             {
-                Debug.Log(dronePos);
                 //Placement & activation
                 ammoUsed.transform.position = dronePos.position;
                 ammoUsed.SetActive(true);
@@ -70,9 +77,17 @@ namespace Upgrades
     
                 //Physic
                 ammoUsed.GetComponent<Rigidbody2D>().velocity = dir * levelList[currentLevel - 1].bulletSpeed;
-                
+
+                if (ammoUsed.CompareTag("BulletGrenade"))
+                {
+                    ammoUsed.GetComponent<BulletLanceGrenade>().direction = dir * levelList[currentLevel - 1].bulletSpeed;
+                    ammoUsed.GetComponent<BulletLanceGrenade>().nbrRebond = 0;
+                }
+
+                _currentAmmo -= 1;
+
                 //Cooldown & Reload
-                if(_currentAmmo > 0) drone.nextFireTimeDrone = Time.time + levelList[currentLevel - 1].fireRate;
+                if (_currentAmmo > 0) drone.nextFireTimeDrone = Time.time + levelList[currentLevel - 1].fireRate;
                 else
                 {
                     drone.nextFireTimeDrone = Time.time + levelList[currentLevel - 1].reload;

@@ -26,7 +26,7 @@ public class EXP : Collectible, ICollectible
 
     public override void Collect()
     {
-        ExpBar.Instance.currentXp += valeurXp;
+        ExpBar.Instance.currentXp += valeurXp - 1;
         
         Destroy(gameObject);
     }

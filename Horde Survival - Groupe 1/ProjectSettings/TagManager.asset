@@ -8,6 +8,7 @@ TagManager:
   - Ennemy
   - Wall
   - Bullet
+  - BulletGrenade
   layers:
   - Default
   - TransparentFX
