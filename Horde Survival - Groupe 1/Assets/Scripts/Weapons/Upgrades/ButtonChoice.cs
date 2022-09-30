@@ -89,6 +89,8 @@ public class ButtonChoice : MonoBehaviour
     {
         buttonName.text = Upgrade.name;
 
+        image.sprite = Upgrade.image;
+
         if (Upgrade.isWeapon)
             description.text = Upgrade.levelList[Upgrade.currentLevel].desciption;
 

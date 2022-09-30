@@ -34,7 +34,7 @@ namespace Character
         public Transform playerTr;
         public static PlayerController Instance;
 
-        private GameObject _nearestEnemy;
+        public GameObject _nearestEnemy;
         #endregion
 
         private void Awake()
@@ -115,45 +115,55 @@ namespace Character
 
         public GameObject EnemyNear()
         {
-            _radius = 2;
-            _detectEnemy = false;
-        
-            Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, _radius, enemyLayer);
-
-            // ON CREE UN RAYCAST DE PLUS EN PLUS GRAND JUSQU'A AVOIR AU MOINS 1 ENNEMI DEDANS
-            while (!_detectEnemy)
+            if (SpawnManager.Instance.compteurEnnemis != 0)
             {
-                if (colliderArray.Length < 1)
-                {
-                    _radius += 2;
+                _radius = 2;
+                _detectEnemy = false;
+        
+                Collider2D[] colliderArray = Physics2D.OverlapCircleAll(transform.position, _radius, enemyLayer);
 
-                    colliderArray = Physics2D.OverlapCircleAll(transform.position, _radius, enemyLayer);
+                // ON CREE UN RAYCAST DE PLUS EN PLUS GRAND JUSQU'A AVOIR AU MOINS 1 ENNEMI DEDANS
+                while (!_detectEnemy)
+                {
+                    if (colliderArray.Length < 1)
+                    {
+                        _radius += 2;
+
+                        colliderArray = Physics2D.OverlapCircleAll(transform.position, _radius, enemyLayer);
+                    }
+
+                    else
+                    {
+                        _detectEnemy = true;
+                    }
                 }
 
-                else
+
+                // ET DANS ON TRI DANS LES ENNEMIS TROUVES DANS CE RAYCAST
+                Vector2 currentPos = transform.position;
+        
+                float minDist = Mathf.Infinity;
+
+                foreach(Collider2D k in colliderArray)
                 {
-                    _detectEnemy = true;
+                    float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
+
+                    if (dist < minDist && dist > 1f)
+                    {
+                        minDist = dist;
+                        _nearestEnemy = k.gameObject;
+                    }
                 }
+
+                return _nearestEnemy;
             }
 
-
-            // ET DANS ON TRI DANS LES ENNEMIS TROUVES DANS CE RAYCAST
-            Vector2 currentPos = transform.position;
-        
-            float minDist = Mathf.Infinity;
-
-            foreach(Collider2D k in colliderArray)
+            else
             {
-                float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
-
-                if (dist < minDist && dist > 1f)
-                {
-                    minDist = dist;
-                    _nearestEnemy = k.gameObject;
-                }
+                _nearestEnemy = null;
             }
-
-            return _nearestEnemy;
+            
+            return null;
         }
         
         private void OnCollisionEnter2D(Collision2D col)

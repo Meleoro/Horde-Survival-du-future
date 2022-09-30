@@ -16,7 +16,7 @@ MonoBehaviour:
   isOnCooldown: 0
   name: lance Grenade
   image: {fileID: 21300000, guid: c9360aa6ccfc8364aa4d7c6fcb6dc66b, type: 3}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
@@ -30,12 +30,12 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 3
-    currentAmmo: 3
+    currentAmmo: 0
     reload: 5
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
+    nbrRebonds: 2
     firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
@@ -48,12 +48,12 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 3
-    currentAmmo: 3
+    currentAmmo: 0
     reload: 5
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
+    nbrRebonds: 2
     firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
@@ -102,7 +102,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 6
-    currentAmmo: 6
+    currentAmmo: 1
     reload: 3
     doubleUZI: 0
     doubleTir: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 6
-    currentAmmo: 6
+    currentAmmo: 5
     reload: 3
     doubleUZI: 0
     doubleTir: 0
