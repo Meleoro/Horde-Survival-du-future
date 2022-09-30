@@ -16,12 +16,12 @@ MonoBehaviour:
   isOnCooldown: 0
   name: UZI
   image: {fileID: 0}
-  currentLevel: 3
+  currentLevel: 9
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   levelList:
-  - desciption: 
+  - desciption: Arme automatique rapide.
     degats: 10
     bulletSpeed: 15
     portee: 15
@@ -39,7 +39,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Augmente la taille du chargeur
     degats: 10
     bulletSpeed: 15
     portee: 15
@@ -47,7 +47,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 8
-    currentAmmo: 1
+    currentAmmo: 0
     reload: 2
     doubleUZI: 1
     doubleTir: 0
@@ -57,7 +57,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: "Augmente les d\xE9gats"
     degats: 15
     bulletSpeed: 15
     portee: 15
@@ -65,7 +65,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 8
-    currentAmmo: 0
+    currentAmmo: 6
     reload: 2
     doubleUZI: 0
     doubleTir: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Diminue le temps de rehargement
     degats: 15
     bulletSpeed: 15
     portee: 15
@@ -93,7 +93,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: "Augmente les d\xE9gats "
     degats: 20
     bulletSpeed: 15
     portee: 15
@@ -101,7 +101,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 8
-    currentAmmo: 0
+    currentAmmo: 2
     reload: 1
     doubleUZI: 0
     doubleTir: 0
@@ -111,7 +111,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Augmente la taille du chargeur
     degats: 20
     bulletSpeed: 15
     portee: 15
@@ -129,7 +129,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: "Augmente les d\xE9gats "
     degats: 30
     bulletSpeed: 15
     portee: 15
@@ -137,7 +137,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 0
+    currentAmmo: 9
     reload: 1
     doubleUZI: 0
     doubleTir: 0
@@ -147,7 +147,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Diminue le temps de rechargement
     degats: 30
     bulletSpeed: 15
     portee: 15
@@ -155,7 +155,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 0
+    currentAmmo: 5
     reload: 0.5
     doubleUZI: 0
     doubleTir: 0
