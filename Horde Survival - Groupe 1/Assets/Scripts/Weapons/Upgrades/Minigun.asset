@@ -15,11 +15,12 @@ MonoBehaviour:
   isReloading: 0
   isOnCooldown: 0
   name: Minigun
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: 2ebcf6e735528df47a1cb77cd69141fb, type: 3}
   currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
+  audio: {fileID: 0}
   levelList:
   - desciption: Tir de puissant projectiles
     degats: 15

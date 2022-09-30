@@ -15,11 +15,12 @@ MonoBehaviour:
   isReloading: 0
   isOnCooldown: 0
   name: lance Grenade
-  image: {fileID: 0}
+  image: {fileID: 21300000, guid: c9360aa6ccfc8364aa4d7c6fcb6dc66b, type: 3}
   currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
+  audio: {fileID: 0}
   levelList:
   - desciption: 
     degats: 50
@@ -33,6 +34,7 @@ MonoBehaviour:
     reload: 5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
@@ -50,6 +52,7 @@ MonoBehaviour:
     reload: 5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
@@ -67,6 +70,7 @@ MonoBehaviour:
     reload: 5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
@@ -84,6 +88,7 @@ MonoBehaviour:
     reload: 3
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 1
     secondSplit: 0
@@ -101,6 +106,7 @@ MonoBehaviour:
     reload: 3
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
