@@ -22,10 +22,10 @@ MonoBehaviour:
   bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
   audio: {fileID: 0}
   levelList:
-  - desciption: 
+  - desciption: Tir des grenades rebondissantes
     degats: 50
     bulletSpeed: 10
-    portee: 15
+    portee: 2
     fireRate: 1
     bulletsPerShot: 0
     dispersion: 0
@@ -40,15 +40,15 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Augmente la cadence de tir
     degats: 50
     bulletSpeed: 10
-    portee: 15
+    portee: 2
     fireRate: 0.8
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 3
-    currentAmmo: 0
+    currentAmmo: 3
     reload: 5
     doubleUZI: 0
     doubleTir: 0
@@ -58,15 +58,15 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: 'Augmente la taille des chargeurs '
     degats: 50
     bulletSpeed: 10
-    portee: 15
+    portee: 2
     fireRate: 0.8
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 4
-    currentAmmo: 0
+    currentAmmo: 4
     reload: 5
     doubleUZI: 0
     doubleTir: 0
@@ -76,10 +76,10 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: Diminue le temps de rechargement
     degats: 50
     bulletSpeed: 10
-    portee: 15
+    portee: 2
     fireRate: 0.8
     bulletsPerShot: 0
     dispersion: 0
@@ -90,20 +90,74 @@ MonoBehaviour:
     doubleTir: 0
     "ballesPer\xE7antes2": 0
     nbrRebonds: 0
-    firstSplit: 1
+    firstSplit: 0
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 
+  - desciption: 'Augmente la taille des chargeurs '
     degats: 50
     bulletSpeed: 10
-    portee: 15
+    portee: 2
     fireRate: 0.8
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 6
-    currentAmmo: 0
+    currentAmmo: 6
     reload: 3
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  - desciption: "Augmente les d\xE9g\xE2ts"
+    degats: 65
+    bulletSpeed: 10
+    portee: 2
+    fireRate: 0.8
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 6
+    currentAmmo: 6
+    reload: 3
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  - desciption: Diminue le temps de rechargement
+    degats: 65
+    bulletSpeed: 10
+    portee: 2
+    fireRate: 0.8
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 6
+    currentAmmo: 6
+    reload: 2
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+  - desciption: "Augmente les d\xE9g\xE2ts"
+    degats: 80
+    bulletSpeed: 10
+    portee: 2
+    fireRate: 0.8
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 6
+    currentAmmo: 6
+    reload: 2
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
