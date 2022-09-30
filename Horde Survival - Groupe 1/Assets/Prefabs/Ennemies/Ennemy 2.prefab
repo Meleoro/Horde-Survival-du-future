@@ -108,6 +108,9 @@ MonoBehaviour:
   rb: {fileID: 4806127789896020566}
   loot: {fileID: 7014358610161431345, guid: 04ee6e1d286a7ac4e9e1ea295360679b, type: 3}
   explosion: {fileID: 3622229435596443396}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  renderer: {fileID: 1665647368470869401}
+  flashTime: 0.2
 --- !u!50 &4806127789896020566
 Rigidbody2D:
   serializedVersion: 4
@@ -121,8 +124,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 3
-  m_AngularDrag: 3
+  m_LinearDrag: 4
+  m_AngularDrag: 4
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0

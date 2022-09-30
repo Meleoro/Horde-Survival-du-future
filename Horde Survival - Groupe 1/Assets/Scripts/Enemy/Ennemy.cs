@@ -18,7 +18,16 @@ public class Ennemy : MonoBehaviour
 
     [Header("Autres")] 
     public GameObject explosion;
-    
+
+    [Header("Hit")] public Color originalColor;
+    public SpriteRenderer renderer;
+    public float flashTime;
+
+    private void Start()
+    {
+        originalColor = renderer.color;
+    }
+
     void Update()
     {
         Vector2 direction = RefCharacter.Instance.transform.position - transform.position;
@@ -58,6 +67,8 @@ public class Ennemy : MonoBehaviour
         {
             health -= other.gameObject.GetComponent<Bullet>().degats
                 + (other.gameObject.GetComponent<Bullet>().degats * UpgradeManager.Instance.degatsPourc / 100);
+            
+            FlashRed();
 
             if (health <= 0)
             {
@@ -81,18 +92,35 @@ public class Ennemy : MonoBehaviour
     }
 
 
+    public void FlashRed()
+    {
+        renderer.color = Color.red;
+        Invoke("ResetColor", flashTime);
+    }
+
+    void ResetColor()
+    {
+        renderer.color = originalColor;
+    }
+    
+    
     public void Damage(float damage)
     {
-        health -= damage;
-        
-        if (health <= 0)
+        if (!dies && damage != 0)
         {
-            StartCoroutine(Dies());
-            ComboManager.Instance.IncreaeMultiplier(0.2f);
+            health -= damage;
+        
+            FlashRed();
+        
+            if (health <= 0)
+            {
+                StartCoroutine(Dies());
+                ComboManager.Instance.IncreaeMultiplier(0.2f);
 
-            GameObject Xp = Instantiate(loot, transform.position, transform.rotation);
+                GameObject Xp = Instantiate(loot, transform.position, transform.rotation);
 
-            Xp.GetComponent<EXP>().valeurXp = ComboManager.Instance.currentMultiplier;
+                Xp.GetComponent<EXP>().valeurXp = ComboManager.Instance.currentMultiplier;
+            }
         }
     }
 
