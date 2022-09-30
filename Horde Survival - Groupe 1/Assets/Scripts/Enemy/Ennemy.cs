@@ -70,10 +70,13 @@ public class Ennemy : MonoBehaviour
 
                 Xp.GetComponent<EXP>().valeurXp = ComboManager.Instance.currentMultiplier;
             }
+
+            if (other.GetComponent<BulletPompe>() != null || other.GetComponent<BulletLanceGrenade>() != null)
+            {
+                Vector2 direction = transform.position - other.transform.position;
             
-            Vector2 direction = transform.position - other.transform.position;
-            
-            GetComponent<Rigidbody2D>().AddForce(direction.normalized * other.gameObject.GetComponent<Bullet>().degats / 2, ForceMode2D.Impulse);
+                GetComponent<Rigidbody2D>().AddForce(direction.normalized * other.gameObject.GetComponent<Bullet>().degats / 2, ForceMode2D.Impulse);
+            }
         }
     }
 
