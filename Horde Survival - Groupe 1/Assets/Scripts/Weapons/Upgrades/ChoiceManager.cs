@@ -54,6 +54,13 @@ public class ChoiceManager : MonoBehaviour
         foreach (Weapon k in availableUpgrades)
         {
             k.currentLevel = 0;
+
+            if (k.isWeapon)
+            {
+                k.levelList[currentLevel].currentAmmo = k.levelList[currentLevel].ammoMax;
+                k.isReloading = false;
+                k.isOnCooldown = false;
+            }
         }
         
         LevelUp();
