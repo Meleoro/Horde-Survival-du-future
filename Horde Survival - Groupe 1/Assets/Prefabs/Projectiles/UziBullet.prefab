@@ -120,9 +120,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a0344cf5542c5440ba7acc368a6c691, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 11400000, guid: 272b7194090032c4480dc03b65cfde12, type: 2}
   bulletLifeTime: 2
+  _countdown: 0
   degats: 0
   grenade: 0
+  CCBullet: 0
 --- !u!58 &8168605192682312308
 CircleCollider2D:
   m_ObjectHideFlags: 0

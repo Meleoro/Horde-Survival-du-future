@@ -1626,12 +1626,17 @@ MonoBehaviour:
   availableUpgrades:
   - {fileID: 11400000, guid: 37caccd64b5dedb4985eb2772a86d6cc, type: 2}
   - {fileID: 11400000, guid: f55fdb33f2b2a194b8e94c17fb8abe2d, type: 2}
+  - {fileID: 11400000, guid: e25d66093193ffb4c85eccec77003912, type: 2}
+  - {fileID: 11400000, guid: dff52b2f8c8144946968fe5a672d2226, type: 2}
+  - {fileID: 11400000, guid: 1c3dd45b63c0e424282874bf4d9f17b7, type: 2}
+  - {fileID: 11400000, guid: 565aeda9001701548b246dd12f1300b7, type: 2}
   listButtons:
   - {fileID: 407575380289182775}
   - {fileID: 407575381014573064}
   - {fileID: 407575380243452053}
   selectedOptions: 
   currentLevel: 0
+  controller: {fileID: 0}
 --- !u!1 &407575381590693578
 GameObject:
   m_ObjectHideFlags: 0

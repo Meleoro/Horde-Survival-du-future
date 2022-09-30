@@ -157,6 +157,7 @@ namespace Upgrades
 
         [Header("Canon CC")] 
         public bool doubleTir;
+        public bool ballesPerçantes2;
 
         [Header("LanceGrenade")] 
         public int nbrRebonds;
