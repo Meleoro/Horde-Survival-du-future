@@ -48,11 +48,13 @@ public class PlayerHealthManager : MonoBehaviour
         
         
 
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             gameOverPanel.SetActive(true);
             Time.timeScale = 0;
             controller.SetActive(true);
+            
+            ScoreManager.Instance.CalculateScore();
         }
         
         healthBar.SetHealth(currentHealth);

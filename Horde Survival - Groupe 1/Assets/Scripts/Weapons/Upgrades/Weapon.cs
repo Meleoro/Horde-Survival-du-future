@@ -30,7 +30,7 @@ namespace Upgrades
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
 
-            audio.Play();
+            //audio.Play();
             
             ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
             ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
@@ -67,7 +67,7 @@ namespace Upgrades
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
             
-            audio.Play();
+            //audio.Play();
             
             ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
             ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
@@ -105,7 +105,7 @@ namespace Upgrades
         
         [Header("Upgrade / Weapon")]
         public string name;
-        public Image image;
+        public Sprite image;
         public int currentLevel;
         public bool isWeapon;
 
