@@ -18,6 +18,7 @@ namespace Character
         private float _radius;
         public float nextTimeFire;
         private bool _detectEnemy;
+        private bool invinsibilite;
         
         #endregion
 
@@ -61,7 +62,8 @@ namespace Character
             PlayerPos = playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
             
-            weaponUsed.PlayerShoot(this,initialBulletPos.position);
+            if(weaponUsed != null)
+                weaponUsed.PlayerShoot(this,initialBulletPos.position);
         }
         
         public bool PlayerCooldown()
@@ -122,7 +124,6 @@ namespace Character
             Vector2 currentPos = transform.position;
         
             float minDist = Mathf.Infinity;
-            float minDist2 = Mathf.Infinity;
 
             foreach(Collider2D k in colliderArray)
             {
@@ -138,11 +139,10 @@ namespace Character
             return _nearestEnemy;
         }
         
-        private void OnTriggerEnter2D(Collider2D col)
+        private void OnCollisionEnter2D(Collision2D col)
         {
-            if (col.gameObject.CompareTag("Ennemy"))
-            { 
-                Debug.Log("Oof");
+            if (col.gameObject.CompareTag("Ennemy") && !invinsibilite)
+            {
                 healthManager.TakeDamage(1);
             }
         }

@@ -8,6 +8,7 @@ TagManager:
   - Ennemy
   - Wall
   - Bullet
+  - BulletGrenade
   layers:
   - Default
   - TransparentFX
@@ -16,8 +17,8 @@ TagManager:
   - Water
   - UI
   - Ennemy
-  - 
-  - 
+  - Player
+  - Bullet
   - 
   - 
   - 

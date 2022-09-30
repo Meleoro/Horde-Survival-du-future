@@ -18,9 +18,12 @@ public class Magnet : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.TryGetComponent(out EXP exp))
+        if (!collision.CompareTag("Ennemy"))
         {
-            exp.SetTarget(transform.parent.position);
+            if (collision.gameObject.TryGetComponent(out EXP exp))
+            {
+                exp.SetTarget(transform.parent.position);
+            }
         }
     }
 }

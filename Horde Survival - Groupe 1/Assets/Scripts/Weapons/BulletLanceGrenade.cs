@@ -47,12 +47,9 @@ public class BulletLanceGrenade : MonoBehaviour
     {
         rb.velocity = direction.normalized * bulletSpeed;
 
-        timer += Time.deltaTime;
-
-        if (timer > lanceGrenade.levelList[lanceGrenade.currentLevel - 1].portee)
+        if(timer > 0)
         {
-            gameObject.SetActive(false);
-            timer = 0;
+            timer -= Time.deltaTime;
         }
     }
 
@@ -117,7 +114,7 @@ public class BulletLanceGrenade : MonoBehaviour
         {
             float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
 
-            if (dist < minDist && dist > 2f)
+            if (dist < minDist && dist > 3f)
             {
                 minDist2 = minDist;
                 nearestEnnemy2 = nearestEnnemy;
@@ -126,7 +123,7 @@ public class BulletLanceGrenade : MonoBehaviour
                 nearestEnnemy = k.gameObject;
             }
             
-            else if (dist < minDist2 && dist > 2f)
+            else if (dist < minDist2 && dist > 3f)
             {
                 minDist2 = dist;
                 nearestEnnemy2 = k.gameObject;
@@ -156,9 +153,10 @@ public class BulletLanceGrenade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Ennemy") && canBounce)
+        if (col.gameObject.CompareTag("Ennemy") && canBounce && timer <= 0)
         {
             nbrRebond += 1;
+            timer = 0.2f;
             
             ChangeDirectionOpti();
             
@@ -169,16 +167,16 @@ public class BulletLanceGrenade : MonoBehaviour
                 Split();
 
             if (nbrRebond >= limiteRebonds)
-            {
-                timer = 0;
-                
+            {   
                 if (isTheOriginal)
                 {
+                    timer = 0;
                     gameObject.SetActive(false);
                 }
 
                 else
                 {
+                    timer = 0;
                     gameObject.SetActive(false);
                 }
             }

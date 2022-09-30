@@ -12,6 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6166ca4f06f42614e8ba09e3f0e7a25d, type: 3}
   m_Name: Data01
   m_EditorClassIdentifier: 
-  characterSpeed: 20
-  basicAttackSpeed: 10
-  basicAttackCooldown: 0.5
+  characterSpeed: 5

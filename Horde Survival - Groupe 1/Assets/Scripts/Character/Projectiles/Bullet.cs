@@ -14,28 +14,32 @@ namespace Character.Projectiles
 
         public float bulletLifeTime;
         private float _countdown;
+        public float degats;
+
+        public bool grenade;
 
         private void Start()
         {
             _pC = PlayerController.PlayerPos;
-            _tr = GetComponent<Transform>();
+            _tr = GetComponent<Transform>(); 
         }
 
         private void Update()
         {
+
             _countdown += Time.deltaTime; 
             
             if(_countdown >= bulletLifeTime) 
             {
-                Debug.Log(1);
                 _countdown = 0f;
                 gameObject.SetActive(false);
             }
+            
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            if (other.gameObject.CompareTag("Ennemy"))
+            if (other.gameObject.CompareTag("Ennemy") && !grenade)
             {
                 gameObject.SetActive(false);
             }        

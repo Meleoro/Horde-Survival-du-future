@@ -40,6 +40,14 @@ public class WeaponManager : MonoBehaviour
     }
 
 
+    private void Start()
+    {
+        PlayerController.Instance.weaponUsed = null;
+        drone1.weapon = null;
+        drone2.weapon = null;
+    }
+
+
     private void Update()
     {
         // SI LE JOUEUR VEUT SWITCH
