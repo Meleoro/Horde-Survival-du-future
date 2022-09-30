@@ -16,7 +16,7 @@ MonoBehaviour:
   isOnCooldown: 0
   name: UZI
   image: {fileID: 0}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
@@ -25,14 +25,15 @@ MonoBehaviour:
     degats: 10
     bulletSpeed: 15
     portee: 15
-    fireRate: 0.4
+    fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 12
+    currentAmmo: 9
     reload: 1
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
@@ -46,10 +47,11 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 18
-    currentAmmo: 2
+    currentAmmo: 9
     reload: 1
     doubleUZI: 1
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
@@ -63,10 +65,11 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 18
-    currentAmmo: 0
+    currentAmmo: 13
     reload: 0.5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
@@ -80,10 +83,11 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 18
-    currentAmmo: 0
+    currentAmmo: 4
     reload: 0.5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
@@ -101,6 +105,7 @@ MonoBehaviour:
     reload: 0.5
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
