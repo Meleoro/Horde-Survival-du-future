@@ -14,12 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isReloading: 0
   isOnCooldown: 0
-  name: 
+  name: Vitesse
   image: {fileID: 0}
-  currentLevel: 0
+  currentLevel: 1
   isWeapon: 0
   weapon: {fileID: 0}
   bullet: {fileID: 0}
+  audio: {fileID: 0}
   levelList:
   - desciption: 
     degats: 0
@@ -33,6 +34,7 @@ MonoBehaviour:
     reload: 0
     doubleUZI: 0
     doubleTir: 0
+    "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
