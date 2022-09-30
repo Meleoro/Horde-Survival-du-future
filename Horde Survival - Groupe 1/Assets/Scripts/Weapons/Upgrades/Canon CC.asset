@@ -129,8 +129,8 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: "Augmente les d\xE9gats"
-    degats: 90
+  - desciption: Diminue le temps de rechargement
+    degats: 70
     bulletSpeed: 15
     portee: 15
     fireRate: 0
@@ -148,7 +148,7 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
   - desciption: Diminue le temps de rechargement
-    degats: 70
+    degats: 90
     bulletSpeed: 15
     portee: 15
     fireRate: 0
