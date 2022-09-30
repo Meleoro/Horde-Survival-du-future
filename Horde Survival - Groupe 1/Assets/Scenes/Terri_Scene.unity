@@ -921,15 +921,15 @@ PrefabInstance:
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.data[4]
       value: 
-      objectReference: {fileID: 11400000, guid: 99e56a52542e5084da92cbfb1e05c541, type: 2}
+      objectReference: {fileID: 11400000, guid: f186424cd7367734f9ccb116b08e0686, type: 2}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.data[5]
       value: 
-      objectReference: {fileID: 11400000, guid: 99e56a52542e5084da92cbfb1e05c541, type: 2}
+      objectReference: {fileID: 11400000, guid: 4dc44622b3cc086448ccaaad0b3e676c, type: 2}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.data[6]
       value: 
-      objectReference: {fileID: 11400000, guid: 99e56a52542e5084da92cbfb1e05c541, type: 2}
+      objectReference: {fileID: 11400000, guid: 09738622854789d4695bb530e5a0bd6d, type: 2}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: ennemies.Array.data[0]
       value: 
@@ -1150,13 +1150,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolData:
   - prefab: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
-    numberOfProjectiles: 30
+    numberOfProjectiles: 20
   - prefab: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
-    numberOfProjectiles: 50
+    numberOfProjectiles: 20
   - prefab: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
     numberOfProjectiles: 6
   - prefab: {fileID: 9124585523636447651, guid: 000370840dc35cd46b737c56d87b4457, type: 3}
-    numberOfProjectiles: 4
+    numberOfProjectiles: 2
 --- !u!4 &1289564050
 Transform:
   m_ObjectHideFlags: 0
