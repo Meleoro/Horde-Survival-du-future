@@ -96,12 +96,9 @@ namespace Upgrades
                     _currentAmmo = levelList[currentLevel - 1].ammoMax;
                 }
             }
-            
         }
         
-  
         
-
         [Header("Upgrade / Weapon")]
         public string name;
         public Image image;

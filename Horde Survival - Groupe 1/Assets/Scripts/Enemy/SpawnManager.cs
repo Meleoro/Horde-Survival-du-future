@@ -1,8 +1,10 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
+using TMPro;
 
 public class SpawnManager : MonoBehaviour
 {
@@ -27,6 +29,11 @@ public class SpawnManager : MonoBehaviour
     private float spawnX;
     private float spawnY;
 
+    public TextMeshProUGUI timer;
+    public int seconds;
+    private bool newSecond;
+    public int minutes;
+
 
     private void Awake()
     {
@@ -39,6 +46,8 @@ public class SpawnManager : MonoBehaviour
         currentVague = vagues[currentVagueNumber];
         timerVague = currentVague.duration;
         timerSpawn = currentVague.spawnRate;
+
+        newSecond = true;
     }
 
 
@@ -59,6 +68,42 @@ public class SpawnManager : MonoBehaviour
             timerSpawn = currentVague.spawnRate;
             
             SpawnEntity(SelectSpawnEntity());
+        }
+
+        if (newSecond)
+        {
+            StartCoroutine(addSecond());
+        }
+
+        if (seconds == 60)
+        {
+            minutes += 1;
+            seconds = 0;
+        }
+
+        if (minutes < 10)
+        {
+            if (seconds < 10)
+            {
+                timer.text = "0" + minutes + " : " + "0" + seconds;
+            }
+            
+            else
+            {
+                timer.text = "0" + minutes + " : " + seconds;
+            }
+        }
+        else
+        {
+            if(seconds < 10)
+            {
+                timer.text = minutes + " : " + "0" + seconds;
+            }
+
+            else
+            {
+                timer.text = minutes + " : " + seconds;
+            }
         }
     }
 
@@ -144,5 +189,15 @@ public class SpawnManager : MonoBehaviour
         
         currentVague = vagues[currentVagueNumber];
         timerVague = currentVague.duration;
+    }
+
+    IEnumerator addSecond()
+    {
+        seconds += 1;
+        newSecond = false;
+
+        yield return new WaitForSeconds(1);
+
+        newSecond = true;
     }
 }
