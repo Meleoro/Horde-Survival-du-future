@@ -108,6 +108,9 @@ MonoBehaviour:
   rb: {fileID: 4806127789896020566}
   loot: {fileID: 7014358610161431345, guid: 04ee6e1d286a7ac4e9e1ea295360679b, type: 3}
   explosion: {fileID: 4861299075512097845}
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  renderer: {fileID: 1665647368470869401}
+  flashTime: 0.2
 --- !u!58 &16811872
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -137,8 +140,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 3
-  m_AngularDrag: 3
+  m_LinearDrag: 4
+  m_AngularDrag: 4
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -222,4 +225,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15ef5a02ac06696409322923b8ea4afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  explosionForce: 1
+  explosionForce: 0
