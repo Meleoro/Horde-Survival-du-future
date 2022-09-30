@@ -2059,7 +2059,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4471536212032958114, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: UI
       objectReference: {fileID: 0}
     - target: {fileID: 7241641094715330953, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
       propertyPath: m_AnchorMax.y
