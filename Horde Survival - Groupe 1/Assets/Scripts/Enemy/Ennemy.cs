@@ -63,7 +63,7 @@ public class Ennemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if ((other.gameObject.tag == "Bullet" || other.gameObject.tag == "BulletGrenade") && !dies)
+        if ((other.gameObject.tag == "Bullet" || other.gameObject.tag == "BulletGrenade" || other.gameObject.tag == "BulletMiniGun") && !dies)
         {
             health -= other.gameObject.GetComponent<Bullet>().degats
                 + (other.gameObject.GetComponent<Bullet>().degats * UpgradeManager.Instance.degatsPourc / 100);

@@ -51,6 +51,12 @@ namespace Upgrades
                     ammoUsed.GetComponent<BulletLanceGrenade>().nbrRebond = 0;
                 }
 
+                if (ammoUsed.CompareTag("BulletMiniGun"))
+                {
+                    RefCharacter.Instance.GetComponent<Rigidbody2D>().AddForce((-pc.nearestEnemyPos + pc.transform.position).normalized * levelList[currentLevel - 1].knockbackStrenght,
+                        ForceMode2D.Impulse);
+                }
+
                 _currentAmmo -= 1;
                 levelList[currentLevel - 1].currentAmmo = _currentAmmo;
 
@@ -169,5 +175,6 @@ namespace Upgrades
         [Header("Minigun")] 
         public bool ballesPerçantes;
         public bool noRecul;
+        public float knockbackStrenght;
     }
 }

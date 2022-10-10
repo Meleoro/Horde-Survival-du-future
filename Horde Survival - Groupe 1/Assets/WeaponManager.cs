@@ -96,10 +96,7 @@ public class WeaponManager : MonoBehaviour
             
             currentWeapons[0].isReloading = true;
             currentWeapons[1].isReloading = true;
-            
-            Debug.Log(currentWeapons[0]);
-            Debug.Log(currentWeapons[1]);
-            
+
             StartCoroutine(SwitchWeaponCooldown1());
         }
         
@@ -107,11 +104,10 @@ public class WeaponManager : MonoBehaviour
         else if (currentWeapons.Count == 3)
         {
             Weapon stockage0 = currentWeapons[0];
-            Weapon stockage1 = currentWeapons[1];
-            
+
             currentWeapons[0] = currentWeapons[1];
             currentWeapons[1] = currentWeapons[2];
-            currentWeapons[2] = stockage1;
+            currentWeapons[2] = stockage0;
             
             currentWeapons[0].isReloading = true;
             currentWeapons[1].isReloading = true;
