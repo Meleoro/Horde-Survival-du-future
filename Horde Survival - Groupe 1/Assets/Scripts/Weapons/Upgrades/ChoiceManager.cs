@@ -205,6 +205,8 @@ public class ChoiceManager : MonoBehaviour
                         listButtons[i].Upgrade = availableUpgrades[choice];
 
                         endLoop = true;
+                        
+                        listButtons[i].currentIndex = choice;
                     }
                 
                     // SI ON PEUT AJOUTER UNE UPGRADE AUX CHOIX
@@ -214,6 +216,8 @@ public class ChoiceManager : MonoBehaviour
                         listButtons[i].Upgrade = availableUpgrades[choice];
 
                         endLoop = true;
+                        
+                        listButtons[i].currentIndex = choice;
                     }
                 }
             }

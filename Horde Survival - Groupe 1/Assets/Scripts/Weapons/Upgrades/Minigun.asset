@@ -16,13 +16,13 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Minigun
   image: {fileID: 21300000, guid: 2ebcf6e735528df47a1cb77cd69141fb, type: 3}
-  currentLevel: 4
+  currentLevel: 1
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
   audio: {fileID: 0}
   levelList:
-  - desciption: Tir de puissant projectiles
+  - desciption: Tir une salve de puissants projectiles
     degats: 15
     bulletSpeed: 20
     portee: 2
@@ -30,7 +30,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 0
+    currentAmmo: 12
     reload: 6
     doubleUZI: 0
     doubleTir: 0
@@ -40,16 +40,16 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-    knockbackStrenght: 3
-  - desciption: "Augmente les d\xE9g\xE2ts"
+    knockbackStrenght: 4
+  - desciption: "D\xE9g\xE2ts + taille chargeur"
     degats: 18
     bulletSpeed: 20
     portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 12
-    currentAmmo: 0
+    ammoMax: 18
+    currentAmmo: 2
     reload: 6
     doubleUZI: 0
     doubleTir: 0
@@ -59,34 +59,15 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-    knockbackStrenght: 3
-  - desciption: "Augmente les d\xE9g\xE2ts"
-    degats: 20
+    knockbackStrenght: 4
+  - desciption: "Balles transper\xE7antes + rechargement"
+    degats: 18
     bulletSpeed: 20
     portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 12
-    currentAmmo: 0
-    reload: 6
-    doubleUZI: 0
-    doubleTir: 0
-    "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-    knockbackStrenght: 0
-  - desciption: Diminue le temps de rechargement
-    degats: 20
-    bulletSpeed: 20
-    portee: 2
-    fireRate: 0.2
-    bulletsPerShot: 0
-    dispersion: 0
-    ammoMax: 12
+    ammoMax: 18
     currentAmmo: 0
     reload: 4
     doubleUZI: 0
@@ -95,17 +76,17 @@ MonoBehaviour:
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
-    "ballesPer\xE7antes": 0
+    "ballesPer\xE7antes": 1
     noRecul: 0
-    knockbackStrenght: 0
-  - desciption: 'Augmente la taille des chargeurs '
+    knockbackStrenght: 4
+  - desciption: Taille chargeur + cadence de tir
     degats: 20
     bulletSpeed: 20
     portee: 2
-    fireRate: 0.2
+    fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 16
+    ammoMax: 26
     currentAmmo: 0
     reload: 4
     doubleUZI: 0
@@ -114,36 +95,55 @@ MonoBehaviour:
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
-    "ballesPer\xE7antes": 0
+    "ballesPer\xE7antes": 1
     noRecul: 0
-    knockbackStrenght: 0
-  - desciption: Diminue le temps de rechargement
-    degats: 20
+    knockbackStrenght: 3.5
+  - desciption: "D\xE9g\xE2ts + rechargement"
+    degats: 30
     bulletSpeed: 20
     portee: 2
-    fireRate: 0.2
+    fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 16
+    ammoMax: 26
     currentAmmo: 0
-    reload: 2
+    reload: 2.5
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
-    "ballesPer\xE7antes": 0
+    "ballesPer\xE7antes": 1
     noRecul: 0
-    knockbackStrenght: 0
-  - desciption: "Augmente les d\xE9g\xE2ts"
+    knockbackStrenght: 4
+  - desciption: Moins de recul + taille chargeur
+    degats: 30
+    bulletSpeed: 20
+    portee: 2
+    fireRate: 0.1
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 35
+    currentAmmo: 0
+    reload: 2.5
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 0
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 1
+    noRecul: 0
+    knockbackStrenght: 2
+  - desciption: "D\xE9g\xE2ts + cadence de tir + taille chargeur"
     degats: 40
     bulletSpeed: 20
     portee: 2
-    fireRate: 0.2
+    fireRate: 0.06
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 16
+    ammoMax: 45
     currentAmmo: 0
     reload: 2
     doubleUZI: 0
@@ -152,9 +152,9 @@ MonoBehaviour:
     nbrRebonds: 0
     firstSplit: 0
     secondSplit: 0
-    "ballesPer\xE7antes": 0
+    "ballesPer\xE7antes": 1
     noRecul: 0
-    knockbackStrenght: 0
+    knockbackStrenght: 2
   description: 
   damages: 0
   damagesGain: 0
