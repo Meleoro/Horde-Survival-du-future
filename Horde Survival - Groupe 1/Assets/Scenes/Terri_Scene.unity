@@ -543,7 +543,7 @@ PrefabInstance:
       objectReference: {fileID: 1096107264}
     - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
       propertyPath: thirdWeaponLevel
-      value: 6
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
       propertyPath: secondWeaponLevel
