@@ -120,7 +120,7 @@ public class BulletLanceGrenade : MonoBehaviour
             {
                 float dist = Vector2.Distance(k.gameObject.transform.position, currentPos);
 
-                if (dist < minDist && dist > 3f)
+                if (dist < minDist && dist > 1f)
                 {
                     minDist2 = minDist;
                     nearestEnnemy2 = nearestEnnemy;
@@ -129,7 +129,7 @@ public class BulletLanceGrenade : MonoBehaviour
                     nearestEnnemy = k.gameObject;
                 }
             
-                else if (dist < minDist2 && dist > 3f)
+                else if (dist < minDist2 && dist > 1f)
                 {
                     minDist2 = dist;
                     nearestEnnemy2 = k.gameObject;
