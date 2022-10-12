@@ -8,7 +8,6 @@ using UnityEngine.UI;
 
 namespace Upgrades
 {
-
     [CreateAssetMenu(fileName = "New Upgrade", menuName = "Upgrade")]
     public class Weapon : ScriptableObject
     {
@@ -58,7 +57,7 @@ namespace Upgrades
 
                 if (ammoUsed.CompareTag("BulletMiniGun"))
                 {
-                    RefCharacter.Instance.GetComponent<Rigidbody2D>().AddForce((-pc.nearestEnemyPos + pc.transform.position).normalized * levelList[currentLevel - 1].knockbackStrenght,
+                    RefCharacter.Instance.GetComponent<Rigidbody2D>().AddForce((- mousePos + new Vector2(pc.transform.position.x, pc.transform.position.y)).normalized  * levelList[currentLevel - 1].knockbackStrenght,
                         ForceMode2D.Impulse);
                 }
 
