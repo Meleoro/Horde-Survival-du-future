@@ -16,14 +16,14 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Canon CC
   image: {fileID: 21300000, guid: 7d2043e97e19a7c4aa7d53fd54825c99, type: 3}
-  currentLevel: 2
+  currentLevel: 7
   isWeapon: 1
   weapon: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   bullet: {fileID: 9124585523636447651, guid: 000370840dc35cd46b737c56d87b4457, type: 3}
   audio: {fileID: 0}
   levelList:
   - desciption: "Tire 3 projectiles \xE0 courte port\xE9e"
-    degats: 30
+    degats: 25
     bulletSpeed: 15
     portee: 0.3
     fireRate: 2
@@ -42,14 +42,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "Balles transper\xE7antes"
-    degats: 30
+    degats: 25
     bulletSpeed: 15
     portee: 0.3
     fireRate: 2
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 2
-    currentAmmo: 1
+    currentAmmo: 0
     reload: 2
     doubleUZI: 0
     doubleTir: 0
@@ -61,14 +61,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "Port\xE9e + d\xE9g\xE2ts"
-    degats: 45
+    degats: 30
     bulletSpeed: 15
     portee: 0.5
     fireRate: 2
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 2
-    currentAmmo: 2
+    currentAmmo: 0
     reload: 2
     doubleUZI: 0
     doubleTir: 0
@@ -80,14 +80,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "Rechargement + d\xE9g\xE2ts"
-    degats: 55
+    degats: 35
     bulletSpeed: 15
     portee: 0.5
     fireRate: 1.3
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 2
-    currentAmmo: 0
+    currentAmmo: 1
     reload: 1.3
     doubleUZI: 0
     doubleTir: 0
@@ -99,14 +99,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "Rechargement + port\xE9e"
-    degats: 55
+    degats: 35
     bulletSpeed: 15
     portee: 0.75
     fireRate: 0.9
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 2
-    currentAmmo: 2
+    currentAmmo: 1
     reload: 0.9
     doubleUZI: 0
     doubleTir: 0
@@ -118,14 +118,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "D\xE9g\xE2ts"
-    degats: 70
+    degats: 40
     bulletSpeed: 15
     portee: 0.75
     fireRate: 0.9
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 2
-    currentAmmo: 2
+    currentAmmo: 1
     reload: 0.9
     doubleUZI: 0
     doubleTir: 0
@@ -137,14 +137,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "Rechargement + port\xE9e"
-    degats: 70
+    degats: 40
     bulletSpeed: 15
     portee: 0.9
     fireRate: 0.6
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 2
-    currentAmmo: 2
+    currentAmmo: 1
     reload: 0.6
     doubleUZI: 0
     doubleTir: 0
@@ -156,14 +156,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "Rechargement + d\xE9g\xE2ts"
-    degats: 90
+    degats: 50
     bulletSpeed: 15
     portee: 0.9
     fireRate: 0.3
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 2
-    currentAmmo: 2
+    currentAmmo: 1
     reload: 0.3
     doubleUZI: 0
     doubleTir: 0

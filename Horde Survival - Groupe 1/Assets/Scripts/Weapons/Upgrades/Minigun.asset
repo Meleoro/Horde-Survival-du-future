@@ -16,21 +16,21 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Minigun
   image: {fileID: 21300000, guid: 2ebcf6e735528df47a1cb77cd69141fb, type: 3}
-  currentLevel: 1
+  currentLevel: 5
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
   audio: {fileID: 0}
   levelList:
   - desciption: Tir une salve de puissants projectiles
-    degats: 15
+    degats: 10
     bulletSpeed: 20
     portee: 2
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 12
+    currentAmmo: 0
     reload: 6
     doubleUZI: 0
     doubleTir: 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: "D\xE9g\xE2ts + taille chargeur"
-    degats: 18
+    degats: 12
     bulletSpeed: 20
     portee: 2
     fireRate: 0.2
@@ -61,7 +61,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: "Balles transper\xE7antes + rechargement"
-    degats: 18
+    degats: 12
     bulletSpeed: 20
     portee: 2
     fireRate: 0.2
@@ -80,14 +80,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: Taille chargeur + cadence de tir
-    degats: 20
+    degats: 14
     bulletSpeed: 20
     portee: 2
     fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 26
-    currentAmmo: 0
+    currentAmmo: 4
     reload: 4
     doubleUZI: 0
     doubleTir: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 3.5
   - desciption: "D\xE9g\xE2ts + rechargement"
-    degats: 30
+    degats: 16
     bulletSpeed: 20
     portee: 2
     fireRate: 0.1
@@ -118,7 +118,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: Moins de recul + taille chargeur
-    degats: 30
+    degats: 16
     bulletSpeed: 20
     portee: 2
     fireRate: 0.1
@@ -137,7 +137,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 2
   - desciption: "D\xE9g\xE2ts + cadence de tir + taille chargeur"
-    degats: 40
+    degats: 18
     bulletSpeed: 20
     portee: 2
     fireRate: 0.06

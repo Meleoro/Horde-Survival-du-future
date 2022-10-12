@@ -18,7 +18,8 @@ public class ChoiceManager : MonoBehaviour
     public List<int> selectedOptions;
 
 
-    [Header("Others")] public int thirdWeaponLevel;
+    [Header("Others")] public int secondWeaponLevel;
+    public int thirdWeaponLevel;
     public int currentLevel;
     public GameObject controller;
     private int nbrWeapons;
@@ -161,7 +162,7 @@ public class ChoiceManager : MonoBehaviour
         
         if (nbrWeapons > 0)
         {
-            nbrWeapons = random.Range(1, nbrWeapons + 1);
+            nbrWeapons = random.Range(1, nbrWeapons);
         }
         
 
