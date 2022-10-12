@@ -16,6 +16,10 @@ public class WeaponManager : MonoBehaviour
     public DroneAttack drone1;
     public DroneAttack drone2;
 
+    public SpriteRenderer CharacterImage;
+    public SpriteRenderer Drone1Image;
+    public SpriteRenderer Drone2Image;
+
     public List<Weapon> currentWeapons = new List<Weapon>();
 
     private void Awake()
@@ -66,6 +70,10 @@ public class WeaponManager : MonoBehaviour
             PlayerController.Instance.weaponUsed = currentWeapons[0];
             drone1.weapon = currentWeapons[1];
             drone2.weapon = currentWeapons[2];
+            
+            CharacterImage.sprite = currentWeapons[0].image;
+            Drone1Image.sprite = currentWeapons[1].image;
+            Drone2Image.sprite = currentWeapons[2].image;
         }
         
         else if (currentWeapons.Count == 2)
@@ -73,6 +81,9 @@ public class WeaponManager : MonoBehaviour
             PlayerController.Instance.weaponUsed = currentWeapons[0];
             drone1.weapon = currentWeapons[1]; 
             drone2.weapon = null;
+            
+            CharacterImage.sprite = currentWeapons[0].image;
+            Drone1Image.sprite = currentWeapons[1].image;
         }
         
         else if (currentWeapons.Count == 1)
@@ -80,6 +91,8 @@ public class WeaponManager : MonoBehaviour
             PlayerController.Instance.weaponUsed = currentWeapons[0];
             drone1.weapon = null;
             drone2.weapon = null;
+
+            CharacterImage.sprite = currentWeapons[0].image;
         }
     }
 
