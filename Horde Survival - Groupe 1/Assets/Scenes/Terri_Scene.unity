@@ -1041,31 +1041,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[3]
-      value: 50
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
-      propertyPath: levels.Array.data[4]
-      value: 52
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
-      propertyPath: levels.Array.data[5]
-      value: 55
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
-      propertyPath: levels.Array.data[6]
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
-      propertyPath: levels.Array.data[7]
+      propertyPath: levels.Array.data[4]
+      value: 62
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.data[5]
       value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
-      propertyPath: levels.Array.data[8]
+      propertyPath: levels.Array.data[6]
       value: 70
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
-      propertyPath: levels.Array.data[9]
+      propertyPath: levels.Array.data[7]
+      value: 72
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.data[8]
       value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
+      propertyPath: levels.Array.data[9]
+      value: 77
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[10]
