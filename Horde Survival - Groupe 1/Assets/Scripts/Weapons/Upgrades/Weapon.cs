@@ -30,8 +30,6 @@ namespace Upgrades
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
 
-            //audio.Play();
-
             if (ammoUsed != null && pc.PlayerCooldown() && pc._nearestEnemy != null)
             {            
                 ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
@@ -67,7 +65,6 @@ namespace Upgrades
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
             
-            //audio.Play();
 
             if (ammoUsed != null && drone.DroneCooldown() && PlayerController.Instance._nearestEnemy != null)
             {

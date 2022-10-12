@@ -16,13 +16,13 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Canon CC
   image: {fileID: 21300000, guid: 7d2043e97e19a7c4aa7d53fd54825c99, type: 3}
-  currentLevel: 0
+  currentLevel: 2
   isWeapon: 1
   weapon: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   bullet: {fileID: 9124585523636447651, guid: 000370840dc35cd46b737c56d87b4457, type: 3}
   audio: {fileID: 0}
   levelList:
-  - desciption: Tir 3 projectiles sur l'enemi le plus proche
+  - desciption: Tire 3 projectiles sur l'enemi le plus proche
     degats: 30
     bulletSpeed: 15
     portee: 15
