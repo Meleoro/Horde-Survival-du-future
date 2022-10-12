@@ -430,7 +430,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -808.4, y: -317.1}
+  m_AnchoredPosition: {x: -783, y: -305}
   m_SizeDelta: {x: 339.1, y: 88.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &360876026
@@ -880,24 +880,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &651385564 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 571902370416656228, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
-  m_PrefabInstance: {fileID: 1848419275}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &651385570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651385564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572fb932734f42d4c900be6a319f85e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 0}
 --- !u!20 &651385575 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 571902370416656227, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
@@ -1640,9 +1622,25 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -383
       objectReference: {fileID: 0}
+    - target: {fileID: 6984283234333100695, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b785c949aef2ef84c97e5853c0714e9c, type: 2}
+    - target: {fileID: 6984283234333100695, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7241641094715330953, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949162012141834128, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: b785c949aef2ef84c97e5853c0714e9c, type: 2}
+    - target: {fileID: 7949162012141834128, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_hasFontAssetChanged
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8143783321971131039, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
       propertyPath: m_Pivot.x
@@ -2277,7 +2275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 722.76, y: 441.9}
+  m_AnchoredPosition: {x: 736, y: 453}
   m_SizeDelta: {x: 251.49, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1905673165
