@@ -82,7 +82,7 @@ public class ChoiceManager : MonoBehaviour
         currentLevel += 1;
         Time.timeScale = 0;
         
-        if (currentLevel <= 2 || currentLevel == thirdWeaponLevel)
+        if (currentLevel == 1 || currentLevel == secondWeaponLevel || currentLevel == thirdWeaponLevel)
         {
             SelectNewWeapon();
         }
@@ -162,7 +162,7 @@ public class ChoiceManager : MonoBehaviour
         if (nbrWeapons > 0)
         {
             if(nbrWeapons == 1)
-                nbrWeapons = 1;
+                nbrWeapons = random.Range(0, 2);
             
             else if (nbrWeapons == 2)
                 nbrWeapons = random.Range(1, 3);
