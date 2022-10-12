@@ -35,10 +35,13 @@ namespace Upgrades
                 ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
                 ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
                 ammoUsed.GetComponent<Bullet>()._countdown = 0;
-                
+
                 //Placement & activation
                 ammoUsed.transform.position = initialPos;
                 ammoUsed.SetActive(true);
+                
+                ammoUsed.GetComponent<TrailRenderer>().enabled = true;
+                ammoUsed.GetComponent<TrailRenderer>().time = 1;
     
                 //Physic
                 //ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
