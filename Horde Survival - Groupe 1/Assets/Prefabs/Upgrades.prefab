@@ -1635,6 +1635,8 @@ MonoBehaviour:
   - {fileID: 407575381014573064}
   - {fileID: 407575380243452053}
   selectedOptions: 
+  secondWeaponLevel: 2
+  thirdWeaponLevel: 5
   currentLevel: 0
   controller: {fileID: 0}
 --- !u!1 &407575381590693578
