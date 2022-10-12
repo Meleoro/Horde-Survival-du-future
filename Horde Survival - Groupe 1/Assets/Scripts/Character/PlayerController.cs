@@ -72,7 +72,7 @@ namespace Character
             PlayerCooldown();
             PlayerPos = playerTr.position;
             nearestEnemyPos = EnemyNear().transform.position;
-            
+
             if(weaponUsed != null)
                 weaponUsed.PlayerShoot(this,initialBulletPos.position);
 
@@ -90,7 +90,7 @@ namespace Character
             {
                 transform.rotation = Quaternion.Euler(0, 0, 0);
             }
-            
+
         }
         
         public bool PlayerCooldown()
