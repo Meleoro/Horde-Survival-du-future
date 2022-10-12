@@ -16,7 +16,7 @@ public class Ennemy : MonoBehaviour
 
     public GameObject loot;
 
-    [SerializeField] private HealthBar healthBar;
+    private HealthBar healthBar;
 
     [Header("Autres")] public int index;
     public GameObject explosion;
@@ -27,16 +27,16 @@ public class Ennemy : MonoBehaviour
 
     private void Start()
     {
+        healthBar = GetComponent<HealthBar>();
         originalColor = renderer.color;
-        healthBar.SetHealth(health);
+        healthBar.SetMaxHealth(health);
+        
     }
 
     void Update()
     {
         Vector2 direction = RefCharacter.Instance.transform.position - transform.position;
         
-        
-
         if (direction.normalized.x < 0)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
