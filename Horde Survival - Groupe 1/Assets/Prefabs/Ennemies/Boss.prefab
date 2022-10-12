@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 1665647368470869401}
   - component: {fileID: 1665647368470869400}
   - component: {fileID: 4806127789896020566}
-  - component: {fileID: 982410903}
-  - component: {fileID: 6168487554642860594}
+  - component: {fileID: 5768474804413360780}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Ennemy
@@ -101,12 +100,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd6c62233746f64da1296f6b4f3048a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  health: 30
+  speed: 1.6
+  health: 500
   dies: 0
-  explosionForce: 10
+  explosionForce: 600
   rb: {fileID: 4806127789896020566}
   loot: {fileID: 7014358610161431345, guid: 04ee6e1d286a7ac4e9e1ea295360679b, type: 3}
+  index: 0
   explosion: {fileID: 3622229435596443396}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
   renderer: {fileID: 1665647368470869401}
@@ -132,24 +132,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &982410903
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665647368470869403}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.008246422, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.6
---- !u!58 &6168487554642860594
-CircleCollider2D:
+--- !u!70 &5768474804413360780
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -161,9 +145,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.8
+  m_Offset: {x: 0.15, y: 0}
+  m_Size: {x: 1.24, y: 1.62}
+  m_Direction: 0
 --- !u!1 &3622229435596443396
 GameObject:
   m_ObjectHideFlags: 0
