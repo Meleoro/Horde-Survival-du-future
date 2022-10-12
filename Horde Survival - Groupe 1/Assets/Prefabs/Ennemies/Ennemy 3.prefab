@@ -12,8 +12,7 @@ GameObject:
   - component: {fileID: 1665647368470869401}
   - component: {fileID: 1665647368470869400}
   - component: {fileID: 4806127789896020566}
-  - component: {fileID: 982410903}
-  - component: {fileID: 6168487554642860594}
+  - component: {fileID: 6639522686140258459}
   m_Layer: 6
   m_Name: Ennemy 3
   m_TagString: Ennemy
@@ -101,16 +100,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd6c62233746f64da1296f6b4f3048a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
-  health: 60
+  speed: 2.8
+  health: 15
   dies: 0
-  explosionForce: 0
-  rb: {fileID: 4806127789896020566}
+  explosionForce: 10
+  rb: {fileID: 4806127789896020566, guid: fdbcd13ea108a244fb338196c852a0d6, type: 3}
   loot: {fileID: 7014358610161431345, guid: 04ee6e1d286a7ac4e9e1ea295360679b, type: 3}
-  index: 0
-  explosion: {fileID: 3622229435596443396}
+  index: 1
+  explosion: {fileID: 4861299075512097845, guid: fdbcd13ea108a244fb338196c852a0d6, type: 3}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  renderer: {fileID: 1665647368470869401}
+  renderer: {fileID: 1665647368470869401, guid: fdbcd13ea108a244fb338196c852a0d6, type: 3}
   flashTime: 0.2
 --- !u!50 &4806127789896020566
 Rigidbody2D:
@@ -133,24 +132,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &982410903
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665647368470869403}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.008246422, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.3
---- !u!58 &6168487554642860594
-CircleCollider2D:
+--- !u!70 &6639522686140258459
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -163,8 +146,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.4
+  m_Size: {x: 0.33, y: 0.6875}
+  m_Direction: 0
 --- !u!1 &3622229435596443396
 GameObject:
   m_ObjectHideFlags: 0
