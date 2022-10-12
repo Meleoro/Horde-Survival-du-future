@@ -110,7 +110,7 @@ public class Ennemy : MonoBehaviour
         {
             health -= damage;
             
-            healthBar.SetHealth(damage);
+            //healthBar.SetHealth(damage);
         
             FlashRed();
         
