@@ -1037,15 +1037,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[2]
-      value: 40
+      value: 35
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[3]
-      value: 60
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[4]
-      value: 62
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[5]
