@@ -7,6 +7,9 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public static ScoreManager Instance;
+    
+    public int score;
+    public TextMeshProUGUI textScore;
 
     private void Awake()
     {
@@ -17,10 +20,6 @@ public class ScoreManager : MonoBehaviour
     {
         CalculateScore();
     }
-
-
-    public int score;
-    public TextMeshProUGUI textScore;
 
     public void CalculateScore()
     {
@@ -34,6 +33,6 @@ public class ScoreManager : MonoBehaviour
     
     public void AddPoint(int points)
     {
-        score += points;
+        score += points * 3;
     }
 }

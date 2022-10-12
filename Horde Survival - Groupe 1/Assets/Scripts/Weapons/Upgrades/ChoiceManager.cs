@@ -5,7 +5,6 @@ using Unity.VisualScripting;
 using UnityEngine;
 using Upgrades;
 using random = UnityEngine.Random;
-using Random = System.Random;
 
 public class ChoiceManager : MonoBehaviour
 {
@@ -162,7 +161,14 @@ public class ChoiceManager : MonoBehaviour
         
         if (nbrWeapons > 0)
         {
-            nbrWeapons = random.Range(1, nbrWeapons);
+            if(nbrWeapons == 1)
+                nbrWeapons = 1;
+            
+            else if (nbrWeapons == 2)
+                nbrWeapons = random.Range(1, 3);
+
+            else
+                nbrWeapons = random.Range(1, 3);
         }
         else
         {
@@ -204,14 +210,17 @@ public class ChoiceManager : MonoBehaviour
                     // SI ON PEUT AJOUTER UNE ARME AUX CHOIX
                     if (availableUpgrades[choice].isWeapon && nbrWeapons > 0)
                     {
-                        nbrWeapons -= 1;
+                        if (availableUpgrades[choice].currentLevel > (currentLevel / 2) + 1 || currentLevel < thirdWeaponLevel)
+                        {
+                            nbrWeapons -= 1;
                         
-                        selectedOptions.Add(choice);
-                        listButtons[i].Upgrade = availableUpgrades[choice];
+                            selectedOptions.Add(choice);
+                            listButtons[i].Upgrade = availableUpgrades[choice];
 
-                        endLoop = true;
+                            endLoop = true;
                         
-                        listButtons[i].currentIndex = choice;
+                            listButtons[i].currentIndex = choice;
+                        }
                     }
                 
                     // SI ON PEUT AJOUTER UNE UPGRADE AUX CHOIX

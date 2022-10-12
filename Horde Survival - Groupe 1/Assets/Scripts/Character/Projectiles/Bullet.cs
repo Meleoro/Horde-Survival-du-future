@@ -35,15 +35,13 @@ namespace Character.Projectiles
                     GetComponent<BulletPompe>().Shoot();
                 }
 
-                gameObject.GetComponent<TrailRenderer>().time = 1;
+                gameObject.GetComponent<TrailRenderer>().Clear();
             }
-            
+
             _countdown += Time.deltaTime; 
             
             if(_countdown >= bulletLifeTime) 
             {
-                gameObject.GetComponent<TrailRenderer>().time = 0;
-                
                 _countdown = 0f;
                 gameObject.SetActive(false);
             }
@@ -56,9 +54,6 @@ namespace Character.Projectiles
             {
                 if (other.gameObject.CompareTag("Ennemy") && !grenade)
                 {
-                    gameObject.GetComponent<TrailRenderer>().time = 0;
-                    
-                    
                     gameObject.SetActive(false);
                 } 
             }
