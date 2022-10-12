@@ -880,24 +880,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &651385564 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 571902370416656228, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
-  m_PrefabInstance: {fileID: 1848419275}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &651385570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 651385564}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572fb932734f42d4c900be6a319f85e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  camera: {fileID: 0}
 --- !u!20 &651385575 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 571902370416656227, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
@@ -1518,13 +1500,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   poolData:
   - prefab: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
-    numberOfProjectiles: 20
+    numberOfProjectiles: 30
   - prefab: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
-    numberOfProjectiles: 20
+    numberOfProjectiles: 30
   - prefab: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
-    numberOfProjectiles: 6
+    numberOfProjectiles: 10
   - prefab: {fileID: 9124585523636447651, guid: 000370840dc35cd46b737c56d87b4457, type: 3}
-    numberOfProjectiles: 2
+    numberOfProjectiles: 5
 --- !u!4 &1289564050
 Transform:
   m_ObjectHideFlags: 0
@@ -2239,8 +2221,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 783112870, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
 --- !u!1 &1905673163
 GameObject:

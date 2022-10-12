@@ -26,7 +26,7 @@ namespace Character.Projectiles
             _tr = GetComponent<Transform>(); 
         }
 
-        private void Update()
+        private void LateUpdate()
         {
             if (_countdown == 0)
             {
@@ -34,6 +34,8 @@ namespace Character.Projectiles
                 {
                     GetComponent<BulletPompe>().Shoot();
                 }
+
+                gameObject.GetComponent<TrailRenderer>().time = 1;
             }
             
             _countdown += Time.deltaTime; 
@@ -41,7 +43,6 @@ namespace Character.Projectiles
             if(_countdown >= bulletLifeTime) 
             {
                 gameObject.GetComponent<TrailRenderer>().time = 0;
-                gameObject.GetComponent<TrailRenderer>().enabled = false;
                 
                 _countdown = 0f;
                 gameObject.SetActive(false);
@@ -56,7 +57,6 @@ namespace Character.Projectiles
                 if (other.gameObject.CompareTag("Ennemy") && !grenade)
                 {
                     gameObject.GetComponent<TrailRenderer>().time = 0;
-                    gameObject.GetComponent<TrailRenderer>().enabled = false;
                     
                     
                     gameObject.SetActive(false);
