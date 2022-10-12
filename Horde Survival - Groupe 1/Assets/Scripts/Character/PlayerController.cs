@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -28,10 +30,11 @@ namespace Character
         [SerializeField] public Transform initialBulletPos;
         [SerializeField] private PlayerData playerData;
         [SerializeField] private PlayerHealthManager healthManager;
+        [SerializeField] private SpriteRenderer spriteRen;
         public Animator anim;
         public Weapon weaponUsed;
         private Rigidbody2D _rb;
-        private PlayerInputActions _playerControls;
+        public PlayerInputActions _playerControls;
         public Transform playerTr;
         public static PlayerController Instance;
 
@@ -179,7 +182,16 @@ namespace Character
             if (col.gameObject.CompareTag("Ennemy") && !invinsibilite)
             {
                 healthManager.TakeDamage(1);
+                StartCoroutine(GetHit());
             }
+        }
+
+        IEnumerator GetHit()
+        {
+            spriteRen.color = Color.red;
+            yield return new WaitForSeconds(0.5f);
+            spriteRen.color = Color.white;
+
         }
     }
 }
