@@ -16,7 +16,7 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Minigun
   image: {fileID: 21300000, guid: 2ebcf6e735528df47a1cb77cd69141fb, type: 3}
-  currentLevel: 5
+  currentLevel: 3
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
@@ -25,12 +25,12 @@ MonoBehaviour:
   - desciption: Tir une salve de puissants projectiles
     degats: 10
     bulletSpeed: 20
-    portee: 2
+    portee: 4
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 0
+    currentAmmo: 12
     reload: 6
     doubleUZI: 0
     doubleTir: 0
@@ -44,12 +44,12 @@ MonoBehaviour:
   - desciption: "D\xE9g\xE2ts + taille chargeur"
     degats: 12
     bulletSpeed: 20
-    portee: 2
+    portee: 4
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 18
-    currentAmmo: 2
+    currentAmmo: 18
     reload: 6
     doubleUZI: 0
     doubleTir: 0
@@ -63,7 +63,7 @@ MonoBehaviour:
   - desciption: "Balles transper\xE7antes + rechargement"
     degats: 12
     bulletSpeed: 20
-    portee: 2
+    portee: 4
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
@@ -82,7 +82,7 @@ MonoBehaviour:
   - desciption: Taille chargeur + cadence de tir
     degats: 14
     bulletSpeed: 20
-    portee: 2
+    portee: 4
     fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
   - desciption: "D\xE9g\xE2ts + rechargement"
     degats: 16
     bulletSpeed: 20
-    portee: 2
+    portee: 4
     fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
@@ -120,7 +120,7 @@ MonoBehaviour:
   - desciption: Moins de recul + taille chargeur
     degats: 16
     bulletSpeed: 20
-    portee: 2
+    portee: 4
     fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
@@ -139,7 +139,7 @@ MonoBehaviour:
   - desciption: "D\xE9g\xE2ts + cadence de tir + taille chargeur"
     degats: 18
     bulletSpeed: 20
-    portee: 2
+    portee: 4
     fireRate: 0.06
     bulletsPerShot: 0
     dispersion: 0
