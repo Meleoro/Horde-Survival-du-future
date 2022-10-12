@@ -109,7 +109,7 @@ MonoBehaviour:
   index: 1
   explosion: {fileID: 4861299075512097845, guid: fdbcd13ea108a244fb338196c852a0d6, type: 3}
   originalColor: {r: 0, g: 0, b: 0, a: 0}
-  renderer: {fileID: 1665647368470869401, guid: fdbcd13ea108a244fb338196c852a0d6, type: 3}
+  renderer: {fileID: 1665647368470869401}
   flashTime: 0.2
 --- !u!50 &4806127789896020566
 Rigidbody2D:
