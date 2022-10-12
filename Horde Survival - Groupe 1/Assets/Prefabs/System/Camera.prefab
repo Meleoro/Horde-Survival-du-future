@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 571902370416656226}
   - component: {fileID: 571902370416656229}
   - component: {fileID: 571902370416656225}
-  - component: {fileID: 651385570}
+  - component: {fileID: 2240775668204511323}
   m_Layer: 0
   m_Name: MainCam
   m_TagString: Untagged
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &651385570
+--- !u!114 &2240775668204511323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
