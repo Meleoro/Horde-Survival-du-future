@@ -13,6 +13,7 @@ public class ExpManager : MonoBehaviour
     public int levelCount = 0;
 
     public ExpBar other;
+    public GameObject maxIndicator;
 
     //collision entre le joueur et le point d'exp
     //compteur +1
@@ -55,6 +56,12 @@ public class ExpManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.J))
         {
             ExpBar.Instance.currentXp += 1;
+        }
+
+        if (levelCount == 21 && ExpBar.Instance.currentXp == ExpBar.Instance.slider.maxValue)
+        {
+            Debug.Log("yeet");
+            maxIndicator.SetActive(true);
         }
         
         other.UpdateExp();
