@@ -101,7 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2.5
-  health: 300
+  health: 150
   dies: 0
   explosionForce: 30
   rb: {fileID: 4806127789896020566}
