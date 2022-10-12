@@ -35,17 +35,24 @@ namespace Upgrades
                 ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
                 ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
                 ammoUsed.GetComponent<Bullet>()._countdown = 0;
-                
+
                 //Placement & activation
                 ammoUsed.transform.position = initialPos;
                 ammoUsed.SetActive(true);
-    
+
                 //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
+                //ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
+
+                Vector2 mousePos = RefCamera.Instance.camera.ScreenToWorldPoint(pc._playerControls.Player.MousePosition.ReadValue<Vector2>());;
+
+                //mousePos = new Vector2(mousePos.x - (mousePos.x / 2), mousePos.y - (mousePos.y / 2));
+                
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = (mousePos - new Vector2(pc.transform.position.x, pc.transform.position.y)).normalized 
+                                                                * levelList[currentLevel - 1].bulletSpeed;
 
                 if (ammoUsed.CompareTag("BulletGrenade"))
                 {
-                    ammoUsed.GetComponent<BulletLanceGrenade>().direction = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
+                    ammoUsed.GetComponent<BulletLanceGrenade>().direction = (mousePos - new Vector2(pc.transform.position.x, pc.transform.position.y)).normalized * levelList[currentLevel - 1].bulletSpeed;
                     ammoUsed.GetComponent<BulletLanceGrenade>().nbrRebond = 0;
                 }
 
@@ -77,6 +84,8 @@ namespace Upgrades
                 ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
                 ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
                 ammoUsed.GetComponent<Bullet>()._countdown = 0;
+                
+                ammoUsed.GetComponent<TrailRenderer>().Clear();
                 
                 //Placement & activation
                 ammoUsed.transform.position = dronePos.position;

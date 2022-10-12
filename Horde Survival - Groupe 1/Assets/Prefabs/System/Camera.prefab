@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 571902370416656226}
   - component: {fileID: 571902370416656229}
   - component: {fileID: 571902370416656225}
+  - component: {fileID: 2240775668204511323}
   m_Layer: 0
   m_Name: MainCam
   m_TagString: Untagged
@@ -153,6 +154,19 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2240775668204511323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 571902370416656228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 572fb932734f42d4c900be6a319f85e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 571902370416656227}
 --- !u!1 &571902371697715252
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,7 +265,6 @@ GameObject:
   m_Component:
   - component: {fileID: 571902371853767438}
   - component: {fileID: 571902371853767425}
-  - component: {fileID: 783112870}
   m_Layer: 0
   m_Name: Cinemachine 2D Cam
   m_TagString: Untagged
@@ -313,18 +326,6 @@ MonoBehaviour:
         m_Calls: []
   m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 571902371697715253}
---- !u!114 &783112870
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571902371853767424}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 572fb932734f42d4c900be6a319f85e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4555722906330355357
 GameObject:
   m_ObjectHideFlags: 0
