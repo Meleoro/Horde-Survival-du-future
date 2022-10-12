@@ -193,6 +193,7 @@ public class SpawnManager : MonoBehaviour
         
         currentVague = vagues[currentVagueNumber];
         timerVague = currentVague.duration;
+        Debug.Log(currentVague);
     }
 
     IEnumerator addSecond()
