@@ -16,7 +16,7 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Minigun
   image: {fileID: 21300000, guid: 2ebcf6e735528df47a1cb77cd69141fb, type: 3}
-  currentLevel: 1
+  currentLevel: 4
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
@@ -30,7 +30,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 12
+    currentAmmo: 0
     reload: 6
     doubleUZI: 0
     doubleTir: 0
@@ -40,6 +40,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
+    knockbackStrenght: 3
   - desciption: "Augmente les d\xE9g\xE2ts"
     degats: 18
     bulletSpeed: 20
@@ -58,6 +59,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
+    knockbackStrenght: 3
   - desciption: "Augmente les d\xE9g\xE2ts"
     degats: 20
     bulletSpeed: 20
@@ -76,6 +78,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
+    knockbackStrenght: 0
   - desciption: Diminue le temps de rechargement
     degats: 20
     bulletSpeed: 20
@@ -94,6 +97,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
+    knockbackStrenght: 0
   - desciption: 'Augmente la taille des chargeurs '
     degats: 20
     bulletSpeed: 20
@@ -112,6 +116,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
+    knockbackStrenght: 0
   - desciption: Diminue le temps de rechargement
     degats: 20
     bulletSpeed: 20
@@ -130,6 +135,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
+    knockbackStrenght: 0
   - desciption: "Augmente les d\xE9g\xE2ts"
     degats: 40
     bulletSpeed: 20
@@ -148,6 +154,7 @@ MonoBehaviour:
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
+    knockbackStrenght: 0
   description: 
   damages: 0
   damagesGain: 0

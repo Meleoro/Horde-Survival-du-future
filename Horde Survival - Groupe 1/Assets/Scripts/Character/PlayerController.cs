@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Serialization;
@@ -57,6 +58,12 @@ namespace Character
         {
             _playerControls.Disable();
         }
+
+        private void Start()
+        {
+            _rb.drag = 10;
+        }
+
         private void Update()
         {
             PlayerCooldown();
@@ -105,7 +112,8 @@ namespace Character
         {
             float newSpeed = playerData.characterSpeed + (playerData.characterSpeed * UpgradeManager.Instance.speedPourc / 100);
             
-            _rb.velocity = new Vector2(movement.x * newSpeed, movement.y * newSpeed);
+            //_rb.velocity = new Vector2(movement.x * newSpeed, movement.y * newSpeed);
+            _rb.AddForce(new Vector2(movement.x * newSpeed, movement.y * newSpeed), ForceMode2D.Force);
         }
         void HandleRotation()
         {
