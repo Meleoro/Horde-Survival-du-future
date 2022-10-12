@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 1665647368470869400}
   - component: {fileID: 4806127789896020566}
   - component: {fileID: 9170065151492297488}
-  - component: {fileID: 4327367317006340908}
   m_Layer: 6
   m_Name: Ennemy
   m_TagString: Ennemy
@@ -149,22 +148,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.39, y: 0.6875}
   m_Direction: 0
---- !u!58 &4327367317006340908
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665647368470869403}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.55
 --- !u!1 &4861299075512097845
 GameObject:
   m_ObjectHideFlags: 0
@@ -182,7 +165,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3017290071129954829
 Transform:
   m_ObjectHideFlags: 0
