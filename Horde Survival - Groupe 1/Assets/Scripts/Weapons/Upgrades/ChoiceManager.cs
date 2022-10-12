@@ -164,6 +164,10 @@ public class ChoiceManager : MonoBehaviour
         {
             nbrWeapons = random.Range(1, nbrWeapons);
         }
+        else
+        {
+            nbrWeapons = 0;
+        }
         
 
         // SELECTION DES TROIS CHOIX
