@@ -22,16 +22,16 @@ MonoBehaviour:
   bullet: {fileID: 2964705157784008405, guid: 8f4d33accdbe11b4891c77862139d58b, type: 3}
   audio: {fileID: 0}
   levelList:
-  - desciption: Arme automatique rapide.
-    degats: 5
+  - desciption: Arme automatique rapide
+    degats: 10
     bulletSpeed: 15
-    portee: 2
+    portee: 3
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 6
-    currentAmmo: 6
-    reload: 2
+    ammoMax: 8
+    currentAmmo: 8
+    reload: 1.5
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
@@ -41,16 +41,16 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
     knockbackStrenght: 2
-  - desciption: Augmente la taille du chargeur
+  - desciption: Taille chargeur
     degats: 10
     bulletSpeed: 15
-    portee: 2
+    portee: 3
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 8
+    ammoMax: 12
     currentAmmo: 0
-    reload: 2
+    reload: 1.5
     doubleUZI: 1
     doubleTir: 0
     "ballesPer\xE7antes2": 0
@@ -63,13 +63,13 @@ MonoBehaviour:
   - desciption: "Augmente les d\xE9gats"
     degats: 15
     bulletSpeed: 15
-    portee: 2
+    portee: 3
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 8
-    currentAmmo: 6
-    reload: 2
+    ammoMax: 12
+    currentAmmo: 12
+    reload: 1.5
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
@@ -79,15 +79,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
     knockbackStrenght: 0
-  - desciption: Diminue le temps de rechargement
+  - desciption: Rechargement + cadence de tir
     degats: 15
     bulletSpeed: 15
-    portee: 2
-    fireRate: 0.2
+    portee: 3
+    fireRate: 0.15
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 8
-    currentAmmo: 0
+    ammoMax: 12
+    currentAmmo: 12
     reload: 1
     doubleUZI: 0
     doubleTir: 0
@@ -98,15 +98,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
     knockbackStrenght: 0
-  - desciption: "Augmente les d\xE9gats "
+  - desciption: "D\xE9g\xE2ts"
     degats: 20
     bulletSpeed: 15
-    portee: 2
-    fireRate: 0.2
+    portee: 3
+    fireRate: 0.15
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 8
-    currentAmmo: 2
+    ammoMax: 12
+    currentAmmo: 12
     reload: 1
     doubleUZI: 0
     doubleTir: 0
@@ -117,15 +117,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
     knockbackStrenght: 0
-  - desciption: Augmente la taille du chargeur
+  - desciption: Taille chargeur
     degats: 20
     bulletSpeed: 15
-    portee: 2
-    fireRate: 0.2
+    portee: 3
+    fireRate: 0.15
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 12
-    currentAmmo: 5
+    ammoMax: 16
+    currentAmmo: 16
     reload: 1
     doubleUZI: 0
     doubleTir: 0
@@ -136,15 +136,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
     knockbackStrenght: 0
-  - desciption: "Augmente les d\xE9gats "
+  - desciption: "D\xE9g\xE2ts +cadence de tir"
     degats: 30
     bulletSpeed: 15
-    portee: 2
-    fireRate: 0.2
+    portee: 3
+    fireRate: 0.12
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 12
-    currentAmmo: 4
+    ammoMax: 16
+    currentAmmo: 16
     reload: 1
     doubleUZI: 0
     doubleTir: 0
@@ -155,15 +155,15 @@ MonoBehaviour:
     "ballesPer\xE7antes": 0
     noRecul: 0
     knockbackStrenght: 0
-  - desciption: Diminue le temps de rechargement
+  - desciption: Rechargement + taille chargeur
     degats: 30
     bulletSpeed: 15
-    portee: 2
-    fireRate: 0.2
+    portee: 3
+    fireRate: 0.12
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 12
-    currentAmmo: 3
+    ammoMax: 20
+    currentAmmo: 20
     reload: 0.5
     doubleUZI: 0
     doubleTir: 0
