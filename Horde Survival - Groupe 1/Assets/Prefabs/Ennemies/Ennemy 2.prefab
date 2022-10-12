@@ -100,8 +100,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd6c62233746f64da1296f6b4f3048a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  health: 100
+  speed: 2.5
+  health: 300
   dies: 0
   explosionForce: 30
   rb: {fileID: 4806127789896020566}
