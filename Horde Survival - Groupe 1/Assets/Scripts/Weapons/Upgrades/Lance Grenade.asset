@@ -16,7 +16,7 @@ MonoBehaviour:
   isOnCooldown: 0
   name: lance Grenade
   image: {fileID: 21300000, guid: c9360aa6ccfc8364aa4d7c6fcb6dc66b, type: 3}
-  currentLevel: 1
+  currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 614827286038339249, guid: 7743726c2cfec3749b1c6d892c56ecfe, type: 3}
@@ -25,7 +25,26 @@ MonoBehaviour:
   - desciption: Tir des grenades rebondissantes
     degats: 50
     bulletSpeed: 10
-    portee: 2
+    portee: 3
+    fireRate: 1
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 3
+    currentAmmo: 3
+    reload: 5
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 2
+    firstSplit: 0
+    secondSplit: 0
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+    knockbackStrenght: 0
+  - desciption: Duplication du projectile au premier impact
+    degats: 50
+    bulletSpeed: 10
+    portee: 3
     fireRate: 1
     bulletsPerShot: 0
     dispersion: 0
@@ -36,105 +55,73 @@ MonoBehaviour:
     doubleTir: 0
     "ballesPer\xE7antes2": 0
     nbrRebonds: 2
-    firstSplit: 0
+    firstSplit: 1
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: Augmente la cadence de tir
+    knockbackStrenght: 0
+  - desciption: +1 rebond + rechargement
     degats: 50
     bulletSpeed: 10
-    portee: 2
-    fireRate: 0.8
-    bulletsPerShot: 0
-    dispersion: 0
-    ammoMax: 3
-    currentAmmo: 0
-    reload: 5
-    doubleUZI: 0
-    doubleTir: 0
-    "ballesPer\xE7antes2": 0
-    nbrRebonds: 2
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: 'Augmente la taille des chargeurs '
-    degats: 50
-    bulletSpeed: 10
-    portee: 2
-    fireRate: 0.8
+    portee: 3
+    fireRate: 0.75
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 4
     currentAmmo: 4
-    reload: 5
+    reload: 4
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
-    firstSplit: 0
+    nbrRebonds: 3
+    firstSplit: 1
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: Diminue le temps de rechargement
-    degats: 50
+    knockbackStrenght: 0
+  - desciption: "D\xE9g\xE2ts + rechargement"
+    degats: 75
     bulletSpeed: 10
-    portee: 2
-    fireRate: 0.8
+    portee: 3
+    fireRate: 0.6
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 4
-    currentAmmo: 0
+    currentAmmo: 4
     reload: 3
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
-    firstSplit: 0
+    nbrRebonds: 3
+    firstSplit: 1
     secondSplit: 0
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: 'Augmente la taille des chargeurs '
-    degats: 50
+    knockbackStrenght: 0
+  - desciption: Duplication du projectile au second impact
+    degats: 75
     bulletSpeed: 10
-    portee: 2
-    fireRate: 0.8
+    portee: 3
+    fireRate: 0.6
     bulletsPerShot: 0
     dispersion: 0
-    ammoMax: 6
-    currentAmmo: 1
+    ammoMax: 4
+    currentAmmo: 4
     reload: 3
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
+    nbrRebonds: 3
+    firstSplit: 1
+    secondSplit: 1
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: "Augmente les d\xE9g\xE2ts"
-    degats: 65
+    knockbackStrenght: 0
+  - desciption: +1 rebond + rechargement
+    degats: 75
     bulletSpeed: 10
-    portee: 2
-    fireRate: 0.8
-    bulletsPerShot: 0
-    dispersion: 0
-    ammoMax: 6
-    currentAmmo: 5
-    reload: 3
-    doubleUZI: 0
-    doubleTir: 0
-    "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
-    "ballesPer\xE7antes": 0
-    noRecul: 0
-  - desciption: Diminue le temps de rechargement
-    degats: 65
-    bulletSpeed: 10
-    portee: 2
-    fireRate: 0.8
+    portee: 4
+    fireRate: 0.4
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 6
@@ -143,16 +130,17 @@ MonoBehaviour:
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
+    nbrRebonds: 4
+    firstSplit: 1
+    secondSplit: 1
     "ballesPer\xE7antes": 0
     noRecul: 0
-  - desciption: "Augmente les d\xE9g\xE2ts"
-    degats: 80
+    knockbackStrenght: 0
+  - desciption: "D\xE9g\xE2ts"
+    degats: 100
     bulletSpeed: 10
-    portee: 2
-    fireRate: 0.8
+    portee: 4
+    fireRate: 0.4
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 6
@@ -161,11 +149,31 @@ MonoBehaviour:
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
-    nbrRebonds: 0
-    firstSplit: 0
-    secondSplit: 0
+    nbrRebonds: 4
+    firstSplit: 1
+    secondSplit: 1
     "ballesPer\xE7antes": 0
     noRecul: 0
+    knockbackStrenght: 0
+  - desciption: +1 rebond + rechargement
+    degats: 100
+    bulletSpeed: 10
+    portee: 4
+    fireRate: 0.2
+    bulletsPerShot: 0
+    dispersion: 0
+    ammoMax: 6
+    currentAmmo: 6
+    reload: 1
+    doubleUZI: 0
+    doubleTir: 0
+    "ballesPer\xE7antes2": 0
+    nbrRebonds: 5
+    firstSplit: 1
+    secondSplit: 1
+    "ballesPer\xE7antes": 0
+    noRecul: 0
+    knockbackStrenght: 0
   description: 
   damages: 0
   damagesGain: 0
