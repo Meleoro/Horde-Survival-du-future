@@ -59,7 +59,7 @@ public class WeaponManager : MonoBehaviour
             }
         }
 
-        
+
         // ON ATTRIBUE LES ARMES A CHAQUE SCRIPT
         if (currentWeapons.Count == 3)
         {
