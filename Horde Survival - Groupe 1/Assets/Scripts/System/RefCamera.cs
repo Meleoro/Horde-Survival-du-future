@@ -7,6 +7,8 @@ public class RefCamera : MonoBehaviour
 {
     public static RefCamera Instance;
 
+    public Camera camera;
+
     public void Awake()
     {
         if (Instance == null)

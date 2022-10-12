@@ -41,7 +41,16 @@ namespace Upgrades
                 ammoUsed.SetActive(true);
     
                 //Physic
-                ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
+                //ammoUsed.GetComponent<Rigidbody2D>().velocity = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
+
+                Vector2 mousePos = RefCamera.Instance.camera.ScreenToWorldPoint(pc._playerControls.Player.MousePosition.ReadValue<Vector2>());;
+
+                //mousePos = new Vector2(mousePos.x - (mousePos.x / 2), mousePos.y - (mousePos.y / 2));
+                
+                ammoUsed.GetComponent<Rigidbody2D>().velocity = (mousePos - new Vector2(pc.transform.position.x, pc.transform.position.y)).normalized 
+                                                                * levelList[currentLevel - 1].bulletSpeed;
+                
+                Debug.Log(mousePos);
 
                 if (ammoUsed.CompareTag("BulletGrenade"))
                 {

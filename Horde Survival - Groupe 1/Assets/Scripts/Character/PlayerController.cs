@@ -31,7 +31,7 @@ namespace Character
         public Animator anim;
         public Weapon weaponUsed;
         private Rigidbody2D _rb;
-        private PlayerInputActions _playerControls;
+        public PlayerInputActions _playerControls;
         public Transform playerTr;
         public static PlayerController Instance;
 

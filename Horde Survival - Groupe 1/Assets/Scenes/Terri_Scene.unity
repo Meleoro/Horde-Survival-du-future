@@ -686,6 +686,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 572fb932734f42d4c900be6a319f85e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 651385575}
+--- !u!20 &651385575 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 571902370416656227, guid: 3209568992713c341b6ce30925bc3b7e, type: 3}
+  m_PrefabInstance: {fileID: 1848419275}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &671200614
 PrefabInstance:
   m_ObjectHideFlags: 0
