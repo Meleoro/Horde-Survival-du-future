@@ -49,12 +49,10 @@ namespace Upgrades
                 
                 ammoUsed.GetComponent<Rigidbody2D>().velocity = (mousePos - new Vector2(pc.transform.position.x, pc.transform.position.y)).normalized 
                                                                 * levelList[currentLevel - 1].bulletSpeed;
-                
-                Debug.Log(mousePos);
 
                 if (ammoUsed.CompareTag("BulletGrenade"))
                 {
-                    ammoUsed.GetComponent<BulletLanceGrenade>().direction = (pc.nearestEnemyPos - pc.transform.position).normalized * levelList[currentLevel - 1].bulletSpeed;
+                    ammoUsed.GetComponent<BulletLanceGrenade>().direction = (mousePos - new Vector2(pc.transform.position.x, pc.transform.position.y)).normalized * levelList[currentLevel - 1].bulletSpeed;
                     ammoUsed.GetComponent<BulletLanceGrenade>().nbrRebond = 0;
                 }
 
