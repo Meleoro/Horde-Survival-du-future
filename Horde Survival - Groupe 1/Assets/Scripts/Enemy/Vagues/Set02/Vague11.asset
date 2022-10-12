@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Vague11
   m_EditorClassIdentifier: 
   duration: 30
-  spawnRate: 1
+  spawnRate: 0.5
   spawnFrequency:
   - key: {fileID: 1665647368470869403, guid: 49c7991c45a6a8e44a237a7c64bfe5ef, type: 3}
     val: 100
