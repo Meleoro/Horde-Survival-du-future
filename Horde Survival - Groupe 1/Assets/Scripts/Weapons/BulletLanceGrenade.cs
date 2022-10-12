@@ -45,6 +45,10 @@ public class BulletLanceGrenade : MonoBehaviour
 
     private void Update()
     {
+        limiteRebonds = lanceGrenade.levelList[lanceGrenade.currentLevel - 1].nbrRebonds;
+        split1 = lanceGrenade.levelList[lanceGrenade.currentLevel - 1].firstSplit;
+        split2 = lanceGrenade.levelList[lanceGrenade.currentLevel - 1].secondSplit;
+        
         rb.velocity = direction.normalized * bulletSpeed;
 
         if(timer > 0)
