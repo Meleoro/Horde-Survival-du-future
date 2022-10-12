@@ -210,7 +210,7 @@ public class ChoiceManager : MonoBehaviour
                     // SI ON PEUT AJOUTER UNE ARME AUX CHOIX
                     if (availableUpgrades[choice].isWeapon && nbrWeapons > 0)
                     {
-                        if (availableUpgrades[choice].currentLevel > (currentLevel / 2) + 1 || currentLevel < thirdWeaponLevel)
+                        if (availableUpgrades[choice].currentLevel < (currentLevel / 2) + 1 || currentLevel < thirdWeaponLevel)
                         {
                             nbrWeapons -= 1;
                         
