@@ -62,7 +62,6 @@ public class ExpManager : MonoBehaviour
 
         if (levelCount == 21 && ExpBar.Instance.currentXp == ExpBar.Instance.slider.maxValue)
         {
-            Debug.Log("yeet");
             maxIndicator.SetActive(true);
         }
         
