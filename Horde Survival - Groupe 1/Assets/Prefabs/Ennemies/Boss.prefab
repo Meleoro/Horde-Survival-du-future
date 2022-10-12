@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1665647368470869400}
   - component: {fileID: 4806127789896020566}
   - component: {fileID: 5768474804413360780}
+  - component: {fileID: 7046555205209790659}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Ennemy
@@ -145,9 +146,25 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.15, y: 0}
-  m_Size: {x: 1.24, y: 1.62}
+  m_Offset: {x: 0.21960068, y: -0.017399948}
+  m_Size: {x: 0.47439384, y: 1.3154982}
   m_Direction: 0
+--- !u!70 &7046555205209790659
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665647368470869403}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.076125845, y: -0.4654547}
+  m_Size: {x: 1.1022024, y: 0.4931913}
+  m_Direction: 1
 --- !u!1 &3622229435596443396
 GameObject:
   m_ObjectHideFlags: 0
