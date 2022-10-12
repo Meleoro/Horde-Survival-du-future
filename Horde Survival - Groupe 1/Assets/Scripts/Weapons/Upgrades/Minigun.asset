@@ -16,14 +16,14 @@ MonoBehaviour:
   isOnCooldown: 0
   name: Minigun
   image: {fileID: 21300000, guid: 2ebcf6e735528df47a1cb77cd69141fb, type: 3}
-  currentLevel: 3
+  currentLevel: 0
   isWeapon: 1
   weapon: {fileID: 0}
   bullet: {fileID: 2964705157784008405, guid: 997b70cb7990c6646993e80766ebb8ae, type: 3}
   audio: {fileID: 0}
   levelList:
   - desciption: Tir une salve de puissants projectiles
-    degats: 10
+    degats: 15
     bulletSpeed: 20
     portee: 4
     fireRate: 0.2
@@ -42,14 +42,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: "D\xE9g\xE2ts + taille chargeur"
-    degats: 12
+    degats: 15
     bulletSpeed: 20
     portee: 4
     fireRate: 0.2
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 18
-    currentAmmo: 18
+    currentAmmo: 0
     reload: 6
     doubleUZI: 0
     doubleTir: 0
@@ -61,7 +61,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: "Balles transper\xE7antes + rechargement"
-    degats: 12
+    degats: 15
     bulletSpeed: 20
     portee: 4
     fireRate: 0.2
@@ -80,14 +80,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: Taille chargeur + cadence de tir
-    degats: 14
+    degats: 15
     bulletSpeed: 20
     portee: 4
     fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 26
-    currentAmmo: 4
+    currentAmmo: 0
     reload: 4
     doubleUZI: 0
     doubleTir: 0
@@ -99,14 +99,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 3.5
   - desciption: "D\xE9g\xE2ts + rechargement"
-    degats: 16
+    degats: 28
     bulletSpeed: 20
     portee: 4
     fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 26
-    currentAmmo: 0
+    currentAmmo: 7
     reload: 2.5
     doubleUZI: 0
     doubleTir: 0
@@ -118,14 +118,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: Moins de recul + taille chargeur
-    degats: 16
+    degats: 18
     bulletSpeed: 20
     portee: 4
     fireRate: 0.1
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 35
-    currentAmmo: 0
+    currentAmmo: 23
     reload: 2.5
     doubleUZI: 0
     doubleTir: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 2
   - desciption: "D\xE9g\xE2ts + cadence de tir + taille chargeur"
-    degats: 18
+    degats: 20
     bulletSpeed: 20
     portee: 4
     fireRate: 0.06
