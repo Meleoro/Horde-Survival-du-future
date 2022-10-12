@@ -161,7 +161,7 @@ public class ChoiceManager : MonoBehaviour
         
         if (nbrWeapons > 0)
         {
-            nbrWeapons = random.Range(1, nbrWeapons + 1);
+            nbrWeapons = random.Range(1, nbrWeapons);
         }
         
 
