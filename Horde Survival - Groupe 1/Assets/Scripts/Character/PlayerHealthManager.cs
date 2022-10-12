@@ -70,8 +70,8 @@ public class PlayerHealthManager : MonoBehaviour
     {
         int saveHealth = maxHealth;
 
-        maxHealth += (maxHealth * UpgradeManager.Instance.healthGain / 100);
+        maxHealth += (maxHealth * 20 / 100);
         
-        currentHealth += (saveHealth * UpgradeManager.Instance.healthGain / 100);
+        currentHealth += (saveHealth * 20 / 100);
     }
 }
