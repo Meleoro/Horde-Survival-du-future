@@ -1029,23 +1029,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[0]
-      value: 20
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[1]
-      value: 30
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[2]
-      value: 35
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[3]
-      value: 40
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[4]
-      value: 50
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4783163499830368093, guid: 6084b5db4e3736b4685ae97f87e483d4, type: 3}
       propertyPath: levels.Array.data[5]
