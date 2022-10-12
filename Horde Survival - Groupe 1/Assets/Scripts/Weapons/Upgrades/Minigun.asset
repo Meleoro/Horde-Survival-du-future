@@ -23,7 +23,7 @@ MonoBehaviour:
   audio: {fileID: 0}
   levelList:
   - desciption: Tir une salve de puissants projectiles
-    degats: 15
+    degats: 25
     bulletSpeed: 20
     portee: 4
     fireRate: 0.2
@@ -31,7 +31,7 @@ MonoBehaviour:
     dispersion: 0
     ammoMax: 12
     currentAmmo: 12
-    reload: 6
+    reload: 5
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
@@ -42,7 +42,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: "D\xE9g\xE2ts + taille chargeur"
-    degats: 15
+    degats: 28
     bulletSpeed: 20
     portee: 4
     fireRate: 0.2
@@ -50,7 +50,7 @@ MonoBehaviour:
     dispersion: 0
     ammoMax: 18
     currentAmmo: 0
-    reload: 6
+    reload: 5
     doubleUZI: 0
     doubleTir: 0
     "ballesPer\xE7antes2": 0
@@ -61,7 +61,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: "Balles transper\xE7antes + rechargement"
-    degats: 15
+    degats: 28
     bulletSpeed: 20
     portee: 4
     fireRate: 0.2
@@ -80,7 +80,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 4
   - desciption: Taille chargeur + cadence de tir
-    degats: 15
+    degats: 28
     bulletSpeed: 20
     portee: 4
     fireRate: 0.1
@@ -99,7 +99,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 3.5
   - desciption: "D\xE9g\xE2ts + rechargement"
-    degats: 28
+    degats: 30
     bulletSpeed: 20
     portee: 4
     fireRate: 0.1

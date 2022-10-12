@@ -23,14 +23,14 @@ MonoBehaviour:
   audio: {fileID: 0}
   levelList:
   - desciption: Arme automatique rapide
-    degats: 10
+    degats: 25
     bulletSpeed: 15
     portee: 3
     fireRate: 0.18
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 8
-    currentAmmo: 0
+    currentAmmo: 6
     reload: 1.5
     doubleUZI: 0
     doubleTir: 0
@@ -42,14 +42,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 2
   - desciption: Taille chargeur
-    degats: 10
+    degats: 25
     bulletSpeed: 15
     portee: 3
     fireRate: 0.15
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 11
+    currentAmmo: 0
     reload: 1.5
     doubleUZI: 1
     doubleTir: 0
@@ -61,14 +61,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "Augmente les d\xE9gats"
-    degats: 15
+    degats: 28
     bulletSpeed: 15
     portee: 3
     fireRate: 0.15
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 9
+    currentAmmo: 0
     reload: 1.5
     doubleUZI: 0
     doubleTir: 0
@@ -80,14 +80,14 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: Rechargement + cadence de tir
-    degats: 15
+    degats: 28
     bulletSpeed: 15
     portee: 3
     fireRate: 0.15
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 12
-    currentAmmo: 6
+    currentAmmo: 0
     reload: 1
     doubleUZI: 0
     doubleTir: 0
@@ -99,7 +99,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: "D\xE9g\xE2ts"
-    degats: 20
+    degats: 28
     bulletSpeed: 15
     portee: 3
     fireRate: 0.12
@@ -118,7 +118,7 @@ MonoBehaviour:
     noRecul: 0
     knockbackStrenght: 0
   - desciption: Taille chargeur
-    degats: 20
+    degats: 28
     bulletSpeed: 15
     portee: 3
     fireRate: 0.12
@@ -144,7 +144,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 16
-    currentAmmo: 9
+    currentAmmo: 0
     reload: 1
     doubleUZI: 0
     doubleTir: 0
@@ -163,7 +163,7 @@ MonoBehaviour:
     bulletsPerShot: 0
     dispersion: 0
     ammoMax: 20
-    currentAmmo: 20
+    currentAmmo: 0
     reload: 0.5
     doubleUZI: 0
     doubleTir: 0
