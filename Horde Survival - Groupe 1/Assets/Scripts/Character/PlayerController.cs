@@ -71,7 +71,7 @@ namespace Character
         {
             PlayerCooldown();
             PlayerPos = playerTr.position;
-            nearestEnemyPos = EnemyNear().transform.position;
+            //nearestEnemyPos = EnemyNear().transform.position;
 
             if(weaponUsed != null)
                 weaponUsed.PlayerShoot(this,initialBulletPos.position);

@@ -29,7 +29,7 @@ namespace Upgrades
         {
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
 
-            if (ammoUsed != null && pc.PlayerCooldown() && pc._nearestEnemy != null)
+            if (ammoUsed != null && pc.PlayerCooldown())
             {            
                 ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
                 ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
@@ -78,7 +78,7 @@ namespace Upgrades
             GameObject ammoUsed = ObjectPooling.Instance.GetObject(bullet.name);
             
 
-            if (ammoUsed != null && drone.DroneCooldown() && PlayerController.Instance._nearestEnemy != null)
+            if (ammoUsed != null && drone.DroneCooldown())
             {
                 ammoUsed.GetComponent<Bullet>().degats = levelList[currentLevel - 1].degats;
                 ammoUsed.GetComponent<Bullet>().bulletLifeTime = levelList[currentLevel - 1].portee;
