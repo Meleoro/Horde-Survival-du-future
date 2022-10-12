@@ -16,8 +16,6 @@ public class Ennemy : MonoBehaviour
 
     public GameObject loot;
 
-    private HealthBar healthBar;
-
     [Header("Autres")] public int index;
     public GameObject explosion;
 
@@ -27,10 +25,7 @@ public class Ennemy : MonoBehaviour
 
     private void Start()
     {
-        healthBar = GetComponent<HealthBar>();
         originalColor = renderer.color;
-        healthBar.SetMaxHealth(health);
-        
     }
 
     void Update()
