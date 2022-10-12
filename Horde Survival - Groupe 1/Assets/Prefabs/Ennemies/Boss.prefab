@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1665647368470869400}
   - component: {fileID: 4806127789896020566}
   - component: {fileID: 5768474804413360780}
+  - component: {fileID: 7906927519440044451}
   m_Layer: 6
   m_Name: Boss
   m_TagString: Ennemy
@@ -100,8 +101,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8cd6c62233746f64da1296f6b4f3048a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.6
-  health: 500
+  speed: 1.8
+  health: 250
   dies: 0
   explosionForce: 600
   rb: {fileID: 4806127789896020566}
@@ -148,6 +149,22 @@ CapsuleCollider2D:
   m_Offset: {x: 0.15, y: 0}
   m_Size: {x: 1.24, y: 1.62}
   m_Direction: 0
+--- !u!58 &7906927519440044451
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665647368470869403}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 3
 --- !u!1 &3622229435596443396
 GameObject:
   m_ObjectHideFlags: 0

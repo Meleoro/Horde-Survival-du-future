@@ -1092,12 +1092,20 @@ PrefabInstance:
       objectReference: {fileID: 1905673165}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.size
-      value: 7
+      value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
+      propertyPath: vagues.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 4414a61569ed14649aa324e21979f186, type: 2}
+    - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
+      propertyPath: vagues.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a74990b8bd96144fa51e21f0cba89aa, type: 2}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.data[2]
       value: 
-      objectReference: {fileID: 11400000, guid: bb5ed484a3ecc674f880c059c2347dc1, type: 2}
+      objectReference: {fileID: 11400000, guid: c4ede9d41c6b5bb42bb100de8748169b, type: 2}
     - target: {fileID: 6366703095613722954, guid: c5edfeee55f90c54992268065cddc873, type: 3}
       propertyPath: vagues.Array.data[3]
       value: 
