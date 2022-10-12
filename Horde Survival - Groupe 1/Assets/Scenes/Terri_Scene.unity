@@ -528,6 +528,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 407575381447287754, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 407575381447287756, guid: 47191a0a0dd241740bb0e68c80b15356, type: 3}
       propertyPath: controller
       value: 
@@ -1550,6 +1554,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1438963748}
     m_Modifications:
+    - target: {fileID: 1368655620845249842, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1368655620845249842, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -60
+      objectReference: {fileID: 0}
     - target: {fileID: 2029985610919695412, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -1635,9 +1647,25 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7949162012141834128, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_margin.w
+      value: 71.41021
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949162012141834128, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_margin.x
+      value: -112.874084
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949162012141834128, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_margin.z
+      value: -55.285583
+      objectReference: {fileID: 0}
+    - target: {fileID: 7949162012141834128, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: b785c949aef2ef84c97e5853c0714e9c, type: 2}
+    - target: {fileID: 7949162012141834128, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 8276552259745201996, guid: b785c949aef2ef84c97e5853c0714e9c, type: 2}
     - target: {fileID: 7949162012141834128, guid: 1f16c255583ab4445b61e59b15334341, type: 3}
       propertyPath: m_hasFontAssetChanged
       value: 1
