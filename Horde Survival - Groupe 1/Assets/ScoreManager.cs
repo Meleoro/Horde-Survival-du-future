@@ -13,13 +13,18 @@ public class ScoreManager : MonoBehaviour
         Instance = this;
     }
 
+    private void Update()
+    {
+        CalculateScore();
+    }
+
 
     public int score;
     public TextMeshProUGUI textScore;
 
     public void CalculateScore()
     {
-        textScore.gameObject.SetActive(true);
+        //textScore.gameObject.SetActive(true);
         
         int finalScore = score + SpawnManager.Instance.minutes * 60 + SpawnManager.Instance.seconds;
 

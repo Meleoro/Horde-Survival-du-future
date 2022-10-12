@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using System;
+using TMPro;
 using UnityEngine.UIElements.Experimental;
 
 public class ExpManager : MonoBehaviour
@@ -11,7 +12,8 @@ public class ExpManager : MonoBehaviour
     
     public static int pointCount;
     public int levelCount = 0;
-
+    public TextMeshProUGUI lvlCount;
+    
     public ExpBar other;
 
     //collision entre le joueur et le point d'exp
@@ -58,6 +60,8 @@ public class ExpManager : MonoBehaviour
         }
         
         other.UpdateExp();
+        
+        lvlCount.text  = "Niv " + levelCount;
     }
 }
 
